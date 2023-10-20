@@ -1,0 +1,269 @@
+.vector-icon10,
+.vector-icon11 {
+  position: absolute;
+  height: 63.62%;
+  width: 25.86%;
+  top: 36.38%;
+  right: 0;
+  bottom: 0;
+  left: 74.14%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon11 {
+  height: 58.36%;
+  width: 51.98%;
+  top: 41.64%;
+  right: 48.02%;
+  left: 0;
+}
+.icon7 {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 217px;
+  height: 40px;
+  object-fit: cover;
+}
+.frame-child12 {
+  position: absolute;
+  top: 19px;
+  left: 10px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-800);
+  width: 1180px;
+  height: 683px;
+}
+.training-and-learning {
+  position: absolute;
+  top: 71px;
+  left: 170px;
+  display: inline-block;
+  width: 556px;
+}
+.blank-line11 {
+  margin: 0;
+}
+.customisable-trainings-leader {
+  margin: 0;
+  padding-left: var(--padding-5xl);
+}
+.customisable-trainings-leader-container {
+  position: absolute;
+  top: 300px;
+  left: 89px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width: 482px;
+}
+.enhance-organizational-and {
+  margin-bottom: 0;
+}
+.enhance-organizational-and-container,
+.organizations-and-individuals-container {
+  position: absolute;
+  top: 292px;
+  left: 659px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width: 474px;
+  height: 65px;
+}
+.organizations-and-individuals-container {
+  top: 525px;
+  height: 68px;
+}
+.benefits10 {
+  top: 228px;
+  left: 705px;
+  width: 110px;
+  height: 24px;
+}
+.benefits10,
+.ideal-for5,
+.offerings5 {
+  position: absolute;
+  display: inline-block;
+}
+.ideal-for5 {
+  top: 461px;
+  left: 721px;
+  width: 110px;
+  height: 24px;
+}
+.offerings5 {
+  top: 235px;
+  left: 89px;
+  width: 130px;
+}
+.benefit-icon5 {
+  position: absolute;
+  top: 223.5px;
+  left: 657.5px;
+  width: 33px;
+  height: 33px;
+}
+.frame-child13,
+.frame-child14 {
+  position: absolute;
+  top: 201px;
+  left: 627px;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+  width: 537px;
+  height: 198px;
+}
+.frame-child14 {
+  top: 426px;
+}
+.ideal-icon5,
+.training-icon1 {
+  position: absolute;
+  top: 450px;
+  left: 659px;
+  width: 46px;
+  height: 46px;
+}
+.training-icon1 {
+  top: 51px;
+  left: 42px;
+  width: 96px;
+  height: 75px;
+}
+.rectangle-parent2 {
+  position: absolute;
+  top: 64px;
+  left: 40px;
+  width: 1200px;
+  height: 704px;
+  text-align: left;
+  font-size: var(--heading-2-size);
+}
+.frame-icon9 {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.auto-layout-horizontal10,
+.auto-layout-horizontal9,
+.auto-layout-vertical4 {
+  border-radius: var(--br-9xs);
+  border: 1px solid var(--color-darkkhaki);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auto-layout-horizontal9 {
+  background-color: var(--color-gray-200);
+  flex-direction: row;
+  padding: var(--padding-xl);
+}
+.auto-layout-horizontal10,
+.auto-layout-vertical4 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 43px;
+  height: 43px;
+  cursor: pointer;
+}
+.auto-layout-vertical4 {
+  top: calc(50% - 276px);
+  right: 133px;
+  overflow: hidden;
+  flex-direction: column;
+}
+.auto-layout-horizontal10 {
+  top: 140px;
+  left: 1171px;
+  background-color: var(--color-gray-200);
+  flex-direction: row;
+  padding: var(--padding-xl);
+}
+.button6 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.statesecondary6 {
+  position: absolute;
+  top: 706px;
+  left: 1055px;
+  border-radius: var(--br-981xl);
+  background-color: var(--color-darkkhaki);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--button-text-size);
+}
+.glossary5 {
+  left: 1050px;
+  width: 74px;
+}
+.about5,
+.contact5,
+.glossary5,
+.home5,
+.rent-a-skill5,
+.services5 {
+  position: absolute;
+  top: 36px;
+  display: inline-block;
+  height: 26px;
+}
+.about5 {
+  left: 699px;
+  width: 51px;
+  cursor: pointer;
+}
+.contact5,
+.home5,
+.rent-a-skill5,
+.services5 {
+  left: 606px;
+  width: 53px;
+}
+.contact5,
+.rent-a-skill5,
+.services5 {
+  left: 904px;
+  width: 106px;
+}
+.contact5,
+.services5 {
+  left: 790px;
+  width: 74px;
+}
+.contact5 {
+  left: 1164px;
+  width: 66px;
+  cursor: pointer;
+}
+.our-services-3-child {
+  position: absolute;
+  top: 61.5px;
+  left: 797.5px;
+  border-top: 1px solid var(--color-burlywood);
+  box-sizing: border-box;
+  width: 58.01px;
+  height: 1px;
+  cursor: pointer;
+}
+.our-services-3 {
+  position: relative;
+  background: linear-gradient(59.63deg, #282828, #353535);
+  width: 100%;
+  height: 832px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--body-text-size);
+  color: var(--color-whitesmoke);
+  font-family: var(--body-text);
+}

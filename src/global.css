@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Agrandir:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-agrandir: Agrandir;
+  --body-text: Raleway;
+  --font-inherit: inherit;
+  --font-archivo: Archivo;
+
+  /* font sizes */
+  --font-size-sm: 14px;
+  --font-size-19xl: 38px;
+  --body-text-size: 18px;
+  --button-text-size: 16px;
+  --heading-2-size: 28px;
+  --font-size-11xl: 30px;
+  --heading-1-size: 50px;
+  --black-size: 32px;
+  --subheading-size: 24px;
+  --font-size-3xs: 10px;
+
+  /* Colors */
+  --yellow: #ffa800;
+  --color-darkkhaki: #be9e45;
+  --color-burlywood: #d8c691;
+  --color-whitesmoke: #f5f5f5;
+  --color-gray-100: #fbfdfe;
+  --color-gray-200: #2c2c2c;
+  --color-gray-300: #111;
+  --color-gray-400: #0d0e14;
+  --color-gray-500: rgba(0, 0, 0, 0.6);
+  --color-gray-600: rgba(255, 255, 255, 0.6);
+  --color-gray-700: rgba(17, 17, 17, 0.4);
+  --color-gray-800: rgba(17, 17, 17, 0.16);
+  --color-black: #000;
+  --color-lightsteelblue: #a1aebf;
+  --color-white: #fff;
+
+  /* Gaps */
+  --gap-5xl: 24px;
+  --gap-181xl: 200px;
+  --gap-13xl: 32px;
+  --gap-base: 16px;
+
+  /* Paddings */
+  --padding-xs: 12px;
+  --padding-5xl: 24px;
+  --padding-xl: 20px;
+  --padding-61xl: 80px;
+  --padding-13xl: 32px;
+  --padding-base: 16px;
+  --padding-101xl: 120px;
+
+  /* Border radiuses */
+  --br-981xl: 1000px;
+  --br-9xs: 4px;
+  --br-3xs: 10px;
+  --br-xl: 20px;
+  --br-mini: 15px;
+  --br-5xs: 8px;
+  --br-24xl: 43px;
+  --br-11xl: 30px;
+  --br-12xs: 1px;
+  --br-8xs: 5px;
+}

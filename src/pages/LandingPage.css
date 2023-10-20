@@ -1,0 +1,214 @@
+/* .vector-icon55,
+.vector-icon56 {
+  position: absolute;
+  height: 75.84%;
+  width: 35.94%;
+  top: 0;
+  right: 0;
+  bottom: 24.16%;
+  left: 64.06%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+} */
+/* .vector-icon56 {
+  height: 61.8%;
+  width: 60.71%;
+  top: 38.2%;
+  right: 39.29%;
+  bottom: 0;
+  left: 0;
+} */
+.icon25,
+.the-lighthouse-logo-no-tagline {
+  position: absolute;
+  top: 95px;
+  /* left: 543px; */
+  width: 195px;
+  height: 194px;
+  object-fit: cover;
+  justify-content: center;
+}
+.icon25 {
+  top: 17px;
+  left: 20px;   width: 217px;
+  height: 40px;
+}
+.rent-a-skill21 {
+  position: absolute;
+  top: 36px;
+  left: 1088px;
+  display: inline-block;
+  width: 119px;
+  height: 26px;
+}
+.glossary21 {
+  left: 1236px;
+  width: 74px;
+}
+.about16,
+.contact16,
+.glossary21,
+.home16,
+.services21 {
+  position: absolute;
+  top: 36px;
+  display: inline-block;
+  height: 26px;
+}
+.about16 {
+  left: 885px;
+  width: 51px;
+  cursor: pointer;
+}
+.contact16,
+.home16,
+.services21 {
+  left: 792px;
+  width: 53px;
+}
+.contact16,
+.services21 {
+  left: 976px;
+  width: 74px;
+  cursor: pointer;
+}
+.contact16 {
+  left: 1350px;
+  width: 66px;
+}
+.landing-page-child {
+  position: absolute;
+  top: 61.5px;
+  left: 787.5px;
+  border-top: 1px solid var(--color-burlywood);
+  box-sizing: border-box;
+  width: 58.01px;
+  height: 1px;
+}
+.frame-child21 {
+  width: "100%";
+  background-color: "red";
+  border: "1px solid red";
+} 
+.lighthouse {
+  background: linear-gradient(
+    217.81deg,
+    #be9e45,
+    #be9e45 0.01%,
+    #fff 49%,
+    #d8c691
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.welcome-to-the-container {
+  /* position: absolute; */
+  /* top: 0;
+  left: 0;
+  display: inline-block; */
+  /* align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+  /* font-size: var(--body-text-size); */
+}
+.frame {
+  position: absolute;
+  top: 300px;
+  /* left: 470px; */
+  width: 658px;
+  height: 59px;
+  align-items: center;
+  
+  
+}
+.bringing-the-path1,
+.frame1 {
+  position: absolute;
+  height: 35px;
+}
+.bringing-the-path1 {
+  top: 0;
+  left: 40px;
+  font-weight: 300;
+  display: inline-block;
+  width: 474px;
+
+}
+.frame1 {
+  top: 366px;
+  /* left: 500px; */
+  width: 514px;
+  overflow: hidden;
+  font-size: var(--subheading-size);
+}
+.the-lighthouse- {
+  margin: 0;
+}
+.the-lighthouse-container {
+  position: absolute;
+  top: 416px;
+  left: 280px;
+  font-size: var(--body-text-size);
+  text-align: center;
+  display: inline-block;
+  width: 962px;
+  height: 173px;
+  
+  justify-content: center;
+  align-items: center;
+}
+.button35 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.stateprimary12 {
+  position: absolute;
+  top: 615px;
+  left: 630px;
+  border-radius: var(--br-981xl);
+  background-color: var(--color-darkkhaki);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  cursor: pointer;
+  font-size: var(--button-text-size);
+}
+.rectangle-parent10 {
+  /* position: absolute;
+  top: 64px;
+  left: 40px; */
+  width: '100%';
+  height: '100%';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:#382a04;
+  height: 704px;
+  text-align: center;
+  font-size: var(--heading-1-size);
+}
+.landing-page {
+  /* position: relative; */
+  background-image: url("../images/LandingPage.png");
+  width: 100vw;
+  /* height: 100vh; */
+  /* overflow: hidden; */
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--body-text-size);
+  color: var(--color-whitesmoke);
+  font-family: var(--body-text);
+  background-size: cover;
+  /* background-position: center;
+  background-repeat: no-repeat; */
+  height: 100vh;
+  object-fit: contain !important;
+}

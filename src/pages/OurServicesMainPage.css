@@ -1,0 +1,529 @@
+.vector-icon16,
+.vector-icon17,
+.vector-icon18 {
+  position: absolute;
+  height: 78.51%;
+  width: 16.92%;
+  top: 8.53%;
+  right: 0;
+  bottom: 12.96%;
+  left: 83.08%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon17,
+.vector-icon18 {
+  height: 52.48%;
+  width: 17.6%;
+  top: 33.49%;
+  right: 82.4%;
+  bottom: 14.03%;
+  left: 0;
+}
+.vector-icon18 {
+  height: 28.36%;
+  width: 39.63%;
+  top: 71.64%;
+  right: 0;
+  bottom: 0;
+  left: 60.37%;
+}
+.icon10 {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  width: 217px;
+  height: 40px;
+  object-fit: cover;
+}
+.button9 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.statesecondary9 {
+  position: absolute;
+  top: 935px;
+  left: 566px;
+  border-radius: var(--br-981xl);
+  background-color: var(--color-darkkhaki);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  text-align: left;
+  font-size: var(--button-text-size);
+}
+.explore-our-diverse,
+.glossary8 {
+  position: absolute;
+  top: 840px;
+  left: 238px;
+  display: inline-block;
+  width: 805px;
+}
+.glossary8 {
+  top: 36px;
+  left: 1050px;
+  width: 74px;
+  height: 26px;
+}
+.about8 {
+  left: 699px;
+  width: 51px;
+  cursor: pointer;
+}
+.about8,
+.contact8,
+.home8,
+.rent-a-skill8,
+.services8 {
+  position: absolute;
+  top: 36px;
+  display: inline-block;
+  height: 26px;
+}
+.home8 {
+  left: 606px;
+  width: 53px;
+  cursor: pointer;
+}
+.contact8,
+.rent-a-skill8,
+.services8 {
+  left: 904px;
+  width: 106px;
+}
+.contact8,
+.services8 {
+  left: 790px;
+  width: 74px;
+}
+.contact8 {
+  left: 1164px;
+  width: 66px;
+  cursor: pointer;
+}
+.our-services-main-page-child {
+  position: absolute;
+  top: 61.5px;
+  left: 797.5px;
+  border-top: 1px solid var(--color-burlywood);
+  box-sizing: border-box;
+  width: 58.01px;
+  height: 1px;
+}
+.event-and-entertainment {
+  position: absolute;
+  top: 1090px;
+  left: 131px;
+  font-size: var(--heading-1-size);
+  display: inline-block;
+  width: 1014px;
+}
+.service-8-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  border: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+}
+.comprehensive-organisational-t1 {
+  position: absolute;
+  width: 93.98%;
+  top: 60.91%;
+  left: 3.01%;
+  display: inline-block;
+}
+.org-transform-icon2 {
+  position: absolute;
+  height: 43.91%;
+  width: 35.53%;
+  top: 7.23%;
+  right: 36.94%;
+  bottom: 48.86%;
+  left: 27.54%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-8 {
+  position: absolute;
+  top: 589px;
+  left: 954px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.writing-and-editorial1 {
+  position: absolute;
+  width: 93.98%;
+  top: 68.53%;
+  left: 3.01%;
+  display: inline-block;
+}
+.editor-icon2 {
+  position: absolute;
+  height: 44.42%;
+  width: 32.89%;
+  top: 15.48%;
+  right: 33.46%;
+  bottom: 40.1%;
+  left: 33.65%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-7 {
+  position: absolute;
+  top: 589px;
+  left: 656px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.language-and-cultural1 {
+  position: absolute;
+  width: 93.98%;
+  top: 66.5%;
+  left: 3.01%;
+  display: inline-block;
+}
+.icon11 {
+  position: absolute;
+  height: 103.8%;
+  width: 103.8%;
+  top: -1.9%;
+  right: -1.9%;
+  bottom: -1.9%;
+  left: -1.9%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.a2,
+.div2 {
+  position: absolute;
+  height: 42.65%;
+  width: 25%;
+  top: 42.39%;
+  left: 56.52%;
+  display: inline-block;
+}
+.div2 {
+  width: 36.76%;
+  top: 3.26%;
+  left: 10.87%;
+}
+.cultural-icon2 {
+  position: absolute;
+  height: 40.1%;
+  width: 29.7%;
+  top: 16.24%;
+  right: 34.96%;
+  bottom: 43.65%;
+  left: 35.34%;
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--color-darkkhaki);
+}
+.service-6 {
+  position: absolute;
+  top: 589px;
+  left: 358px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.branding-icon2 {
+  position: absolute;
+  height: 41.12%;
+  width: 37.31%;
+  top: 15.48%;
+  right: 33.74%;
+  bottom: 43.4%;
+  left: 28.95%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-5 {
+  position: absolute;
+  top: 589px;
+  left: 60px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.outdoor-services-icon2 {
+  position: absolute;
+  height: 38.07%;
+  width: 29.7%;
+  top: 18.02%;
+  right: 35.15%;
+  bottom: 43.91%;
+  left: 35.15%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-4 {
+  position: absolute;
+  top: 352px;
+  left: 954px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.training-icon2 {
+  position: absolute;
+  height: 37.82%;
+  width: 36.09%;
+  top: 15.23%;
+  right: 33.83%;
+  bottom: 46.95%;
+  left: 30.08%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-3 {
+  position: absolute;
+  top: 352px;
+  left: 656px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.creative-services-icon2 {
+  position: absolute;
+  height: 38.07%;
+  width: 28.2%;
+  top: 14.21%;
+  right: 36.84%;
+  bottom: 47.72%;
+  left: 34.96%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-2 {
+  position: absolute;
+  top: 352px;
+  left: 358px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.personality-dev-icon2 {
+  position: absolute;
+  height: 47.98%;
+  width: 34.21%;
+  top: 11.17%;
+  right: 34.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-1 {
+  position: absolute;
+  top: 352px;
+  left: 60px;
+  width: 266px;
+  height: 197px;
+  cursor: pointer;
+}
+.event-hosting-and {
+  position: absolute;
+  top: 1284px;
+  left: 85px;
+  display: inline-block;
+  width: 482px;
+}
+.customised-entertainment-solut,
+.mcing-services-our,
+.music-and-bands {
+  position: absolute;
+  top: 1291px;
+  left: 713px;
+  display: inline-block;
+  width: 482px;
+}
+.customised-entertainment-solut,
+.music-and-bands {
+  top: 1497px;
+  left: 93px;
+}
+.customised-entertainment-solut {
+  left: 713px;
+}
+.event-hosting-icon1 {
+  position: absolute;
+  top: 1203px;
+  left: 291px;
+  width: 70px;
+  height: 65px;
+}
+.mcing-icon1,
+.music-and-band-icon1 {
+  position: absolute;
+  top: 1421.5px;
+  left: 302.5px;
+  width: 63px;
+  height: 62px;
+}
+.mcing-icon1 {
+  top: 1200.5px;
+  left: 900.25px;
+  width: 77.25px;
+  height: 77px;
+}
+.our-services-main-page-item {
+  position: absolute;
+  top: 1025.5px;
+  left: 251.5px;
+  border-top: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+  width: 778px;
+  height: 1px;
+}
+.group-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+  width: 536px;
+  height: 182px;
+}
+.benefits17 {
+  margin: 0;
+}
+.benefits16 {
+  position: absolute;
+  top: 27px;
+  left: 236px;
+  display: inline-block;
+  width: 110px;
+  height: 24px;
+}
+.benefit-icon8 {
+  position: absolute;
+  top: 22.5px;
+  left: 188.5px;
+  width: 33px;
+  height: 33px;
+}
+.create-unforgettable-moments {
+  position: absolute;
+  top: 75px;
+  left: 20px;
+  font-size: var(--body-text-size);
+  color: var(--color-whitesmoke);
+  text-align: center;
+  display: inline-block;
+  width: 497px;
+  height: 83px;
+}
+.group-div {
+  position: absolute;
+  top: 1645px;
+  left: 369px;
+  width: 536px;
+  height: 182px;
+  text-align: left;
+  font-size: var(--heading-2-size);
+  color: var(--color-darkkhaki);
+}
+.discover-the-rhythm {
+  position: absolute;
+  top: 1881px;
+  left: calc(50% - 402px);
+  display: inline-block;
+  width: 799px;
+  height: 50px;
+}
+.statesecondary10 {
+  position: absolute;
+  top: 1963px;
+  left: calc(50% - 77px);
+  border-radius: var(--br-981xl);
+  background-color: var(--color-darkkhaki);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--button-text-size);
+}
+.customised-solutions-icon1 {
+  position: absolute;
+  height: 2.91%;
+  width: 4.22%;
+  top: 69.1%;
+  right: 23.32%;
+  bottom: 27.99%;
+  left: 72.46%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.empowering-your-journey {
+  align-self: stretch;
+  position: relative;
+}
+.at-the-lighthouse {
+  flex: 1;
+  position: relative;
+}
+.auto-layout-horizontal14 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--body-text-size);
+}
+.auto-layout-vertical6,
+.auto-layout-vertical7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.auto-layout-vertical7 {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-5xl);
+}
+.auto-layout-vertical6 {
+  position: absolute;
+  top: 152px;
+  left: calc(50% - 507px);
+  width: 1014px;
+  align-items: center;
+  font-size: var(--heading-1-size);
+}
+.our-services-main-page {
+  position: relative;
+  background: linear-gradient(59.63deg, #282828, #353535);
+  width: 100%;
+  height: 2060px;
+  /* overflow: hidden; */
+  text-align: center;
+  font-size: var(--body-text-size);
+  color: var(--color-whitesmoke);
+  font-family: var(--body-text);
+  
+}
