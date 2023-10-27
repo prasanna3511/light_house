@@ -28,7 +28,7 @@
 .statesecondary12,
 .statesecondary13 {
   position: absolute;
-  top: 718px;
+  top: 32%;
   border-radius: var(--br-981xl);
   border: 1px solid var(--color-darkkhaki);
   display: flex;
@@ -41,15 +41,15 @@
   color: var(--color-darkkhaki);
 }
 .statesecondary11 {
-  left: 412px;
+  left: 30%;
   cursor: pointer;
 }
 .statesecondary12,
 .statesecondary13 {
-  left: 632px;
+  left: 42%;
 }
 .statesecondary13 {
-  left: 985px;
+  left: 62%;
   cursor: pointer;
 }
 .icon12 {
@@ -145,10 +145,10 @@
 }
 .read-less {
   position: absolute;
-  top: 160px;
-  left: 901px;
+padding-top: 120%;
+  left: 85%; 
   color: var(--color-darkkhaki);
-  text-align: center;
+  /* align-items: left; */
   cursor: pointer;
 }
 .who-we-are-parent {
@@ -157,10 +157,9 @@
   display: flex;
   top: 112px;
    text-align: center;
-  left: 135px;
-  width: 1200px;
-  height: 542px;
-  text-align: left;
+  /* left: 135px; */
+  width: 100%;
+  /* height: 542px */
 }
 /* .vector-icon21 {
   position: absolute;
@@ -178,8 +177,8 @@
 .about-page-11-inner,
 .about-page-11-item {
   position: absolute;
-  top: 921px;
-  left: 150px;
+  top: 40%;
+  left: 15%;
   border-radius: var(--br-xl);
   background-color: var(--color-gray-700);
   border: 1px solid var(--color-burlywood);
@@ -189,31 +188,36 @@
 }
 
 .about-page-11-inner {
-  top: 1133px;
+  top:50%;
   height: 243px;
 }
 .our-vision-mission {
-  top: 822px;
-  left: 380px;
+   top: 822px;
+   left: 30%;  
+  justify-content: center;
+  display: flex;
   font-size: var(--heading-1-size);
-  text-align: left;
-  width: 711px;
+  /* text-align: left;
+  width: 711px; */
+  text-align: center;
 }
 .embark-on-your-container,
 .our-vision-mission,
 .to-be-a {
   position: absolute;
   display: inline-block;
+  
 }
 .to-be-a {
-  top: 969px;
-  left: 400px;
+   top: 42%;
+   left: 35%;
   text-align: right;
   width: 740px;
+ 
 }
 .embark-on-your-container {
   top: 2106px;
-  left: 450px;
+  left: 500px;
   width: 588px;
   height: 64px;
   text-align: center;
@@ -235,49 +239,50 @@
   color: var(--color-darkkhaki);
 }
 .statesecondary14 {
-  left: 495px;
+  left: 36%;
   cursor: pointer;
 }
 .statesecondary15,
 .statesecondary16 {
-  left: 844px;
+  left: 62%;
 }
 .statesecondary16 {
-  left: 653px;
+ left: 48%;
 }
 .mission,
 .vision {
   position: absolute;
-  top: 992px;
-  left: 192px;
+  top: 43%;
+  left: 20%;
   font-size: var(--black-size);
   font-weight: 900;
 }
 .mission {
-  top: 1245px;
-  left: 1130px;
+  position: absolute;
+  top: 54%;
+  left: 80%;
 }
 .to-champion-transformative {
   position: absolute;
-  top: 1181px;
-  left: 180px;
+  top: 52%;
+  left: 20%;
   text-align: left;
   display: inline-block;
   width: 930px;
 }
 .values {
   position: absolute;
-  top: 1430px;
-  left: 665px;
+  top: 62%;
+  left: 50%;
   font-size: var(--black-size);
   font-weight: 900;
 }
 .our-values-are {
   position: absolute;
-  top: 1500px;
-  left: 360px;
+  top: 64%;
+  left: 30%;
   display: inline-block;
-  width: 704px;
+  width: 48%;
 }
 .group-item {
   position: relative;
@@ -308,8 +313,8 @@
 }
 .rectangle-parent5 {
   position: absolute;
-  top: 1582px;
-  left: 155px;
+  top: 68%;
+  left: 16%;
   width: 326px;
   height: 222px;
   font-size: var(--button-text-size);
@@ -323,8 +328,8 @@
 }
 .rectangle-parent6 {
   position: absolute;
-  top: 1582px;
-  left: 590px;
+  top: 68%;
+  left: 43%;
   width: 326px;
   height: 222px;
   font-size: var(--button-text-size);
@@ -344,8 +349,8 @@
 }
 .rectangle-parent7 {
   position: absolute;
-  top: 1582px;
-  left: 1010px;
+  top: 68%;
+  left: 70%;
   width: 326px;
   height: 222px;
   display:flex
@@ -359,8 +364,8 @@
 }
 .rectangle-parent8 {
   position: absolute;
-  top: 1836px;
-  left: 800px;
+  top: 79%;
+  left: 55%;
   width: 326px;
   height: 222px;
 }
@@ -373,8 +378,8 @@
 }
 .rectangle-parent9 {
   position: absolute;
-  top: 1836px;
-  left: 375px;
+  top:79%;
+  left: 30%;
   width: 326px;
   height: 222px;
 }

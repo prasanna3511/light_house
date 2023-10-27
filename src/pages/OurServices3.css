@@ -26,7 +26,7 @@
   height: 40px;
   object-fit: cover;
 }
-.frame-child12 {
+/* .frame-child12 {
   position: absolute;
   top: 19px;
   left: 10px;
@@ -34,7 +34,7 @@
   background-color: var(--color-gray-800);
   width: 1180px;
   height: 683px;
-}
+} */
 .training-and-learning {
   position: absolute;
   top: 71px;
@@ -137,7 +137,7 @@
 .rectangle-parent2 {
   position: absolute;
   top: 64px;
-  left: 40px;
+  left: 15%;
   width: 1200px;
   height: 704px;
   text-align: left;
@@ -158,6 +158,10 @@
   justify-content: center;
 }
 .auto-layout-horizontal9 {
+  
+  top: 16%;
+    left: 90%;
+
   background-color: var(--color-gray-200);
   flex-direction: row;
   padding: var(--padding-xl);
@@ -171,14 +175,16 @@
   cursor: pointer;
 }
 .auto-layout-vertical4 {
-  top: calc(50% - 276px);
-  right: 133px;
+  top: 16.80%;
+  left:85%;
+ 
+   
   overflow: hidden;
   flex-direction: column;
 }
 .auto-layout-horizontal10 {
-  top: 140px;
-  left: 1171px;
+  top: 16.80%;
+  left:89%;
   background-color: var(--color-gray-200);
   flex-direction: row;
   padding: var(--padding-xl);
@@ -190,8 +196,8 @@
 }
 .statesecondary6 {
   position: absolute;
-  top: 706px;
-  left: 1055px;
+  top: 82%;
+  left: 90%;
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;
@@ -258,7 +264,10 @@
 }
 .our-services-3 {
   position: relative;
-  background: linear-gradient(59.63deg, #282828, #353535);
+  background-image: url(../images/ourservices-1.png);
+  object-fit: contain !important;
+  background-size: cover;
+  /* background: linear-gradient(59.63deg, #282828, #353535); */
   width: 100%;
   height: 832px;
   overflow: hidden;

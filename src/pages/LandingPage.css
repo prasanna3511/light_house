@@ -103,16 +103,16 @@
   -webkit-text-fill-color: transparent;
 }
 .welcome-to-the-container {
-  /* position: absolute; */
-  /* top: 0;
+  /* position: absolute;
+   top: 0;
   left: 0;
-  display: inline-block; */
-  /* align-self: stretch;
+  display: inline-block; 
+   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; */
-  /* font-size: var(--body-text-size); */
+  justify-content: center; 
+  font-size: var(--body-text-size); */
 }
 .frame {
   position: absolute;
@@ -130,18 +130,20 @@
   height: 35px;
 }
 .bringing-the-path1 {
-  top: 0;
+  /* top: 0;
   left: 40px;
   font-weight: 300;
   display: inline-block;
-  width: 474px;
-
+  width: 474px; */
+display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .frame1 {
-  top: 366px;
+  top: 50%;
   /* left: 500px; */
   width: 514px;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-size: var(--subheading-size);
 }
 .the-lighthouse- {
@@ -149,14 +151,14 @@
 }
 .the-lighthouse-container {
   position: absolute;
-  top: 416px;
-  left: 280px;
+  top: 60%;
+  /* left: 280px; */
   font-size: var(--body-text-size);
   text-align: center;
   display: inline-block;
   width: 962px;
   height: 173px;
-  
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -167,8 +169,8 @@
 }
 .stateprimary12 {
   position: absolute;
-  top: 615px;
-  left: 630px;
+  top: 90%;
+  
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;

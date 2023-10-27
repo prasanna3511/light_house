@@ -12,6 +12,9 @@ const ContactUsOffline = () => {
   const onHomeTextClick = useCallback(() => {
     navigate("/landing-page");
   }, [navigate]);
+  const onCallTextClick = useCallback(() => {
+    navigate("/contact-us-call");
+  }, [navigate]);
 
   return (
     <div className="contact-us-offline">
@@ -37,7 +40,7 @@ const ContactUsOffline = () => {
                 <div className="offline3">Online</div>
               </div>
               <div className="auto-layout-horizontal81">
-                <div className="offline3">Call</div>
+                <div className="offline3" onClick={onCallTextClick}>Call</div>
               </div>
               <div className="group-child13" />
               <div className="group-child14" />
@@ -50,7 +53,7 @@ const ContactUsOffline = () => {
               <div className="auto-layout-vertical88">
                 <div className="auto-layout-horizontal83">
                   <div className="auto-layout-horizontal84">
-                    <div className="your-name3">Your name</div>
+                  <input type="text" id = "myInput" placeholder ="Your  Name" className="your-name3"/>
                   </div>
                 </div>
               </div>
@@ -64,7 +67,7 @@ const ContactUsOffline = () => {
               <div className="auto-layout-vertical88">
                 <div className="auto-layout-horizontal83">
                   <div className="auto-layout-horizontal84">
-                    <div className="your-name3">Your e-mail</div>
+                  <input type="text" id = "myInput" placeholder ="Email" className="your-name3"/>
                   </div>
                 </div>
               </div>

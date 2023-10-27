@@ -35,14 +35,14 @@
   font-weight: 900;
 }
 .statesecondary17 {
-  left: 290px;
+  left: 31%;
   cursor: pointer;
 }
 .statesecondary17,
 .statesecondary18,
 .statesecondary19 {
   position: absolute;
-  top: 655px;
+  top: 85%;
   border-radius: var(--br-981xl);
   border: 1px solid var(--color-darkkhaki);
   display: flex;
@@ -55,11 +55,11 @@
   color: var(--color-darkkhaki);
 }
 .statesecondary18 {
-  left: 510px;
+  left: 42%;
   cursor: pointer;
 }
 .statesecondary19 {
-  left: 855px;
+  left: 60%;
 }
 /* .icon24 {
   position: absolute;
@@ -195,12 +195,14 @@
 }
 .who-we-are-group {
   position: relative;
-  top: 112px;
-  left: 125px;
+   top: 18%;
+  /* left: 13%;  */
   width: 1200px;
   height: 489px;
-  text-align: left;
+  /* text-align: left; */
   font-size: var(--font-size-sm);
+  justify-content: center;
+  display: inline-block;
 }
 .about-page-1 {
 
@@ -218,6 +220,8 @@
   /* background-position: center; */
   background-repeat: no-repeat;
   height: 100vh;
+  object-fit: contain !important;
+  background-size: cover;
 }
  /* .vector-icon52 {
  background-image: url("../images/Aboutpage-1.png"); /* Replace with the actual path to your image 

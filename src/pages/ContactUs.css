@@ -201,6 +201,8 @@
   position: relative;
   letter-spacing: 0.02em;
   line-height: 20px;
+  border: none; 
+  outline: none; 
 }
 .auto-layout-horizontal111,
 .auto-layout-horizontal112 {

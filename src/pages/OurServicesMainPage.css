@@ -1,18 +1,16 @@
-.vector-icon16,
-.vector-icon17,
-.vector-icon18 {
+.vector-icon16 {
   position: absolute;
   height: 78.51%;
   width: 16.92%;
   top: 8.53%;
   right: 0;
   bottom: 12.96%;
-  left: 83.08%;
-  max-width: 100%;
-  overflow: hidden;
+  left: 60%;
+   max-width: 100%;
+   overflow: hidden; 
   max-height: 100%;
 }
-.vector-icon17,
+/* .vector-icon17,
 .vector-icon18 {
   height: 52.48%;
   width: 17.6%;
@@ -20,15 +18,15 @@
   right: 82.4%;
   bottom: 14.03%;
   left: 0;
-}
-.vector-icon18 {
+} */
+/* .vector-icon18 {
   height: 28.36%;
   width: 39.63%;
   top: 71.64%;
   right: 0;
   bottom: 0;
   left: 60.37%;
-}
+} */
 .icon10 {
   position: absolute;
   top: 17px;
@@ -45,7 +43,7 @@
 .statesecondary9 {
   position: absolute;
   top: 935px;
-  left: 566px;
+  left: calc(50% - 77px);
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;
@@ -53,6 +51,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--padding-xs) var(--padding-5xl);
+  cursor: pointer;
   text-align: left;
   font-size: var(--button-text-size);
 }
@@ -60,7 +59,7 @@
 .glossary8 {
   position: absolute;
   top: 840px;
-  left: 238px;
+  left: 311px;
   display: inline-block;
   width: 805px;
 }
@@ -106,7 +105,7 @@
   width: 66px;
   cursor: pointer;
 }
-.our-services-main-page-child {
+/* .our-services-main-page-child {
   position: absolute;
   top: 61.5px;
   left: 797.5px;
@@ -114,14 +113,15 @@
   box-sizing: border-box;
   width: 58.01px;
   height: 1px;
-}
+} */
 .event-and-entertainment {
-  position: absolute;
-  top: 1090px;
-  left: 131px;
+  position:relative;
+  top: 52%;
+  
   font-size: var(--heading-1-size);
-  display: inline-block;
-  width: 1014px;
+  display:flex;
+text-align: center;
+  justify-content: center;
 }
 .service-8-child {
   position: absolute;
@@ -156,9 +156,9 @@
 }
 .service-8 {
   position: absolute;
-  top: 589px;
-  left: 954px;
-  width: 266px;
+  top: 28.5%;
+  left: 70%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
@@ -183,9 +183,9 @@
 }
 .service-7 {
   position: absolute;
-  top: 589px;
-  left: 656px;
-  width: 266px;
+  top: 28.5%;
+  left: 50%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
@@ -236,9 +236,9 @@
 }
 .service-6 {
   position: absolute;
-  top: 589px;
-  left: 358px;
-  width: 266px;
+  top: 28.5%;
+  left: 30%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
@@ -256,9 +256,9 @@
 }
 .service-5 {
   position: absolute;
-  top: 589px;
-  left: 60px;
-  width: 266px;
+  top:28.5%;
+  left:10%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
@@ -276,9 +276,9 @@
 }
 .service-4 {
   position: absolute;
-  top: 352px;
-  left: 954px;
-  width: 266px;
+  top: 17%;
+  left: 70%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
@@ -296,9 +296,9 @@
 }
 .service-3 {
   position: absolute;
-  top: 352px;
-  left: 656px;
-  width: 266px;
+  top: 17%;
+  left: 50%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
@@ -316,9 +316,9 @@
 }
 .service-2 {
   position: absolute;
-  top: 352px;
-  left: 358px;
-  width: 266px;
+  top: 17%;
+  left: 30%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
@@ -336,16 +336,16 @@
 }
 .service-1 {
   position: absolute;
-  top: 352px;
-  left: 60px;
-  width: 266px;
+  top: 17%;
+  left:10%;
+  width: 18%;
   height: 197px;
   cursor: pointer;
 }
 .event-hosting-and {
   position: absolute;
   top: 1284px;
-  left: 85px;
+  left: 145px;
   display: inline-block;
   width: 482px;
 }
@@ -354,22 +354,22 @@
 .music-and-bands {
   position: absolute;
   top: 1291px;
-  left: 713px;
+  left: 810px;
   display: inline-block;
   width: 482px;
 }
 .customised-entertainment-solut,
 .music-and-bands {
   top: 1497px;
-  left: 93px;
+  left: 114px;
 }
 .customised-entertainment-solut {
-  left: 713px;
+  left: 817px;
 }
 .event-hosting-icon1 {
   position: absolute;
   top: 1203px;
-  left: 291px;
+  left: 317px;
   width: 70px;
   height: 65px;
 }
@@ -383,7 +383,7 @@
 }
 .mcing-icon1 {
   top: 1200.5px;
-  left: 900.25px;
+  left: 1006px;
   width: 77.25px;
   height: 77px;
 }
@@ -438,10 +438,11 @@
 .group-div {
   position: absolute;
   top: 1645px;
-  left: 369px;
+  left: 452px;
   width: 536px;
   height: 182px;
   text-align: left;
+  justify-content: center;
   font-size: var(--heading-2-size);
   color: var(--color-darkkhaki);
 }
@@ -475,7 +476,7 @@
   top: 69.1%;
   right: 23.32%;
   bottom: 27.99%;
-  left: 72.46%;
+  left:1036px;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -515,9 +516,24 @@
   align-items: center;
   font-size: var(--heading-1-size);
 }
+.Services-Child {
+  position: absolute;
+  top:3%;
+  left:52.5%;
+  border-top: 1px solid var(--color-burlywood);
+  box-sizing: border-box;
+  width: 58.01px;
+  height: 1px;
+}
 .our-services-main-page {
   position: relative;
-  background: linear-gradient(59.63deg, #282828, #353535);
+  background-image: url(../images/OurservicesmainPage.png);
+  background-size: cover;
+  background-position: center;
+  object-fit: contain !important;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* background: linear-gradient(59.63deg, #282828, #353535); */
   width: 100%;
   height: 2060px;
   /* overflow: hidden; */

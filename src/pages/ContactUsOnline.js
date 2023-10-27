@@ -50,7 +50,8 @@ const ContactUsOnline = () => {
               <div className="auto-layout-vertical64">
                 <div className="auto-layout-horizontal64">
                   <div className="auto-layout-horizontal65">
-                    <div className="your-name2">Your name</div>
+                    
+                  <input type="text" id = "myInput" placeholder ="Your Name" className="your-name2"/>
                   </div>
                 </div>
               </div>
@@ -64,7 +65,7 @@ const ContactUsOnline = () => {
               <div className="auto-layout-vertical64">
                 <div className="auto-layout-horizontal64">
                   <div className="auto-layout-horizontal65">
-                    <div className="your-name2">Your what’s app number</div>
+                  <input type="text" id = "myInput" placeholder ="Enter Your Whatsapp No" className="your-name2"/>
                   </div>
                 </div>
               </div>

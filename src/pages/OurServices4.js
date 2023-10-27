@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices4.css";
+import "./OurServices3.css";
 
 const OurServices4 = () => {
   const navigate = useNavigate();
@@ -31,10 +32,11 @@ const OurServices4 = () => {
 
   return (
     <div className="our-services-4">
-      <img className="vector-icon8" alt="" src="/vector3.svg" />
-      <img className="vector-icon9" alt="" src="/vector2.svg" />
+     
+
+
       <img className="icon6" alt="" src="/2-1@2x.png" />
-      <div className="rectangle-parent1">
+      <div className="rectangle-parent2">
         <div className="frame-child9" />
         <div className="experiential-and-outdoor">
           Experiential and Outdoor Services
@@ -86,8 +88,8 @@ const OurServices4 = () => {
         <div className="ideal-for4">Ideal for</div>
         <div className="offerings4">Offerings:</div>
         <img className="benefit-icon4" alt="" src="/benefit-icon.svg" />
-        <div className="frame-child10" />
-        <div className="frame-child11" />
+        <div className="frame-child13" />
+        <div className="frame-child14" />
         <img className="ideal-icon4" alt="" src="/ideal-icon.svg" />
         <img
           className="outdoor-services-icon1"
@@ -130,3 +132,5 @@ const OurServices4 = () => {
 };
 
 export default OurServices4;
+// <img className="vector-icon8" alt="" src="/vector3.svg" />
+// <img className="vector-icon9" alt="" src="/vector2.svg" />

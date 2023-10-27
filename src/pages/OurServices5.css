@@ -26,7 +26,7 @@
   height: 40px;
   object-fit: cover;
 }
-.frame-child6 {
+/* .frame-child6 {
   position: absolute;
   top: 19px;
   left: 10px;
@@ -34,7 +34,7 @@
   background-color: var(--color-gray-800);
   width: 1180px;
   height: 683px;
-}
+} */
 .branding-and-strategic {
   position: absolute;
   top: 73px;
@@ -107,8 +107,8 @@
 .frame-child7,
 .frame-child8 {
   position: absolute;
-  top: 201px;
-  left: 627px;
+  top: 27%;
+  left: 53%;
   border-radius: var(--br-3xs);
   border: 1px solid var(--color-darkkhaki);
   box-sizing: border-box;
@@ -116,7 +116,7 @@
   height: 198px;
 }
 .frame-child8 {
-  top: 426px;
+  top: 60%;
 }
 .ideal-icon3 {
   position: absolute;
@@ -134,8 +134,8 @@
   height: 81px;
 }
 .frame-div {
-  top: 64px;
-  left: 40px;
+  top: 5%;
+  left: 10%;
   width: 1200px;
   height: 704px;
   text-align: left;

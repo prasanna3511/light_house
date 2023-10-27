@@ -55,7 +55,8 @@ const OurServicesMainPage = () => {
 
   return (
     <div className="our-services-main-page">
-    
+   
+   
 
 
       <img className="icon10" alt="" src="/2-1@2x.png" />
@@ -71,7 +72,10 @@ const OurServicesMainPage = () => {
         Home
       </div>
       <div className="rent-a-skill8">Rent- a- skill</div>
-      <div className="services8">Services</div>
+      <div className="services8">Services
+      </div>
+      <div className="Services-Child" />
+      
       <div className="contact8" onClick={onContactTextClick}>
         Contact
       </div>
@@ -226,6 +230,7 @@ const OurServicesMainPage = () => {
               journeys. Discover our array of services designed to meet your
               unique needs and aspirations, and let’s co-create paths to
               sustainable success and holistic development.
+            
             </div>
           </div>
         </div>
@@ -236,5 +241,6 @@ const OurServicesMainPage = () => {
 
 export default OurServicesMainPage;
   // <img className="vector-icon16" alt="" src="/vector5.svg" />
-      // <img className="vector-icon17" alt="" src="/vector6.svg" />
+      // <img className="vector-icon17" alt="" src="/vector6.svg" />  
       // <img className="vector-icon18" alt="" src="/vector7.svg" />
+      // <img className="vector-icon49" alt="" src="/vector14.svg" />

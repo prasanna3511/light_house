@@ -132,7 +132,7 @@ const ContactUs = () => {
               <div className="auto-layout-vertical129">
                 <div className="auto-layout-horizontal111">
                   <div className="auto-layout-horizontal112">
-                    <div className="your-name4">Your name</div>
+                  <input type="text" id = "myInput" placeholder ="Your  Name" className="your-name4"/>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices1.css";
+import"./OurServices3.css";
 
 const OurServices1 = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const OurServices1 = () => {
 
 
       <img className="icon9" alt="" src="/2-1@2x.png" />
-      <div className="rectangle-parent4">
+      <div className="rectangle-parent2">
         <div className="frame-child18" />
         <div className="personal-development-and">
           Personal Development and Holistic Growth

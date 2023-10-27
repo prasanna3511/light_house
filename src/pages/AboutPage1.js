@@ -1,10 +1,14 @@
-import { useCallback } from "react";
+import { useCallback,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutPage1.css";
 
 const AboutPage1 = () => {
   const navigate = useNavigate();
-
+  const [edit,setEdit]=useState(false);
+  const [text, setText] = useState("The only constant is change! And the only certainty is uncertainty.");
+  const [text1, setText1] = useState("At The Lighthouse, we guide people in navigating change, whatever phase of their life they are in.`Bringing the path of transformation to light is a holistic process that combines various tools and techniques to support individuals and organisations on their journey towards personal and professional growth. We are committed to facilitating both individuals and organisations in their transformational journeys, by making the complex simple and ‘eating the elephant piece by piece’. ");
+  const [text2, setText2] = useState(" Our goal is to shed light on the concept of awareness and transformation and to bring it to the forefront in a meaningful, and impactful way. Holistically. We collaborate to define the path of transformation and integration, making it more accessible and understandable to all stakeholders, connecting personal purpose to the company’s mission and vision.");
+  const [text3, setText3] = useState("Transformation in a business can involve significant challenges and requires understanding, careful planning, and execution. It may involve rethinking traditional approaches and adopting new technologies or practices, as well as adapting to new ways of communicating and working.");
   const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
@@ -28,6 +32,19 @@ const AboutPage1 = () => {
   const onReadMoreTextClick = useCallback(() => {
     navigate("/about-page11");
   }, [navigate]);
+
+    const handleEdit = ()=>{
+    setEdit(true);
+  }
+  
+const handleSave = ()=>{
+    setEdit(false);
+    setText(text);
+    setText1(text1);
+    setText2(text2);
+    setText3(text3);
+}
+
 
   return (
     <div className="about-page-1">
@@ -68,24 +85,14 @@ const AboutPage1 = () => {
       <div className="who-we-are-group">
         <div className="who-we-are1">Who We Are.</div>
         <div className="at-the-lighthouse-container">
-          <p className="bringing-the-path">{`At The Lighthouse, we guide people in navigating change, whatever phase of their life they are in. `}</p>
-          <p className="bringing-the-path">{`Bringing the path of transformation to light is a holistic process that combines various tools and techniques to support individuals and organisations on their journey towards personal and professional growth. We are committed to facilitating both individuals and organisations in their transformational journeys, by making the complex simple and ‘eating the elephant piece by piece’. `}</p>
+          <p className="bringing-the-path">{text1}</p>
           <p className="bringing-the-path">&nbsp;</p>
           <p className="bringing-the-path">
-            Our goal is to shed light on the concept of awareness and
-            transformation and to bring it to the forefront in a meaningful, and
-            impactful way. Holistically. We collaborate to define the path of
-            transformation and integration, making it more accessible and
-            understandable to all stakeholders, connecting personal purpose to
-            the company’s mission and vision.
+          {text2}
           </p>
           <p className="bringing-the-path">&nbsp;</p>
           <p className="bringing-the-path">
-            Transformation in a business can involve significant challenges and
-            requires understanding, careful planning, and execution. It may
-            involve rethinking traditional approaches and adopting new
-            technologies or practices, as well as adapting to new ways of
-            communicating and working.
+          {text3}
           </p>
           <p className="bringing-the-path">&nbsp;</p>
           <p className="bringing-the-path">{`And the bottom line is The Triple Bottom Line: People, Planet, and Profit. `}</p>
@@ -93,9 +100,35 @@ const AboutPage1 = () => {
         <div className="read-more" onClick={onReadMoreTextClick}>
           Read more.
         </div>
+         {edit ? (
+                      <>
+                      <input placeholder="Enter text"
+                      value={text}
+                      onChange={(e) => setText(e.target.value)} />
+                  
+
+                  <input placeholder="Enter text"
+                  value={text1}
+                  onChange={(e) => setText1(e.target.value)}/>
+              
+
+              <input placeholder="Enter text"
+                  value={text2}
+                  onChange={(e) => setText2(e.target.value)}/>
+
+              <input placeholder="Enter text"
+                  value={text3}
+                  onChange={(e) => setText3(e.target.value)}/>
+                  <button onClick={handleSave}>Save</button>
+                     </>
+                      ) : (
         <div className="the-only-constant1">
-          The only constant is change! And the only certainty is uncertainty.
+        {text}
+        
         </div>
+       
+          )}
+          <button onClick={handleEdit}>EDIT</button>
         <div className="lets-light-up6">Let’s light up our lives!</div>
         <div className="statesecondary20">
           <div className="button29">REad less</div>

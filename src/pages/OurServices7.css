@@ -26,7 +26,7 @@
   height: 40px;
   object-fit: cover;
 }
-.rectangle-div {
+/* .rectangle-div {
   position: absolute;
   top: 19px;
   left: 10px;
@@ -34,7 +34,7 @@
   background-color: var(--color-gray-800);
   width: 1180px;
   height: 683px;
-}
+} */
 .writing-and-editorial {
   position: absolute;
   top: 77px;
@@ -136,12 +136,12 @@
   height: 87.5px;
 }
 .rectangle-group {
-  top: 64px;
-  left: 40px;
-  width: 1200px;
-  height: 704px;
+  top: 7%;
+  left: 8%;
+  /* width: 80%;
+  height: 83%; */
   text-align: left;
-  font-size: var(--heading-2-size);
+  font-size: va r(--heading-2-size);
 }
 .frame-icon1 {
   position: relative;

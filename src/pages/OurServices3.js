@@ -31,11 +31,12 @@ const OurServices3 = () => {
 
   return (
     <div className="our-services-3">
-      <img className="vector-icon10" alt="" src="/vector3.svg" />
-      <img className="vector-icon11" alt="" src="/vector2.svg" />
+     
+
+
       <img className="icon7" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child12" />
+      <div className="frame-child12" />
         <div className="training-and-learning">
           Training and Learning Solutions
         </div>
@@ -119,3 +120,5 @@ const OurServices3 = () => {
 };
 
 export default OurServices3;
+//  <img className="vector-icon10" alt="" src="/vector3.svg" />
+//       <img className="vector-icon11" alt="" src="/vector2.svg" />

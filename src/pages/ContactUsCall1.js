@@ -45,12 +45,13 @@ const ContactUsCall1 = () => {
             </div>
             <img className="icon18" alt="" src="/icon3.svg" />
           </div>
+          
           <div className="auto-layout-horizontal44">
             <div className="auto-layout-vertical39">
               <div className="auto-layout-vertical40">
                 <div className="auto-layout-horizontal45">
                   <div className="auto-layout-horizontal46">
-                    <div className="your-name1">Your name</div>
+                  <input type="text" id = "myInput" placeholder ="Your  Name" className="your-name1"/>
                   </div>
                 </div>
               </div>
@@ -64,7 +65,7 @@ const ContactUsCall1 = () => {
               <div className="auto-layout-vertical40">
                 <div className="auto-layout-horizontal45">
                   <div className="auto-layout-horizontal46">
-                    <div className="your-name1">Your contact number</div>
+                  <input type="text" id = "myInput" placeholder ="Your  mobile No" className="your-name1"/>
                   </div>
                 </div>
               </div>

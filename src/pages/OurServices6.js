@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices6.css";
+import "./OurServices3.css";
 
 const OurServices6 = () => {
   const navigate = useNavigate();
@@ -75,8 +76,8 @@ const OurServices6 = () => {
         <div className="ideal-for2">Ideal for</div>
         <div className="offerings2">Offerings:</div>
         <img className="benefit-icon2" alt="" src="/benefit-icon.svg" />
-        <div className="frame-child4" />
-        <div className="frame-child5" />
+        <div className="frame-child13" />
+        <div className="frame-child14" />
         <img className="ideal-icon2" alt="" src="/ideal-icon.svg" />
         <div className="cultural-icon1">
           <img className="icon4" alt="" src="/icon1.svg" />

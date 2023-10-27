@@ -26,7 +26,7 @@
   height: 40px;
   object-fit: cover;
 }
-.frame-child {
+/* .frame-child {
   position: absolute;
   top: 19px;
   left: 10px;
@@ -34,7 +34,7 @@
   background-color: var(--color-gray-800);
   width: 1180px;
   height: 683px;
-}
+} */
 .comprehensive-organisational-t {
   position: absolute;
   top: 76px;
@@ -56,7 +56,7 @@
 .holistic-individual-and-container,
 .organisations-aspiring-to-container {
   position: absolute;
-  top: 300px;
+  top: 252px;
   left: 89px;
   font-size: var(--font-inherit);
   font-family: var(--font-inherit);
@@ -71,7 +71,7 @@
   height: 102px;
 }
 .organisations-aspiring-to-container {
-  top: 509px;
+  top: 490px;
   height: 81px;
 }
 .benefits {
@@ -87,13 +87,13 @@
   display: inline-block;
 }
 .ideal-for {
-  top: 461px;
+  top: 450px;
   left: 721px;
   width: 110px;
   height: 24px;
 }
 .offerings {
-  top: 235px;
+  top: 200px;
   left: 89px;
   width: 130px;
 }
@@ -120,7 +120,7 @@
 }
 .ideal-icon {
   position: absolute;
-  top: 450px;
+  top: 431px;
   left: 659px;
   width: 46px;
   height: 46px;
@@ -153,12 +153,12 @@
 }
 .rectangle-parent {
   position: absolute;
-  top: 64px;
-  left: 40px;
+  top: 8%;
+  left: 10%;
   width: 1200px;
   height: 704px;
   text-align: left;
-  font-size: var(--heading-2-size);
+  /* font-size: var(--heading-2-size); */
 }
 .frame-icon {
   position: relative;
