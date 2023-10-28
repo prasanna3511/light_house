@@ -16,10 +16,36 @@ const AboutPage11 = () => {
   );
   const [text3, setText3] = useState(
     "Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs."
-  );const [text4, setText4] = useState(
+  );
+  const [text4, setText4] = useState(
     "Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way.It’s not just about hiring talent; it’s about finding the right  expertise that aligns with your vision and goals, contributing to the holistic growth of your organisation. We can facilitate each step in the process of sustainable growth, on every level."
-  
-    );
+  );
+  const [text5, setText5] = useState(
+    "In our pursuit to guide you towards sustainable success, we focus on achieving goals in a manner that is environmentally viable, socially equitable, and economically feasible, ensuring lasting positive impacts and fostering resilience and well-b."
+  );
+  const [text6, setText6] = useState(
+    "In our pursuit to guide you towards sustainable success, we focus on achieving goals in a manner that is environmentally viable, socially equitable, and economically feasible, ensuring lasting positive impacts and fostering resilience and well-b."
+  );
+
+  const [text7, setText7] = useState("Vision");
+  const [text8, setText8] = useState(
+    "To be a beacon of transformation, inspiring holistic growth and sustainable success in an ever-evolving world. We aim to cultivate a collaborative ecosystem where individuals and organisations can thriv  together, embracing change, transcending competition, and fostering mutual empowerment and synergistic relationships for the abundance of all."
+  );
+  const [text9, setText9] = useState("Mission");
+  const [text10, setText10] = useState(
+    "To champion transformative journeys by delivering innovative solutions, insightful guidance, and tailored services. Our mission is to cultivate awareness and introspective growth, unravelling the complexities of transformation to create clear and understandable paths. Whether you are embarking on a comprehensive transformative journey or seeking specific services to address immediate needs, we offer the flexibility and expertise to meet you where you are. By intertwining personal purposes with organisational goals, we strive to create a harmonious alignment, ensuring individual aspirations and organisational objectives are in sync, fostering a collaborative environment conducive to mutual growth and sustainable success."
+  );
+  const [text11, setText11] = useState("Innovative Empowerment");
+  const [text12, setText12] = useState("Inclusive Understanding");
+  const [text13, setText13] = useState("Transparent Integrity");
+  const [text14, setText14] = useState("Reflective Responsibility");
+  const [text15, setText15] = useState("Active Listening");
+
+  const [text16, setText16] = useState(" We foster an environment that values innovative thinking an creativity, empowering everyone to exceed their potential.");
+  const [text17, setText17] = useState(" We embrace diverse thoughts and perspectives, recognising that accepting multiple truths is the foundation for meaningful change and true problem-solving");
+  const [text18, setText18] = useState("    We maintain honesty and transparency in every interaction, establishing a foundation of trust and mutual respect.");
+  const [text19, setText19] = useState("We encourage embracing responsibility for one’s actions and reflections, promoting learning and growth from every experience. We illuminate the path, but the choice to walk it and the responsibility to act are yours.");
+  const [text20, setText20] = useState("We prioritise empathetic and attentive listening, creating an environment where every voice is heard and valued. The harmony of ‘Listen’ and ‘Silent’ reminds us of the importance of being present and reflective in every conversation.");
 
   const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
@@ -59,7 +85,23 @@ const AboutPage11 = () => {
     setText1(text1);
     setText2(text2);
     setText3(text3);
-    setText3(text4);
+    setText4(text4);
+    setText5(text5);
+    setText6(text6);
+    setText7(text7);
+    setText8(text8);
+    setText9(text9);
+      setText10(text10);
+    setText11(text11);
+    setText12(text12);
+    setText13(text13);
+    setText14(text14);
+    setText15(text15);
+    setText16(text16);  
+    setText11(text17);
+      setText11(text18); 
+    setText11(text19); 
+    setText11(text20);
   };
   return (
     <div className="about-page-11">
@@ -90,12 +132,13 @@ const AboutPage11 = () => {
       </div>
       <div className="contact9" onClick={onContactTextClick}>
         Contact
-        </div>
-        <div className="about-page-11-child" />
-        <div className="who-we-are-parent">
+      </div>
+      <div className="about-page-11-child" />
+      <div className="who-we-are-parent">
         <p className="the-only-constant">{` The only constant is change! And the only certainty is. `}</p>
         {edit && (
-          <input className="the-only-constant-textfield"
+          <input
+            className="the-only-constant-textfield"
             placeholder="Enter text"
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -103,49 +146,52 @@ const AboutPage11 = () => {
         )}
         <div className="who-we-are">Who We Are.</div>
         <div className="and-the-bottom-container">
-
           <p className="and-the-bottom">{` And the bottom line is The Triple Bottom Line: People, Planet, and Profit. `}</p>
           {edit && (
-            <input className="the-only-constant-textfield1"
+            <input
+              className="the-only-constant-textfield1"
               placeholder="Enter text"
               value={text1}
               onChange={(e) => setText1(e.target.value)}
             />
           )}
           <p className="and-the-bottom">&nbsp;</p>
-          <p className="and-the-bottom">{`At The Lighthouse, we provide various services to facilitate that journey . Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs.`}
-         </p>
-         {edit && (
-          <input className="the-only-constant-textfield2"
-            placeholder="Enter text"
-            value={text2}
-            onChange={(e) => setText2(e.target.value)}
-          />
-        )}
-          <p className="and-the-bottom">{`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}
-          {`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}</p>
+          <p className="and-the-bottom">
+            {`At The Lighthouse, we provide various services to facilitate that journey . Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs.`}
+          </p>
           {edit && (
-            <input className="the-only-constant-textfield3"
+            <input
+              className="the-only-constant-textfield2"
+              placeholder="Enter text"
+              value={text2}
+              onChange={(e) => setText2(e.target.value)}
+            />
+          )}
+          <p className="and-the-bottom">
+            {`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}
+            {`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}
+          </p>
+          {edit && (
+            <input
+              className="the-only-constant-textfield3"
               placeholder="Enter text"
               value={text3}
               onChange={(e) => setText3(e.target.value)}
             />
           )}
           <p className="and-the-bottom">{`Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way. `}</p>
-          
-        
-            It’s not just about hiring talent; it’s about finding the right
-            expertise that aligns with your vision and goals, contributing to
-            the holistic growth of your organisation. We can facilitate each
-            step in the process of sustainable growth, on every level.
-            {edit && (
-              <input className="the-only-constant-textfield3"
-                placeholder="Enter text"
-                value={text4}
-                onChange={(e) => setText4(e.target.value)}
-              />
-            )}
-
+          It’s not just about hiring talent; it’s about finding the right
+          expertise that aligns with your vision and goals, contributing to the
+          holistic growth of your organisation. We can facilitate each step in
+          the process of sustainable growth, on every level.
+          {edit && (
+            <input
+              className="the-only-constant-textfield3"
+              placeholder="Enter text"
+              value={text4}
+              onChange={(e) => setText4(e.target.value)}
+            />
+          )}
           <p className="and-the-bottom">
             In our pursuit to guide you towards sustainable success, we focus on
             achieving goals in a manner that is environmentally viable, socially
@@ -153,36 +199,40 @@ const AboutPage11 = () => {
             impacts and fostering resilience and well-being for individuals,
             communities, and the planet.
           </p>
+          {edit && (
+            <input
+              className="the-only-constant-textfield3"
+              placeholder="Enter text"
+              value={text5}
+              onChange={(e) => setText5(e.target.value)}
+            />
+          )}
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
             We believe in holistic development, an approach that considers the
             whole person and organisation, addressing their physical, mental,
             emotional, social, and introspective dimensions. It’s about
             promoting balance, harmony, and well-being in every area of life.
+            <p className="and-the-bottom">{`We guide individuals and organisations to empower themselves to evolve and thrive in all dimensions, aligning their actions and decisions with their values, purpose, and the greater good. `}</p>
+            {edit && (
+              <input
+                className="the-only-constant-textfield3"
+                placeholder="Enter text"
+                value={text6}
+                onChange={(e) => setText6(e.target.value)}
+              />
+            )}
           </p>
-          <p className="and-the-bottom">{`We guide individuals and organisations to empower themselves to evolve and thrive in all dimensions, aligning their actions and decisions with their values, purpose, and the greater good. `}</p>
-          <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">Let’s light up our lives!</p>
         </div>
-        {edit ? (
-          <>
-          
 
-       
-           
-            <button onClick={handleSave}>Save</button>
-          </>
-        ) : (
-          <></>
-        )}
         <button onClick={handleEdit}>EDIT</button>
         <div className="read-less" onClick={onReadLessTextClick}>
           Read less.
         </div>
       </div>
       <></>
-    
-    
+
       <div className="about-page-11-item" />
       <div className="about-page-11-inner" />
       <div className="our-vision-mission">Our Vision, Mission, and Values</div>
@@ -193,6 +243,14 @@ const AboutPage11 = () => {
         together, embracing change, transcending competition, and fostering
         mutual empowerment and synergistic relationships for the abundance of
         all.
+        {edit && (
+          <input
+            className="the-only-constant-textfield3"
+            placeholder="Enter text"
+            value={text8}
+            onChange={(e) => setText8(e.target.value)}
+          />
+        )}
       </div>
       <div className="embark-on-your-container">
         <p className="and-the-bottom">{`Embark on your transformative journey with The Lighthouse. `}</p>
@@ -210,8 +268,30 @@ const AboutPage11 = () => {
       <div className="statesecondary16">
         <div className="button12">co- creativise</div>
       </div>
-      <div className="vision">Vision</div>
-      <div className="mission">Mission</div>
+
+      <div className="vision">
+        Vision
+        {edit && (
+          <input
+            className="the-only-constant-textfield7"
+            placeholder="Enter text"
+            value={text7}
+            onChange={(e) => setText7(e.target.value)}
+          />
+        )}
+      </div>
+
+      <div className="mission">
+        Mission
+        {edit && (
+          <input
+            className="the-only-constant-textfield7"
+            placeholder="Enter text"
+            value={text9}
+            onChange={(e) => setText9(e.target.value)}
+          />
+        )}
+      </div>
       <div className="to-champion-transformative">
         To champion transformative journeys by delivering innovative solutions,
         insightful guidance, and tailored services. Our mission is to cultivate
@@ -224,6 +304,14 @@ const AboutPage11 = () => {
         ensuring individual aspirations and organisational objectives are in
         sync, fostering a collaborative environment conducive to mutual growth
         and sustainable success.
+        {edit && (
+          <input
+            className="the-only-constant-textfield7"
+            placeholder="Enter text"
+            value={text10}
+            onChange={(e) => setText10(e.target.value)}
+          />
+        )}
       </div>
       <div className="values">Values</div>
       <div className="our-values-are">
@@ -234,63 +322,160 @@ const AboutPage11 = () => {
       <div className="rectangle-parent5">
         <div className="group-item" />
         <div className="innovative-empowerment-we-container">
-          <p className="innovative-empowerment">Innovative Empowerment</p>
+          <p className="innovative-empowerment">
+            Innovative Empowerment
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text11}
+                onChange={(e) => setText11(e.target.value)}
+              />
+            )}
+          </p>
           <p className="innovative-empowerment">&nbsp;</p>
           <p className="we-foster-an">
             We foster an environment that values innovative thinking and
             creativity, empowering everyone to exceed their potential.
-          </p>
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text16}
+                onChange={(e) => setText16(e.target.value)}
+              />
+            )}
+            </p>
         </div>
       </div>
       <div className="rectangle-parent6">
         <div className="group-item" />
         <div className="inclusive-understanding-we-container">
-          <p className="innovative-empowerment">Inclusive Understanding</p>
+          <p className="innovative-empowerment">
+            Inclusive Understanding
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text12}
+                onChange={(e) => setText12(e.target.value)}
+              />
+            )}
+          </p>
           <p className="innovative-empowerment">&nbsp;</p>
           <p className="we-foster-an">
             We embrace diverse thoughts and perspectives, recognising that
             accepting multiple truths is the foundation for meaningful change
             and true problem-solving.
-          </p>
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text17}
+                onChange={(e) => setText17(e.target.value)}
+              />
+            )}
+            </p>
         </div>
       </div>
       <div className="rectangle-parent7">
         <div className="group-item" />
         <div className="transparent-integrity-we-container">
-          <p className="transparent-integrity">Transparent Integrity</p>
+          <p className="transparent-integrity">
+            Transparent Integrity
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text13}
+                onChange={(e) => setText13(e.target.value)}
+              />
+            )}
+          </p>
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
             We maintain honesty and transparency in every interaction,
             establishing a foundation of trust and mutual respect.
-          </p>
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text18}
+                onChange={(e) => setText18(e.target.value)}
+              />
+            )}
+            </p>
         </div>
       </div>
       <div className="rectangle-parent8">
         <div className="group-item" />
         <div className="reflective-responsibility-we-container">
-          <p className="transparent-integrity">Reflective Responsibility</p>
+          <p className="transparent-integrity">
+            Reflective Responsibility
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text14}
+                onChange={(e) => setText14(e.target.value)}
+              />
+            )}
+          </p>
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
             We encourage embracing responsibility for one’s actions and
             reflections, promoting learning and growth from every experience. We
             illuminate the path, but the choice to walk it and the
             responsibility to act are yours.
-          </p>
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text19}
+                onChange={(e) => setText19(e.target.value)}
+              />
+            )}
+            </p>
         </div>
       </div>
       <div className="rectangle-parent9">
         <div className="group-item" />
         <div className="active-listening-we-container">
-          <p className="transparent-integrity">Active Listening</p>
+          <p className="transparent-integrity">
+            Active Listening
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text15}
+                onChange={(e) => setText15(e.target.value)}
+              />
+            )}
+          </p>
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
             We prioritise empathetic and attentive listening, creating an
             environment where every voice is heard and valued. The harmony of
             ‘Listen’ and ‘Silent’ reminds us of the importance of being present
             and reflective in every conversation.
-          </p>
+         
+            {edit && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text20}
+                onChange={(e) => setText20(e.target.value)}
+              />
+            )}   </p>
         </div>
       </div>
+      {edit ? (
+        <>
+          <button onClick={handleSave}>Save</button>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
@@ -389,8 +574,8 @@ export default AboutPage11;
 //         <div className="and-the-bottom-container">
 //           <p className="and-the-bottom">{` And the bottom line is The Triple Bottom Line: People, Planet, and Profit. `}</p>
 //           <p className="and-the-bottom">&nbsp;</p>
-          // <p className="and-the-bottom">{`At The Lighthouse, we provide various services to facilitate that journey . `}</p>
-          // <p className="and-the-bottom">{`Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs. `}</p>
+// <p className="and-the-bottom">{`At The Lighthouse, we provide various services to facilitate that journey . `}</p>
+// <p className="and-the-bottom">{`Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs. `}</p>
 //           <p className="and-the-bottom">{`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}</p>
 //           <p className="and-the-bottom">{`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}</p>
 //           <p className="and-the-bottom">{`Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way. `}</p>
