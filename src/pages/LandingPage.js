@@ -86,44 +86,55 @@ const handleSave3 = ()=>{
         <div className="the-lighthouse-container">
         <p className="the-lighthouse-">&nbsp;</p>
         
-          {edit ? (
-            <>
-            <input  placeholder="Enter text"
-            value={text1}
-            onChange={(e) => setText1(e.target.value)}
-          />
-          <input  placeholder="Enter text"
-          value={text3}
-          onChange={(e) => setText3(e.target.value)}
-
-        />
-       <input placeholder="Enter text"
-                      value={text}
-                      onChange={(e) => setText(e.target.value)}
-                      />
-        <button onClick={handleSave}>Save</button> 
+        {edit ? (
+          <>
+       
+        
+     
+      <button className="savebutton" onClick={handleSave} >Save</button> 
            </>
             ) :(
-              <p className="the-lighthouse-">
+              <></>
+               
+          )}
+          <button className="editbutton" onClick={handleEdit}>EDIT</button>
+          <p className="the-lighthouse-">&nbsp;</p>
+          <p className="the-lighthouse-">
              {text1.split('\n').map((item, key) => (
                 <span key={key}>
                   {item}
                   <br />
                 </span>
-              ))}</p> 
-          )}
-          <button onClick={handleEdit}>EDIT</button>
-          <p className="the-lighthouse-">&nbsp;</p>
-          
-          
+              ))}
+              </p>
+          { edit && (
+            <input  placeholder="Enter text"
+            value={text1}
+            onChange={(e) => setText1(e.target.value)}/>
+            )}
 
-          <p className="the-lighthouse-">{text3}</p>
+          <p className="the-lighthouse-">{text3}
+          { edit&&(
+
+         
+          <input  placeholder="Enter text"
+          value={text3}
+          onChange={(e) => setText3(e.target.value)}
+        />
+          )}
+        </p>
          
           
           <p className="the-lighthouse-">&nbsp;</p>
          
           <p className="the-lighthouse-">
            {text}
+         {  edit &&(
+           <input placeholder="Enter text"
+                      value={text}
+                      onChange={(e) => setText(e.target.value)}
+                      />
+         )}
           </p>
         
          

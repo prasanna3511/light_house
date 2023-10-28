@@ -1,14 +1,25 @@
-import { useCallback,useState } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutPage11.css";
 
 const AboutPage11 = () => {
   const navigate = useNavigate();
-  const [edit,setEdit]=useState(false);
-  const [text, setText] = useState("The only constant is change! And the only certainty is uncertainty.");
-  const [text1, setText1] = useState(" And the bottom line is The Triple Bottom Line: People, Planet, and Profit.");
-  const [text2, setText2] = useState("At The Lighthouse, we provide various services to facilitate that journey.");
-  const [text3, setText3] = useState("Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs.");
+  const [edit, setEdit] = useState(false);
+  const [text, setText] = useState(
+    "The only constant is change! And the only certainty is uncertainty."
+  );
+  const [text1, setText1] = useState(
+    " And the bottom line is The Triple Bottom Line: People, Planet, and Profit."
+  );
+  const [text2, setText2] = useState(
+    "At The Lighthouse, we provide various services to facilitate that journey. Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs.   "
+  );
+  const [text3, setText3] = useState(
+    "Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs."
+  );const [text4, setText4] = useState(
+    "Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way.It’s not just about hiring talent; it’s about finding the right  expertise that aligns with your vision and goals, contributing to the holistic growth of your organisation. We can facilitate each step in the process of sustainable growth, on every level."
+  
+    );
 
   const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
@@ -38,20 +49,20 @@ const AboutPage11 = () => {
     navigate("/contact-us");
   }, [navigate]);
 
-  const handleEdit = ()=>{
+  const handleEdit = () => {
     setEdit(true);
-  }
+  };
 
-const handleSave = ()=>{
+  const handleSave = () => {
     setEdit(false);
     setText(text);
     setText1(text1);
     setText2(text2);
     setText3(text3);
-}
+    setText3(text4);
+  };
   return (
     <div className="about-page-11">
-
       <div
         className="statesecondary11"
         onClick={onStateSecondaryContainerClick}
@@ -79,25 +90,62 @@ const handleSave = ()=>{
       </div>
       <div className="contact9" onClick={onContactTextClick}>
         Contact
-      </div>
-      <div className="about-page-11-child" />
-      <div className="who-we-are-parent">
+        </div>
+        <div className="about-page-11-child" />
+        <div className="who-we-are-parent">
+        <p className="the-only-constant">{` The only constant is change! And the only certainty is. `}</p>
+        {edit && (
+          <input className="the-only-constant-textfield"
+            placeholder="Enter text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        )}
         <div className="who-we-are">Who We Are.</div>
         <div className="and-the-bottom-container">
+
           <p className="and-the-bottom">{` And the bottom line is The Triple Bottom Line: People, Planet, and Profit. `}</p>
+          {edit && (
+            <input className="the-only-constant-textfield1"
+              placeholder="Enter text"
+              value={text1}
+              onChange={(e) => setText1(e.target.value)}
+            />
+          )}
           <p className="and-the-bottom">&nbsp;</p>
-          <p className="and-the-bottom">{`At The Lighthouse, we provide various services to facilitate that journey . `}</p>
-          <p className="and-the-bottom">{`Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs. `}</p>
-          <p className="and-the-bottom">{`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}</p>
-          <p className="and-the-bottom">{`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}</p>
+          <p className="and-the-bottom">{`At The Lighthouse, we provide various services to facilitate that journey . Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs.`}
+         </p>
+         {edit && (
+          <input className="the-only-constant-textfield2"
+            placeholder="Enter text"
+            value={text2}
+            onChange={(e) => setText2(e.target.value)}
+          />
+        )}
+          <p className="and-the-bottom">{`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}
+          {`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}</p>
+          {edit && (
+            <input className="the-only-constant-textfield3"
+              placeholder="Enter text"
+              value={text3}
+              onChange={(e) => setText3(e.target.value)}
+            />
+          )}
           <p className="and-the-bottom">{`Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way. `}</p>
-          <p className="and-the-bottom">
+          
+        
             It’s not just about hiring talent; it’s about finding the right
             expertise that aligns with your vision and goals, contributing to
             the holistic growth of your organisation. We can facilitate each
             step in the process of sustainable growth, on every level.
-          </p>
-          <p className="and-the-bottom">&nbsp;</p>
+            {edit && (
+              <input className="the-only-constant-textfield3"
+                placeholder="Enter text"
+                value={text4}
+                onChange={(e) => setText4(e.target.value)}
+              />
+            )}
+
           <p className="and-the-bottom">
             In our pursuit to guide you towards sustainable success, we focus on
             achieving goals in a manner that is environmentally viable, socially
@@ -118,36 +166,23 @@ const handleSave = ()=>{
         </div>
         {edit ? (
           <>
-          <input placeholder="Enter text"
-          value={text}
-          onChange={(e) => setText(e.target.value)} />
+          
 
-          <input placeholder="Enter text"
-          value={text1}
-          onChange={(e) => setText1(e.target.value)} />
-
-          <input placeholder="Enter text"
-          value={text2}
-          onChange={(e) => setText2(e.target.value)} />
-
-          <input placeholder="Enter text"
-          value={text3}
-          onChange={(e) => setText3(e.target.value)} />
-          <button onClick={handleSave}>Save</button>
+       
+           
+            <button onClick={handleSave}>Save</button>
           </>
-          ) : (
-
-        <div className="the-only-constant">
-          {text}
-
-        </div>
+        ) : (
+          <></>
         )}
         <button onClick={handleEdit}>EDIT</button>
         <div className="read-less" onClick={onReadLessTextClick}>
           Read less.
         </div>
       </div>
-
+      <></>
+    
+    
       <div className="about-page-11-item" />
       <div className="about-page-11-inner" />
       <div className="our-vision-mission">Our Vision, Mission, and Values</div>
@@ -261,6 +296,7 @@ const handleSave = ()=>{
 };
 
 export default AboutPage11;
+
 // <img className="vector-icon19" alt="" src="/vector8.svg" />
 //       <img className="vector-icon20" alt="" src="/vector9.svg" />
 // <img className="vector-icon21" alt="" src="/vector10.svg" />
@@ -353,8 +389,8 @@ export default AboutPage11;
 //         <div className="and-the-bottom-container">
 //           <p className="and-the-bottom">{` And the bottom line is The Triple Bottom Line: People, Planet, and Profit. `}</p>
 //           <p className="and-the-bottom">&nbsp;</p>
-//           <p className="and-the-bottom">{`At The Lighthouse, we provide various services to facilitate that journey . `}</p>
-//           <p className="and-the-bottom">{`Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs. `}</p>
+          // <p className="and-the-bottom">{`At The Lighthouse, we provide various services to facilitate that journey . `}</p>
+          // <p className="and-the-bottom">{`Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs. `}</p>
 //           <p className="and-the-bottom">{`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}</p>
 //           <p className="and-the-bottom">{`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}</p>
 //           <p className="and-the-bottom">{`Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way. `}</p>
