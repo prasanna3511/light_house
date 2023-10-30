@@ -12,6 +12,9 @@ const ContactUsCall1 = () => {
   const onHomeTextClick = useCallback(() => {
     navigate("/landing-page");
   }, [navigate]);
+  const onServicesText1Click = useCallback(() => {
+    navigate("/our-services-main-page");
+  }, [navigate]);
 
   return (
     <div className="contact-us-call1">
@@ -85,7 +88,7 @@ const ContactUsCall1 = () => {
       <div className="home11" onClick={onHomeTextClick}>
         Home
       </div>
-      <div className="services12">Services</div>
+      <div className="services12" onClick={onServicesText1Click}>Services</div>
       <div className="contact11">Contact</div>
       <div className="contact-us-call-inner" />
       <img className="vector-icon31" alt="" src="/vector14.svg" />

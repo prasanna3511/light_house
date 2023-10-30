@@ -12,7 +12,9 @@ const ContactUsCall = () => {
   const onHomeTextClick = useCallback(() => {
     navigate("/landing-page");
   }, [navigate]);
-
+  const onServicesText1Click = useCallback(() => {
+    navigate("/our-services-main-page");
+  }, [navigate]);
   return (
     <div className="contact-us-call">
       <img className="icon13" alt="" src="/2-1@2x.png" />
@@ -112,7 +114,7 @@ const ContactUsCall = () => {
       <div className="home10" onClick={onHomeTextClick}>
         Home
       </div>
-      <div className="services10">Services</div>
+      <div className="services10"onClick={onServicesText1Click}>Services</div>
       <div className="contact10">Contact</div>
       <div className="contact-us-call-child" />
       <div className="faqs">FAQs?</div>

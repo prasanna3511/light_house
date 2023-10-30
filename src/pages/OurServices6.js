@@ -1,11 +1,15 @@
-import { useCallback } from "react";
+import { useCallback,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices6.css";
 import "./OurServices3.css";
 
 const OurServices6 = () => {
   const navigate = useNavigate();
-
+  const [edit, setEdit] = useState(false);
+  const [text, setText] = useState(" Translation Excellence: Dutch-English-Dutch, English-German-English, German-Dutch-German, and more, for seamless communication across borders..");
+  const [text1, setText1] = useState("Content Marketing Mastery: Amplify your presence with tailored and strategic content solutions..");
+  const [text2, setText2] = useState("Communicate seamlessly and foster mutual understanding and connection across cultures and languages..");
+ const [text3, setText3] = useState("Individuals and organisations seeking to enhance their linguistic capabilities and cultural understanding.");
   const onAutoLayoutVerticalClick = useCallback(() => {
     navigate("/our-services5");
   }, [navigate]);
@@ -30,12 +34,24 @@ const OurServices6 = () => {
     navigate("/contact-us");
   }, [navigate]);
 
+  const handleEdit = () => {
+    setEdit(true);
+  };
+
+  const handleSave = () => {
+    setEdit(false);
+  setEdit(false);
+  setText(text);
+  setText(text1);
+  setText(text2);
+  setText(text3);
+  }
   return (
     <div className="our-services-6">
       <img className="vector-icon4" alt="" src="/vector.svg" />
       <img className="vector-icon5" alt="" src="/vector2.svg" />
       <img className="icon3" alt="" src="/2-1@2x.png" />
-      <div className="rectangle-container">
+      <div className="rectangle-parent2">
         <div className="frame-child3" />
         <div className="language-and-cultural">
           Language and Cultural Services
@@ -43,31 +59,50 @@ const OurServices6 = () => {
         <div className="translation-excellence-dutch-container">
           <ul className="translation-excellence-dutch-">
             <li className="communicate-seamlessly-and">
-              Translation Excellence: Dutch-English-Dutch,
-              English-German-English, German-Dutch-German, and more, for
-              seamless communication across borders.
+            {text}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text}
+                         onChange={(e) => setText(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
           <p className="blank-line3">&nbsp;</p>
           <ul className="translation-excellence-dutch-">
             <li>
-              English Language Mastery: Bespoke lessons to meet your
-              communicative goals and needs.
+            {text1}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text1}
+                         onChange={(e) => setText1(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
         </div>
         <div className="communicate-seamlessly-and-container">
           <ul className="translation-excellence-dutch-">
             <li className="communicate-seamlessly-and">
-              Communicate seamlessly and foster mutual understanding and
-              connection across cultures and languages.
+            {text2}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text2}
+                         onChange={(e) => setText2(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
         </div>
         <div className="individuals-and-organisations-container">
           <ul className="translation-excellence-dutch-">
-            Individuals and organisations seeking to enhance their linguistic
-            capabilities and cultural understanding.
+          {text3}
+          {  edit &&(
+            <input placeholder="Enter text"
+                       value={text3}
+                       onChange={(e) => setText(e.target.value)}
+                       />
+          )}
           </ul>
         </div>
         <div className="benefits4">
@@ -86,15 +121,15 @@ const OurServices6 = () => {
         </div>
       </div>
       <div
-        className="auto-layout-vertical1"
+        className="auto-layout-vertical4"
         onClick={onAutoLayoutVerticalClick}
       >
-        <div className="auto-layout-horizontal3">
+        <div className="auto-layout-horizontal9">
           <img className="frame-icon3" alt="" src="/frame1.svg" />
         </div>
       </div>
       <div
-        className="auto-layout-horizontal4"
+        className="auto-layout-horizontal10"
         onClick={onAutoLayoutHorizontal1Click}
       >
         <img className="frame-icon3" alt="" src="/frame2.svg" />
@@ -115,7 +150,15 @@ const OurServices6 = () => {
         Contact
       </div>
       <div className="our-services-6-child" />
-    </div>
+      {edit ? (
+        <>
+          <button onClick={handleSave}>Save</button>
+        </>
+      ) : (
+        <></>
+      )}
+      <button onClick={handleEdit}>EDIT</button>
+      </div>
   );
 };
 

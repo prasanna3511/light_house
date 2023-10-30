@@ -1,10 +1,16 @@
-import { useCallback } from "react";
+import { useCallback,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices5.css";
+import "./OurServices3.css";
 
 const OurServices5 = () => {
   const navigate = useNavigate();
-
+  const [edit, setEdit] = useState(false);
+  const [text, setText] = useState(" Strategic Branding: Cohesive and impactful branding solutions to strengthen your identity.");
+  const [text1, setText1] = useState("Content Marketing Mastery: Amplify your presence with tailored and strategic content solutions..");
+  const [text2, setText2] = useState(" Social Media Management: Effective and resonant connection with your audience..");
+ const [text3, setText3] = useState(" Strengthen your brand identity and communicate your message effectively and strategically with our comprehensive solutions..");
+ const [text4, setText4] = useState("Brands and organisations looking to enhance their identity, presence, and communication strategies..");
   const onAutoLayoutVerticalClick = useCallback(() => {
     navigate("/our-services4");
   }, [navigate]);
@@ -32,13 +38,26 @@ const OurServices5 = () => {
   const onLineClick = useCallback(() => {
     navigate("/our-services-main-page");
   }, [navigate]);
+ 
+  const handleEdit = () => {
+    setEdit(true);
+  };
 
+  const handleSave = () => {
+    setEdit(false);
+  setEdit(false);
+  setText(text);
+  setText(text1);
+  setText(text2);
+  setText(text3);
+  setText(text4);
+}
   return (
     <div className="our-services-5">
-      <img className="vector-icon6" alt="" src="/vector3.svg" />
-      <img className="vector-icon7" alt="" src="/vector2.svg" />
+    
+      
       <img className="icon5" alt="" src="/2-1@2x.png" />
-      <div className="frame-div">
+      <div className="rectangle-parent2">
         <div className="frame-child6" />
         <div className="branding-and-strategic">
           Branding and Strategic Communication
@@ -46,38 +65,63 @@ const OurServices5 = () => {
         <div className="strategic-branding-cohesive-container">
           <ul className="strategic-branding-cohesive-a">
             <li className="strategic-branding-cohesive">
-              Strategic Branding: Cohesive and impactful branding solutions to
-              strengthen your identity.
+            {text}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text}
+                         onChange={(e) => setText(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
           <p className="blank-line4">&nbsp;</p>
           <ul className="strategic-branding-cohesive-a">
             <li className="strategic-branding-cohesive">
-              Content Marketing Mastery: Amplify your presence with tailored and
-              strategic content solutions.
+            {text1}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text1}
+                         onChange={(e) => setText1(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
           <p className="blank-line4">&nbsp;</p>
           <ul className="strategic-branding-cohesive-a">
             <li>
-              Social Media Management: Effective and resonant connection with
-              your audience.
+            {text2}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text2}
+                         onChange={(e) => setText2(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
         </div>
         <div className="strengthen-your-brand-container">
           <ul className="strategic-branding-cohesive-a">
             <li className="strategic-branding-cohesive">
-              Strengthen your brand identity and communicate your message
-              effectively and strategically with our comprehensive solutions.
+            {text3}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text3}
+                         onChange={(e) => setText3(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
         </div>
         <div className="brands-and-organisations-container">
           <ul className="strategic-branding-cohesive-a">
             <li className="strategic-branding-cohesive">
-              Brands and organisations looking to enhance their identity,
-              presence, and communication strategies.
+               {text4}
+              {  edit &&(
+                <input placeholder="Enter text"
+                           value={text4}
+                           onChange={(e) => setText4(e.target.value)}
+                           />
+              )}
             </li>
           </ul>
           <p className="blank-line4">&nbsp;</p>
@@ -94,15 +138,15 @@ const OurServices5 = () => {
         <img className="branding-icon1" alt="" src="/branding-icon1.svg" />
       </div>
       <div
-        className="auto-layout-vertical2"
+        className="auto-layout-vertical4"
         onClick={onAutoLayoutVerticalClick}
       >
-        <div className="auto-layout-horizontal5">
+        <div className="auto-layout-horizontal9">
           <img className="frame-icon5" alt="" src="/frame1.svg" />
         </div>
       </div>
       <div
-        className="auto-layout-horizontal6"
+        className="auto-layout-horizontal10"
         onClick={onAutoLayoutHorizontal1Click}
       >
         <img className="frame-icon5" alt="" src="/frame2.svg" />
@@ -123,8 +167,17 @@ const OurServices5 = () => {
         Contact
       </div>
       <div className="our-services-5-child" onClick={onLineClick} />
-    </div>
+      {edit ? (
+        <>
+          <button onClick={handleSave}>Save</button>
+        </>
+      ) : (
+        <></>
+      )}
+      <button onClick={handleEdit}>EDIT</button>
+      </div>
   );
 };
 
 export default OurServices5;
+// <img className="vector-icon7" alt="" src="/vector2.svg" />

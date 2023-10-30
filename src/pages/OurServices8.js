@@ -1,11 +1,16 @@
-import { useCallback } from "react";
+import { useCallback,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices8.css";
-
+import "./OurServices3.css";
 const OurServices8 = () => {
   const navigate = useNavigate();
-
-  const onStateSecondaryContainerClick = useCallback(() => {
+  const [edit, setEdit] = useState(false);
+  const [text, setText] = useState("Holistic Individual and Team Empowerment: Unlock the full potential of every member through a deep exploration of individual motivations, passions, and purposes, fostering synergistic teams and holistic growth.");
+  const [text1, setText1] = useState("Sustainable Role Alignment and Enhancement: Optimise individual contributions and team dynamics through strategic role alignment, tailored trainings, and profile creation, ensuring sustainable success and development.");
+  const [text2, setText2] = useState("Cultural Evolution for a Better Tomorrow: Shape a resilient and positive organisational culture through comprehensive gap, mapping, best practice sharing, and transformative habit creation, contributing to a better, more equitable world..");
+ const [text3, setText3] = useState("Embark on a transformative journey with our comprehensive solutions, enhancing organisational culture, optimising performances, and fostering an environment conducive to continuous growth and holistic development.");
+ const [text4, setText4] = useState("Organisations aspiring to transformative and sustainable growth, seeking to strengthen their culture, optimise HR practices, and enhance employee experience and development in alignment with a vision for a better world.s.");
+ const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
 
@@ -28,13 +33,24 @@ const OurServices8 = () => {
   const onContactTextClick = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
+  const handleEdit = () => {
+    setEdit(true);
+  };
 
+  const handleSave = () => {
+    setEdit(false);
+  setEdit(false);
+  setText(text);
+  setText(text1);
+  setText(text2);
+  setText(text3);
+  }
   return (
     <div className="our-services-8">
       <img className="vector-icon" alt="" src="/vector.svg" />
       <img className="vector-icon1" alt="" src="/vector1.svg" />
       <img className="icon1" alt="" src="/2-1@2x.png" />
-      <div className="rectangle-parent">
+      <div className="rectangle-parent2">
         <div className="frame-child" />
         <div className="comprehensive-organisational-t">
           Comprehensive Organisational Transformation and HR Solutions
@@ -42,48 +58,63 @@ const OurServices8 = () => {
         <div className="holistic-individual-and-container">
           <ul className="holistic-individual-and-team-e">
             <li className="holistic-individual-and">
-              Holistic Individual and Team Empowerment: Unlock the full
-              potential of every member through a deep exploration of individual
-              motivations, passions, and purposes, fostering synergistic teams
-              and holistic growth.
+            {text}
             </li>
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text}
+                         onChange={(e) => setText(e.target.value)}
+                         />
+            )}
           </ul>
           <p className="blank-line">&nbsp;</p>
           <ul className="holistic-individual-and-team-e">
             <li className="holistic-individual-and">
-              Sustainable Role Alignment and Enhancement: Optimise individual
-              contributions and team dynamics through strategic role alignment,
-              tailored trainings, and profile creation, ensuring sustainable
-              success and development.
+              {text1}
             </li>
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text1}
+                         onChange={(e) => setText1(e.target.value)}
+                         />
+            )}
           </ul>
           <p className="blank-line">&nbsp;</p>
           <ul className="holistic-individual-and-team-e">
             <li>
-              Cultural Evolution for a Better Tomorrow: Shape a resilient and
-              positive organisational culture through comprehensive gap,
-              mapping, best practice sharing, and transformative habit creation,
-              contributing to a better, more equitable world.
+              {text2}
             </li>
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text2}
+                         onChange={(e) => setText2(e.target.value)}
+                         />
+            )}
           </ul>
         </div>
         <div className="embark-on-a-container">
           <ul className="holistic-individual-and-team-e">
             <li className="holistic-individual-and">
-              Embark on a transformative journey with our comprehensive
-              solutions, enhancing organisational culture, optimising
-              performances, and fostering an environment conducive to continuous
-              growth and holistic development.
+              {text3}
             </li>
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text3}
+                         onChange={(e) => setText3(e.target.value)}
+                         />
+            )}
           </ul>
         </div>
         <div className="organisations-aspiring-to-container">
           <ul className="holistic-individual-and-team-e">
-            Organisations aspiring to transformative and sustainable growth,
-            seeking to strengthen their culture, optimise HR practices, and
-            enhance employee experience and development in alignment with a
-            vision for a better world.
+            {text4}
           </ul>
+          {  edit &&(
+            <input placeholder="Enter text"
+                       value={text4}
+                       onChange={(e) => setText4(e.target.value)}
+                       />
+          )}
         </div>
         <div className="benefits">
           <p className="blank-line">Benefits</p>
@@ -107,7 +138,7 @@ const OurServices8 = () => {
         </div>
       </div>
       <div
-        className="auto-layout-horizontal"
+        className="auto-layout-horizontal10"
         onClick={onAutoLayoutHorizontalClick}
       >
         <img className="frame-icon" alt="" src="/frame.svg" />
@@ -127,7 +158,16 @@ const OurServices8 = () => {
         Contact
       </div>
       <div className="our-services-8-child" />
-    </div>
+      {edit ? (
+        <>
+          <button onClick={handleSave}>Save</button>
+        </>
+      ) : (
+        <></>
+      )}
+      <button onClick={handleEdit}>EDIT</button>
+  
+      </div>
   );
 };
 

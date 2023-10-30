@@ -264,6 +264,7 @@
   top: 36px;
   display: inline-block;
   height: 26px;
+  
 }
 .home10 {
   left: 606px;
@@ -274,6 +275,7 @@
 .services10 {
   left: 790px;
   width: 74px;
+  cursor: pointer;
 }
 .contact10 {
   left: 1164px;

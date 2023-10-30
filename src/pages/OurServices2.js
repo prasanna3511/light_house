@@ -1,10 +1,15 @@
-import { useCallback } from "react";
+import { useCallback,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices2.css";
 import "./OurServices3.css";
 const OurServices2 = () => {
   const navigate = useNavigate();
-
+  const [edit, setEdit] = useState(false);
+  const [text, setText] = useState("  Innovative Creative Writing: Scriptwriting, Corporate and Film Songs, Radio Jingles, and Brandings to elevate your narrative..");
+  const [text1, setText1] = useState("Voice-over Mastery: For Trainings, Audiobooks, Podcasts, and Multimedia Projects, giving voice to your story.");
+  const [text2, setText2] = useState("   Elevate your brand and narrative with our innovative and expressive solutions, creating resonant and engaging experiences.");
+ const [text3, setText3] = useState("   Brands, corporations, and individuals looking to express their story and elevate their presence further through creative mediums.");
+  
   const onAutoLayoutVerticalClick = useCallback(() => {
     navigate("/our-services1");
   }, [navigate]);
@@ -29,6 +34,19 @@ const OurServices2 = () => {
     navigate("/our-services-main-page");
   }, [navigate]);
 
+  const handleEdit = () => {
+    setEdit(true);
+  };
+
+  const handleSave = () => {
+    setEdit(false);
+  setText(text);
+  setText(text1);
+  setText(text2);
+  setText(text3);
+  // setText(text4);
+  // setText(text5);
+  }
   return (
     <div className="our-services-2">
     
@@ -44,31 +62,51 @@ const OurServices2 = () => {
           <p className="blank-line14">&nbsp;</p>
           <ul className="innovative-creative-writing-s">
             <li className="innovative-creative-writing">
-              Innovative Creative Writing: Scriptwriting, Corporate and Film
-              Songs, Radio Jingles, and Brandings to elevate your narrative.
+               {text}
+              {  edit &&(
+                <input placeholder="Enter text"
+                           value={text}
+                           onChange={(e) => setText(e.target.value)}
+                           />
+              )}
             </li>
           </ul>
           <p className="blank-line14">&nbsp;</p>
           <ul className="innovative-creative-writing-s">
             <li className="innovative-creative-writing">
-              Voice-over Mastery: For Trainings, Audiobooks, Podcasts, and
-              Multimedia Projects, giving voice to your story.
+            {text1}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text1}
+                         onChange={(e) => setText1(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
         </div>
         <div className="elevate-your-brand-container">
           <ul className="innovative-creative-writing-s">
             <li className="innovative-creative-writing">
-              Elevate your brand and narrative with our innovative and
-              expressive solutions, creating resonant and engaging experiences.
+            {text2}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text2}
+                         onChange={(e) => setText2(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
         </div>
         <div className="brands-corporations-and-container">
           <ul className="innovative-creative-writing-s">
             <li className="innovative-creative-writing">
-              Brands, corporations, and individuals looking to express their
-              story and elevate their presence further through creative mediums.
+            {text3}
+            {  edit &&(
+              <input placeholder="Enter text"
+                         value={text3}
+                         onChange={(e) => setText3(e.target.value)}
+                         />
+            )}
             </li>
           </ul>
           <p className="blank-line14">&nbsp;</p>
@@ -89,7 +127,7 @@ const OurServices2 = () => {
         />
       </div>
       <div
-        className="auto-layout-vertical5"
+        className="auto-layout-vertical4"
         onClick={onAutoLayoutVerticalClick}
       >
         <div className="auto-layout-horizontal9">
@@ -116,10 +154,17 @@ const OurServices2 = () => {
         Contact
       </div>
       <div className="our-services-2-child" onClick={onLineClick} />
-    </div>
+      {edit ? (
+        <>
+          <button onClick={handleSave}>Save</button>
+        </>
+      ) : (
+        <></>
+      )}
+      <button onClick={handleEdit}>EDIT</button>
+      </div>
+  
   );
 };
 
 export default OurServices2;
-// <img className="vector-icon12" alt="" src="/vector3.svg" />
-// <img className="vector-icon13" alt="" src="/vector2.svg" />

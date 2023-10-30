@@ -26,7 +26,7 @@
   height: 40px;
   object-fit: cover;
 }
-/* .frame-child12 {
+.frame-child12 {
   position: absolute;
   top: 19px;
   left: 10px;
@@ -34,7 +34,7 @@
   background-color: var(--color-gray-800);
   width: 1180px;
   height: 683px;
-} */
+}
 .training-and-learning {
   position: absolute;
   top: 71px;
@@ -158,10 +158,6 @@
   justify-content: center;
 }
 .auto-layout-horizontal9 {
-  
-  top: 16%;
-    left: 90%;
-
   background-color: var(--color-gray-200);
   flex-direction: row;
   padding: var(--padding-xl);
@@ -176,7 +172,7 @@
 }
 .auto-layout-vertical4 {
   top: 16.80%;
-  left:85%;
+  left:75%;
  
    
   overflow: hidden;
@@ -184,7 +180,7 @@
 }
 .auto-layout-horizontal10 {
   top: 16.80%;
-  left:89%;
+  left:78%;
   background-color: var(--color-gray-200);
   flex-direction: row;
   padding: var(--padding-xl);
@@ -196,8 +192,8 @@
 }
 .statesecondary6 {
   position: absolute;
-  top: 82%;
-  left: 90%;
+  top: 90%;
+  left: 75%;
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;

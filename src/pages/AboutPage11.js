@@ -4,7 +4,7 @@ import "./AboutPage11.css";
 
 const AboutPage11 = () => {
   const navigate = useNavigate();
-  const [edit, setEdit] = useState(false);
+  const [edit,setEdit]=useState(false);
   const [text, setText] = useState(
     "The only constant is change! And the only certainty is uncertainty."
   );
@@ -226,7 +226,7 @@ const AboutPage11 = () => {
           <p className="and-the-bottom">Let’s light up our lives!</p>
         </div>
 
-        <button onClick={handleEdit}>EDIT</button>
+        
         <div className="read-less" onClick={onReadLessTextClick}>
           Read less.
         </div>
@@ -476,6 +476,7 @@ const AboutPage11 = () => {
       ) : (
         <></>
       )}
+      <button onClick={handleEdit}>EDIT</button>
     </div>
   );
 };
