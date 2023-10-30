@@ -24,23 +24,32 @@ if ($connection->connect_error) {
     sendJson(500, 'Internal Server Error', ['error' => 'Database connection failed']);
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Fetch all data from the 'product' table
-    $sql = "SELECT * FROM `product`";
-    $result = mysqli_query($connection, $sql);
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    // Check if a 'sub_service' parameter is provided in the GET request
+    if (isset($_GET['sub_service'])) {
+        // Sanitize the input to prevent SQL injection (you should use prepared statements for security)
+        $subService = mysqli_real_escape_string($connection, $_GET['sub_service']);
 
-    if ($result) {
-        $product = [];
-        while ($row = mysqli_fetch_assoc($result)) {
-            $product[] = $row;
+        // Fetch data from the 'services' table where 'sub_service' matches the provided value
+        $sql = "SELECT * FROM `services` WHERE `sub_service` = '$subService'";
+        $result = mysqli_query($connection, $sql);
+
+        if ($result) {
+            $services = [];
+            while ($row = mysqli_fetch_assoc($result)) {
+                $services[] = $row;
+            }
+            sendJson(200, 'Data fetched successfully', ['services' => $services]);
+        } else {
+            sendJson(500, 'Error fetching data');
         }
-        sendJson(200, 'Data fetched successfully', ['product' => $product]);
     } else {
-        sendJson(500, 'Error fetching data');
+        sendJson(400, 'Bad Request. The sub_service parameter is missing.');
     }
 } else {
     sendJson(405, 'Invalid Request Method. HTTP method should be POST');
 }
+
 
 function sendJson($status, $message, $data = []) {
     http_response_code($status);

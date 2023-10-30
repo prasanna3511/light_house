@@ -1,51 +1,38 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutPage11.css";
+import axios from "axios";
 
 const AboutPage11 = () => {
   const navigate = useNavigate();
-  const [edit,setEdit]=useState(false);
-  const [text, setText] = useState(
-    "The only constant is change! And the only certainty is uncertainty."
-  );
-  const [text1, setText1] = useState(
-    " And the bottom line is The Triple Bottom Line: People, Planet, and Profit."
-  );
-  const [text2, setText2] = useState(
-    "At The Lighthouse, we provide various services to facilitate that journey. Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs.   "
-  );
-  const [text3, setText3] = useState(
-    "Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs."
-  );
-  const [text4, setText4] = useState(
-    "Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way.It’s not just about hiring talent; it’s about finding the right  expertise that aligns with your vision and goals, contributing to the holistic growth of your organisation. We can facilitate each step in the process of sustainable growth, on every level."
-  );
-  const [text5, setText5] = useState(
-    "In our pursuit to guide you towards sustainable success, we focus on achieving goals in a manner that is environmentally viable, socially equitable, and economically feasible, ensuring lasting positive impacts and fostering resilience and well-b."
-  );
-  const [text6, setText6] = useState(
-    "In our pursuit to guide you towards sustainable success, we focus on achieving goals in a manner that is environmentally viable, socially equitable, and economically feasible, ensuring lasting positive impacts and fostering resilience and well-b."
-  );
+  const isAuthenticated = localStorage.getItem("isAuthenticated");
 
-  const [text7, setText7] = useState("Vision");
-  const [text8, setText8] = useState(
-    "To be a beacon of transformation, inspiring holistic growth and sustainable success in an ever-evolving world. We aim to cultivate a collaborative ecosystem where individuals and organisations can thriv  together, embracing change, transcending competition, and fostering mutual empowerment and synergistic relationships for the abundance of all."
-  );
-  const [text9, setText9] = useState("Mission");
-  const [text10, setText10] = useState(
-    "To champion transformative journeys by delivering innovative solutions, insightful guidance, and tailored services. Our mission is to cultivate awareness and introspective growth, unravelling the complexities of transformation to create clear and understandable paths. Whether you are embarking on a comprehensive transformative journey or seeking specific services to address immediate needs, we offer the flexibility and expertise to meet you where you are. By intertwining personal purposes with organisational goals, we strive to create a harmonious alignment, ensuring individual aspirations and organisational objectives are in sync, fostering a collaborative environment conducive to mutual growth and sustainable success."
-  );
-  const [text11, setText11] = useState("Innovative Empowerment");
-  const [text12, setText12] = useState("Inclusive Understanding");
-  const [text13, setText13] = useState("Transparent Integrity");
-  const [text14, setText14] = useState("Reflective Responsibility");
-  const [text15, setText15] = useState("Active Listening");
+  const [edit, setEdit] = useState(false);
+  const [edit1, setEdit1] = useState(false);
+  const [edit2, setEdit2] = useState(false);
+  const [text, setText] = useState("");
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
+  const [text3, setText3] = useState("");
+  const [text4, setText4] = useState("");
+  const [text5, setText5] = useState("");
+  const [text6, setText6] = useState("");
 
-  const [text16, setText16] = useState(" We foster an environment that values innovative thinking an creativity, empowering everyone to exceed their potential.");
-  const [text17, setText17] = useState(" We embrace diverse thoughts and perspectives, recognising that accepting multiple truths is the foundation for meaningful change and true problem-solving");
-  const [text18, setText18] = useState("    We maintain honesty and transparency in every interaction, establishing a foundation of trust and mutual respect.");
-  const [text19, setText19] = useState("We encourage embracing responsibility for one’s actions and reflections, promoting learning and growth from every experience. We illuminate the path, but the choice to walk it and the responsibility to act are yours.");
-  const [text20, setText20] = useState("We prioritise empathetic and attentive listening, creating an environment where every voice is heard and valued. The harmony of ‘Listen’ and ‘Silent’ reminds us of the importance of being present and reflective in every conversation.");
+  const [text7, setText7] = useState("");
+  const [text8, setText8] = useState("");
+  const [text9, setText9] = useState("");
+  const [text10, setText10] = useState("");
+  const [text11, setText11] = useState("");
+  const [text12, setText12] = useState("");
+  const [text13, setText13] = useState("");
+  const [text14, setText14] = useState("");
+  const [text15, setText15] = useState("");
+
+  const [text16, setText16] = useState("");
+  const [text17, setText17] = useState("");
+  const [text18, setText18] = useState("");
+  const [text19, setText19] = useState("");
+  const [text20, setText20] = useState("");
 
   const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
@@ -78,31 +65,235 @@ const AboutPage11 = () => {
   const handleEdit = () => {
     setEdit(true);
   };
-
-  const handleSave = () => {
-    setEdit(false);
-    setText(text);
-    setText1(text1);
-    setText2(text2);
-    setText3(text3);
-    setText4(text4);
-    setText5(text5);
-    setText6(text6);
-    setText7(text7);
-    setText8(text8);
-    setText9(text9);
-      setText10(text10);
-    setText11(text11);
-    setText12(text12);
-    setText13(text13);
-    setText14(text14);
-    setText15(text15);
-    setText16(text16);  
-    setText11(text17);
-      setText11(text18); 
-    setText11(text19); 
-    setText11(text20);
+  const handleEdit1 = () => {
+    setEdit1(true);
   };
+  const handleEdit2 = () => {
+    setEdit2(true);
+  };
+  const [id3, setId3] = useState(false);
+  const [id4, setId4] = useState(false);
+  const [id5, setId5] = useState(false);
+  const [bid1, setBid1] = useState(false);
+  const [bid2, setBid2] = useState(false);
+  const [bid3, setBid3] = useState(false);
+  const [bid4, setBid4] = useState(false);
+  const [bid5, setBid5] = useState(false);
+
+  const handleSave = async () => {
+    if (id3) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 4,
+        title: text,
+        short_description: text3,
+        long_description: text4,
+        position: "middle",
+      });
+      console.log(cardResponse.data);
+    } else if (id4) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 5,
+        title: text,
+        short_description: text5,
+        long_description: text6,
+        position: "middle",
+      });
+      console.log(cardResponse.data);
+    } else {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 3,
+        title: text,
+        short_description: text1,
+        long_description: text2,
+        position: "middle",
+      });
+      console.log(cardResponse.data);
+    }
+    setEdit(false);
+    // setEdit(false);
+  };
+
+  const handleSave1 = async () => {
+    if (id5) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 6,
+        title: text7,
+        short_description: "-",
+        long_description: text8,
+        position: "middlecard",
+      });
+      console.log(cardResponse.data);
+    } else {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 7,
+        title: text9,
+        short_description: "-",
+        long_description: text10,
+        position: "middlecard",
+      });
+      console.log(cardResponse.data);
+    }
+    setEdit1(false);
+  };
+
+  const handleSave2 = async () => {
+    if (bid1) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 8,
+        title: text11,
+        short_description: "-",
+        long_description: text16,
+        position: "middlecard",
+      });
+      console.log(cardResponse.data);
+    } else if(bid2) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 9,
+        title: text12,
+        short_description: "-",
+        long_description: text17,
+        position: "middlecard",
+      });
+      console.log(cardResponse.data);
+    }
+    else if(bid3) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 10,
+        title: text13,
+        short_description: "-",
+        long_description: text18,
+        position: "middlecard",
+      });
+      console.log(cardResponse.data);
+    }
+    else if(bid4) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 11,
+        title: text14,
+        short_description: "-",
+        long_description: text19,
+        position: "middlecard",
+      });
+      console.log(cardResponse.data);
+    }
+    else if(bid5) {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+        id: 12,
+        title: text15,
+        short_description: "-",
+        long_description: text20,
+        position: "middlecard",
+      });
+      console.log(cardResponse.data);
+    }
+    setEdit2(false);
+  };
+
+  useEffect(() => {
+    fetchHeaderTopData();
+    fetchVisionData();
+    fetchValueData();
+  }, []);
+
+  const fetchHeaderTopData = () => {
+    let typeToFetch = "middle";
+    axios
+      .get("http://localhost:3000/about.php", {
+        params: {
+          position: typeToFetch,
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data.cards);
+          setText(responseData.data?.cards[0]?.title);
+          setText1(responseData.data?.cards[0]?.short_description);
+          setText2(responseData.data?.cards[0]?.long_description);
+          setText3(responseData.data?.cards[1]?.short_description);
+          setText4(responseData.data?.cards[1]?.long_description);
+          setText5(responseData.data?.cards[2]?.short_description);
+          setText6(responseData.data?.cards[2]?.long_description);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchVisionData = () => {
+    let typeToFetch = "middlecard";
+    axios
+      .get("http://localhost:3000/about.php", {
+        params: {
+          position: typeToFetch,
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data.cards);
+          setText7(responseData.data?.cards[0]?.title);
+          setText8(responseData.data?.cards[0]?.long_description);
+          // setText2(responseData.data?.cards[0]?.long_description);
+          setText9(responseData.data?.cards[1]?.title);
+          setText10(responseData.data?.cards[1]?.long_description);
+          // setText5(responseData.data?.cards[2]?.short_description);
+          // setText6(responseData.data?.cards[2]?.long_description);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchValueData = () => {
+    let typeToFetch = "bottomcard";
+    axios
+      .get("http://localhost:3000/about.php", {
+        params: {
+          position: typeToFetch,
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data.cards);
+          setText11(responseData.data?.cards[0]?.title);
+          setText12(responseData.data?.cards[1]?.title);
+          setText13(responseData.data?.cards[2]?.title);
+          setText14(responseData.data?.cards[3]?.title);
+          setText15(responseData.data?.cards[4]?.title);
+
+          setText16(responseData.data?.cards[0]?.long_description);
+          setText17(responseData.data?.cards[1]?.long_description);
+          setText18(responseData.data?.cards[2]?.long_description);
+          setText19(responseData.data?.cards[3]?.long_description);
+          setText20(responseData.data?.cards[4]?.long_description);
+
+
+          // setText8(responseData.data?.cards[0]?.long_description);
+          // // setText2(responseData.data?.cards[0]?.long_description);
+          // setText9(responseData.data?.cards[1]?.title);
+          // setText10(responseData.data?.cards[1]?.long_description);
+          // // setText5(responseData.data?.cards[2]?.short_description);
+          // // setText6(responseData.data?.cards[2]?.long_description);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
   return (
     <div className="about-page-11">
       <div
@@ -135,7 +326,7 @@ const AboutPage11 = () => {
       </div>
       <div className="about-page-11-child" />
       <div className="who-we-are-parent">
-        <p className="the-only-constant">{` The only constant is change! And the only certainty is. `}</p>
+        <p className="the-only-constant">{text}</p>
         {edit && (
           <input
             className="the-only-constant-textfield"
@@ -146,7 +337,7 @@ const AboutPage11 = () => {
         )}
         <div className="who-we-are">Who We Are.</div>
         <div className="and-the-bottom-container">
-          <p className="and-the-bottom">{` And the bottom line is The Triple Bottom Line: People, Planet, and Profit. `}</p>
+          <p className="and-the-bottom">{text1}</p>
           {edit && (
             <input
               className="the-only-constant-textfield1"
@@ -156,9 +347,7 @@ const AboutPage11 = () => {
             />
           )}
           <p className="and-the-bottom">&nbsp;</p>
-          <p className="and-the-bottom">
-            {`At The Lighthouse, we provide various services to facilitate that journey . Through our platform Rent-A-Skill, you can access expertise on demand - tailored talent for your transformational needs.`}
-          </p>
+          <p className="and-the-bottom">{text2}</p>
           {edit && (
             <input
               className="the-only-constant-textfield2"
@@ -176,57 +365,55 @@ const AboutPage11 = () => {
               className="the-only-constant-textfield3"
               placeholder="Enter text"
               value={text3}
-              onChange={(e) => setText3(e.target.value)}
+              onChange={(e) => {
+                setText3(e.target.value), setId3(true);
+              }}
             />
           )}
-          <p className="and-the-bottom">{`Rent-A-Skill connects you with the right talent, ensuring your transformational journey is supported every step of the way. `}</p>
-          It’s not just about hiring talent; it’s about finding the right
-          expertise that aligns with your vision and goals, contributing to the
-          holistic growth of your organisation. We can facilitate each step in
-          the process of sustainable growth, on every level.
+          <p className="and-the-bottom">{text4}</p>
           {edit && (
             <input
               className="the-only-constant-textfield3"
               placeholder="Enter text"
               value={text4}
-              onChange={(e) => setText4(e.target.value)}
+              onChange={(e) => {
+                setText4(e.target.value), setId3(true);
+              }}
             />
           )}
-          <p className="and-the-bottom">
-            In our pursuit to guide you towards sustainable success, we focus on
-            achieving goals in a manner that is environmentally viable, socially
-            equitable, and economically feasible, ensuring lasting positive
-            impacts and fostering resilience and well-being for individuals,
-            communities, and the planet.
-          </p>
+          <p className="and-the-bottom">{text5}</p>
           {edit && (
             <input
               className="the-only-constant-textfield3"
               placeholder="Enter text"
               value={text5}
-              onChange={(e) => setText5(e.target.value)}
+              onChange={(e) => {
+                setText5(e.target.value), setId4(true);
+              }}
             />
           )}
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
-            We believe in holistic development, an approach that considers the
-            whole person and organisation, addressing their physical, mental,
-            emotional, social, and introspective dimensions. It’s about
-            promoting balance, harmony, and well-being in every area of life.
+            {text6}
             <p className="and-the-bottom">{`We guide individuals and organisations to empower themselves to evolve and thrive in all dimensions, aligning their actions and decisions with their values, purpose, and the greater good. `}</p>
             {edit && (
               <input
                 className="the-only-constant-textfield3"
                 placeholder="Enter text"
                 value={text6}
-                onChange={(e) => setText6(e.target.value)}
+                onChange={(e) => {
+                  setText6(e.target.value), setId4(true);
+                }}
               />
             )}
           </p>
           <p className="and-the-bottom">Let’s light up our lives!</p>
         </div>
-
-        
+        {isAuthenticated &&
+        <>
+        {!edit && <button onClick={handleEdit}>EDIT</button>}
+        </>
+        }
         <div className="read-less" onClick={onReadLessTextClick}>
           Read less.
         </div>
@@ -235,20 +422,21 @@ const AboutPage11 = () => {
 
       <div className="about-page-11-item" />
       <div className="about-page-11-inner" />
+      {isAuthenticated &&
+      <>
+      {!edit1 && <button onClick={handleEdit1}>EDIT middle card</button>}
+      </>
+      }
       <div className="our-vision-mission">Our Vision, Mission, and Values</div>
       <div className="to-be-a">
-        To be a beacon of transformation, inspiring holistic growth and
-        sustainable success in an ever-evolving world. We aim to cultivate a
-        collaborative ecosystem where individuals and organisations can thrive
-        together, embracing change, transcending competition, and fostering
-        mutual empowerment and synergistic relationships for the abundance of
-        all.
-        {edit && (
+        {text8}
+
+        {edit1 && (
           <input
             className="the-only-constant-textfield3"
             placeholder="Enter text"
             value={text8}
-            onChange={(e) => setText8(e.target.value)}
+            onChange={(e) => {setText8(e.target.value),setId5(true)}}
           />
         )}
       </div>
@@ -270,20 +458,22 @@ const AboutPage11 = () => {
       </div>
 
       <div className="vision">
-        Vision
-        {edit && (
+        {text7}
+        {edit1 && (
           <input
             className="the-only-constant-textfield7"
             placeholder="Enter text"
             value={text7}
-            onChange={(e) => setText7(e.target.value)}
+            onChange={(e) => {
+              setText7(e.target.value), setId5(true);
+            }}
           />
         )}
       </div>
 
       <div className="mission">
-        Mission
-        {edit && (
+        {text9}
+        {edit1 && (
           <input
             className="the-only-constant-textfield7"
             placeholder="Enter text"
@@ -293,18 +483,9 @@ const AboutPage11 = () => {
         )}
       </div>
       <div className="to-champion-transformative">
-        To champion transformative journeys by delivering innovative solutions,
-        insightful guidance, and tailored services. Our mission is to cultivate
-        awareness and introspective growth, unravelling the complexities of
-        transformation to create clear and understandable paths. Whether you are
-        embarking on a comprehensive transformative journey or seeking specific
-        services to address immediate needs, we offer the flexibility and
-        expertise to meet you where you are. By intertwining personal purposes
-        with organisational goals, we strive to create a harmonious alignment,
-        ensuring individual aspirations and organisational objectives are in
-        sync, fostering a collaborative environment conducive to mutual growth
-        and sustainable success.
-        {edit && (
+        {text10}
+        sdfvsv
+        {edit1 && (
           <input
             className="the-only-constant-textfield7"
             placeholder="Enter text"
@@ -313,6 +494,11 @@ const AboutPage11 = () => {
           />
         )}
       </div>
+      {isAuthenticated &&
+      <>
+      {!edit2 && <button onClick={handleEdit2}>EDIT Values card</button>}
+      </>
+      }
       <div className="values">Values</div>
       <div className="our-values-are">
         Our values are more than words; they are our commitment to acting and
@@ -323,8 +509,8 @@ const AboutPage11 = () => {
         <div className="group-item" />
         <div className="innovative-empowerment-we-container">
           <p className="innovative-empowerment">
-            Innovative Empowerment
-            {edit && (
+            {text11}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -335,9 +521,8 @@ const AboutPage11 = () => {
           </p>
           <p className="innovative-empowerment">&nbsp;</p>
           <p className="we-foster-an">
-            We foster an environment that values innovative thinking and
-            creativity, empowering everyone to exceed their potential.
-            {edit && (
+            {text16}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -345,15 +530,15 @@ const AboutPage11 = () => {
                 onChange={(e) => setText16(e.target.value)}
               />
             )}
-            </p>
+          </p>
         </div>
       </div>
       <div className="rectangle-parent6">
         <div className="group-item" />
         <div className="inclusive-understanding-we-container">
           <p className="innovative-empowerment">
-            Inclusive Understanding
-            {edit && (
+            {text12}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -364,10 +549,8 @@ const AboutPage11 = () => {
           </p>
           <p className="innovative-empowerment">&nbsp;</p>
           <p className="we-foster-an">
-            We embrace diverse thoughts and perspectives, recognising that
-            accepting multiple truths is the foundation for meaningful change
-            and true problem-solving.
-            {edit && (
+           {text17}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -375,15 +558,15 @@ const AboutPage11 = () => {
                 onChange={(e) => setText17(e.target.value)}
               />
             )}
-            </p>
+          </p>
         </div>
       </div>
       <div className="rectangle-parent7">
         <div className="group-item" />
         <div className="transparent-integrity-we-container">
           <p className="transparent-integrity">
-            Transparent Integrity
-            {edit && (
+            {text13}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -394,9 +577,8 @@ const AboutPage11 = () => {
           </p>
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
-            We maintain honesty and transparency in every interaction,
-            establishing a foundation of trust and mutual respect.
-            {edit && (
+          {text18}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -404,15 +586,15 @@ const AboutPage11 = () => {
                 onChange={(e) => setText18(e.target.value)}
               />
             )}
-            </p>
+          </p>
         </div>
       </div>
       <div className="rectangle-parent8">
         <div className="group-item" />
         <div className="reflective-responsibility-we-container">
           <p className="transparent-integrity">
-            Reflective Responsibility
-            {edit && (
+            {text14}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -423,11 +605,8 @@ const AboutPage11 = () => {
           </p>
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
-            We encourage embracing responsibility for one’s actions and
-            reflections, promoting learning and growth from every experience. We
-            illuminate the path, but the choice to walk it and the
-            responsibility to act are yours.
-            {edit && (
+           {text19}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -435,15 +614,15 @@ const AboutPage11 = () => {
                 onChange={(e) => setText19(e.target.value)}
               />
             )}
-            </p>
+          </p>
         </div>
       </div>
       <div className="rectangle-parent9">
         <div className="group-item" />
         <div className="active-listening-we-container">
           <p className="transparent-integrity">
-            Active Listening
-            {edit && (
+            {text15}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
@@ -454,19 +633,16 @@ const AboutPage11 = () => {
           </p>
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
-            We prioritise empathetic and attentive listening, creating an
-            environment where every voice is heard and valued. The harmony of
-            ‘Listen’ and ‘Silent’ reminds us of the importance of being present
-            and reflective in every conversation.
-         
-            {edit && (
+           {text20}
+            {edit2 && (
               <input
                 className="the-only-constant-textfield11"
                 placeholder="Enter text"
                 value={text20}
                 onChange={(e) => setText20(e.target.value)}
               />
-            )}   </p>
+            )}{" "}
+          </p>
         </div>
       </div>
       {edit ? (
@@ -476,7 +652,20 @@ const AboutPage11 = () => {
       ) : (
         <></>
       )}
-      <button onClick={handleEdit}>EDIT</button>
+      {edit1 ? (
+        <>
+          <button onClick={handleSave1}>Save middle</button>
+        </>
+      ) : (
+        <></>
+      )}
+      {edit2 ? (
+        <>
+          <button onClick={handleSave2}>Save value card</button>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

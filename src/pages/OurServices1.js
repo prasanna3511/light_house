@@ -1,18 +1,21 @@
-import { useCallback,useState } from "react";
+import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices1.css";
 import"./OurServices3.css";
+import axios from "axios";
 
 const OurServices1 = () => {
   const navigate = useNavigate();
   const [edit, setEdit] = useState(false);
-  const [text, setText] = useState("Transformative Coaching: Public Speaking, Executive Guidance, and Mentoring to unlock your true potential.");
-  const [text1, setText1] = useState("  Meditative Practices: Traditional, Walking, and Customised Guided Meditations for holistic well-being..");
- const [text2, setText2] = useState("  Transformational Breathing Sessions: Breathe your way to a balanced and harmonious life.")
-  const [text3, setText3] = useState(" Positive Habit Building: Tailored trainings to foster and sustain healthy life habits.")
-  const [text4, setText4] = useState("  Navigate your transformative journey with personalised trainings and holistic growth services.")
-  const [text5, setText5] = useState("  Unlocking realms of potential and paths to self-discoverys.")  
-  const [text6, setText6] = useState(" Individuals seeking personal growth, self-discovery, balance, and holistic well-being.") 
+  const [text, setText] = useState("");
+  const [text1, setText1] = useState("");
+ const [text2, setText2] = useState("")
+  const [text3, setText3] = useState("")
+ 
+  const [text4, setText4] = useState("")
+  const [text5, setText5] = useState("")  
+ 
+  const [text6, setText6] = useState("") 
   
   const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
@@ -38,15 +41,149 @@ const OurServices1 = () => {
     setEdit(true);
   };
 
-  const handleSave = () => {
+  useEffect(() => {
+    fetchofferingData();
+    fetchbenefitsData();
+    fetchidealData();
+  }, []);
+
+  const fetchofferingData = () => {
+    let typeToFetch = "personaldevlopment";
+    let categoryToFetch = "offerings";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText(responseData.data?.services[0]?.value);
+          setText1(responseData.data?.services[1]?.value);
+          setText2(responseData.data?.services[2]?.value);
+          setText3(responseData.data?.services[3]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchbenefitsData = () => {
+    let typeToFetch = "personaldevlopment";
+    let categoryToFetch = "benefits";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText4(responseData.data?.services[0]?.value);
+          setText5(responseData.data?.services[1]?.value);
+          // setText2(responseData.data?.services[2]?.value);
+          // setText3(responseData.data?.services[3]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchidealData = () => {
+    let typeToFetch = "personaldevlopment";
+    let categoryToFetch = "ideal";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText6(responseData.data?.services[0]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const [id1,setId1] = useState(false);
+  const [id2,setId2] = useState(false);
+  const [id3,setId3] = useState(false);
+  const [id4,setId4] = useState(false);
+  const [id5,setId5] = useState(false);
+  const [id6,setId6] = useState(false);
+  const [id7,setId7] = useState(false);
+  
+  const handleSave = async() => {
     setEdit(false);
-  setText(text);
-  setText(text1);
-  setText(text2);
-  setText(text3);
-  setText(text4);
-  setText(text5);
-  setText(text6);
+    if (id1) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 1,
+        value: text,
+      });
+      console.log(cardResponse.data);
+    } else if(id2) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 2,
+        value: text1,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id3) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 3,
+        value: text2,
+      });
+      console.log(cardResponse.data);
+    } else if(id4) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 4,
+        value: text3,
+      });
+      console.log(cardResponse.data);
+    } else if(id5) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 5,
+        value: text4,
+      });
+      console.log(cardResponse.data);
+    } else if(id6) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 6,
+        value: text5,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id7) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 7,
+        value: text6,
+      });
+      console.log(cardResponse.data);
+    }
+
   }
   return (
     <div className="our-services-1">
@@ -67,7 +204,7 @@ const OurServices1 = () => {
               {  edit &&(
                 <input placeholder="Enter text"
                            value={text}
-                           onChange={(e) => setText(e.target.value)}
+                           onChange={(e) => {setText(e.target.value),setId1(true)}}
                            />
               )}</li>
           </ul>
@@ -78,7 +215,7 @@ const OurServices1 = () => {
               {  edit &&(
                 <input placeholder="Enter text"
                            value={text1}
-                           onChange={(e) => setText1(e.target.value)}
+                           onChange={(e) => {setText1(e.target.value),setId2(true)}}
                            />
               )}</li>
           </ul>
@@ -89,18 +226,18 @@ const OurServices1 = () => {
               {  edit &&(
                 <input placeholder="Enter text"
                            value={text2}
-                           onChange={(e) => setText2(e.target.value)}
+                           onChange={(e) => {setText2(e.target.value),setId3(true)}}
                            />
               )} </li>
           </ul>
           <p className="blank-line17">&nbsp;</p>
           <ul className="transformative-coaching-publi">
             <li className="positive-habit-building">
-              P{text3}
+              {text3}
               {  edit &&(
                 <input placeholder="Enter text"
                            value={text3}
-                           onChange={(e) => setText3(e.target.value)}
+                           onChange={(e) =>{ setText3(e.target.value),setId4(true)}}
                            />
               )}
               </li>
@@ -116,7 +253,7 @@ const OurServices1 = () => {
                 <input
                   placeholder="Enter text"
                   value={text4}
-                  onChange={(e) => setText4(e.target.value)}
+                  onChange={(e) => {setText4(e.target.value),setId5(true)}}
                 />
               )}       </li>
             <li className="positive-habit-building">
@@ -125,7 +262,7 @@ const OurServices1 = () => {
               <input
                 placeholder="Enter text"
                 value={text5}
-                onChange={(e) => setText5(e.target.value)}
+                onChange={(e) => {setText5(e.target.value),setId6(true)}}
               />
             )}  
             </li>
@@ -140,7 +277,7 @@ const OurServices1 = () => {
                 <input
                   placeholder="Enter text"
                   value={text6}
-                  onChange={(e) => setText6(e.target.value)}
+                  onChange={(e) => {setText6(e.target.value),setId7(true)}}
                 />
               )}     </li>
           </ul>

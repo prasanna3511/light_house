@@ -1,16 +1,17 @@
-import { useCallback,useState } from "react";
+import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices4.css";
 import "./OurServices3.css";
+import axios from "axios";
 
 const OurServices4 = () => {
   const navigate = useNavigate();
   const [edit, setEdit] = useState(false);
-  const [text, setText] = useState("Team-building Excellence: Customised sessions to foster collaboration, mutual growth, and synergistic relationships.");
-  const [text1, setText1] = useState(" Inspiring Retreats: Tailored experiences to rejuvenate, inspire, and transform.");
-  const [text2, setText2] = useState("Shinrin Yoku (Forest Bathing): Experience the healing and transformative power of nature..");
- const [text3, setText3] = useState("  Create memorable and transformative experiences, fostering growth, learning, and well-being through our experiential and outdoor services.");
- const [text4, setText4] = useState("Teams, organisations, and individuals seeking transformative and rejuvenating experiences in nature and beyond.");
+  const [text, setText] = useState("");
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
+ const [text3, setText3] = useState("");
+ const [text4, setText4] = useState("");
  const onAutoLayoutVerticalClick = useCallback(() => {
     navigate("/our-services3");
   }, [navigate]);
@@ -39,15 +40,135 @@ const OurServices4 = () => {
     setEdit(true);
   };
 
-  const handleSave = () => {
+  useEffect(() => {
+    fetchofferingData();
+    fetchbenefitsData();
+    fetchidealData();
+  }, []);
+
+  const fetchofferingData = () => {
+    let typeToFetch = "experientialoutdoor";
+    let categoryToFetch = "offerings";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("API response", responseData.data);
+          setText(responseData.data?.services[0]?.value);
+          setText1(responseData.data?.services[1]?.value);
+          setText2(responseData.data?.services[2]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchbenefitsData = () => {
+    let typeToFetch = "experientialoutdoor";
+    let categoryToFetch = "benefits";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText3(responseData.data?.services[0]?.value);
+          // setText5(responseData.data?.services[1]?.value);
+          // setText2(responseData.data?.services[2]?.value);
+          // setText3(responseData.data?.services[3]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchidealData = () => {
+    let typeToFetch = "experientialoutdoor";
+    let categoryToFetch = "ideal";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText4(responseData.data?.services[0]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const [id1,setId1] = useState(false);
+  const [id2,setId2] = useState(false);
+  const [id3,setId3] = useState(false);
+  const [id4,setId4] = useState(false);
+  const [id5,setId5] = useState(false);
+  
+  const handleSave = async() => {
     setEdit(false);
-  setEdit(false);
-  setText(text);
-  setText(text1);
-  setText(text2);
-  setText(text3);
-  setText(text4);
-}
+    if (id1) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 16,
+        value: text,
+      });
+      console.log(cardResponse.data);
+    } else if(id2) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 17,
+        value: text1,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id3) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 18,
+        value: text2,
+      });
+      console.log(cardResponse.data);
+    } else if(id4) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 19,
+        value: text3,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id5) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 20,
+        value: text4,
+      });
+      console.log(cardResponse.data);
+    }
+  }
+
   return (
     <div className="our-services-4">
      
@@ -67,7 +188,7 @@ const OurServices4 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text}
-                         onChange={(e) => setText(e.target.value)}
+                         onChange={(e) => {setText(e.target.value),setId1(true)}}
                          />
             )}
             </li>
@@ -78,8 +199,8 @@ const OurServices4 = () => {
             {text1}
             {  edit &&(
               <input placeholder="Enter text"
-                         value={text}
-                         onChange={(e) => setText1(e.target.value)}
+                         value={text1}
+                         onChange={(e) => {setText1(e.target.value),setId2(true)}}
                          />
             )}
             </li>
@@ -91,7 +212,7 @@ const OurServices4 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text2}
-                         onChange={(e) => setText2(e.target.value)}
+                         onChange={(e) => {setText2(e.target.value),setId3(true)}}
                          />
             )}
             </li>
@@ -104,7 +225,7 @@ const OurServices4 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text3}
-                         onChange={(e) => setText(e.target.value)}
+                         onChange={(e) => {setText3(e.target.value),setId4(true)}}
                          />
             )}
             </li>
@@ -117,7 +238,7 @@ const OurServices4 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text4}
-                         onChange={(e) => setText4(e.target.value)}
+                         onChange={(e) => {setText4(e.target.value),setId5(true)}}
                          />
             )}
             </li>

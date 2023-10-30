@@ -1,15 +1,16 @@
-import { useCallback,useState } from "react";
+import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices7.css";
 import "./OurServices3.css";
+import axios from "axios";
 
 const OurServices7 = () => {
   const navigate = useNavigate();
   const [edit, setEdit] = useState(false);
-  const [text, setText] = useState("  Copywriting Excellence: Articulate your thoughts with clarity impact, and resonance.");
-  const [text1, setText1] = useState(" Editing and Proofreading Mastery: Ensure your message is communicated effectively and authentically.");
-  const [text2, setText2] = useState("Enhance the quality, resonance, and impact of your written communications with our expert editorial services.");
- const [text3, setText3] = useState("Authors, corporations, and individuals seeking clarity, impact, and authenticity in their written communications.");
+  const [text, setText] = useState("");
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
+ const [text3, setText3] = useState("");
   const onAutoLayoutVerticalClick = useCallback(() => {
     navigate("/our-services6");
   }, [navigate]);
@@ -42,14 +43,128 @@ const OurServices7 = () => {
     setEdit(true);
   };
 
-  const handleSave = () => {
+  useEffect(() => {
+    fetchofferingData();
+    fetchbenefitsData();
+    fetchidealData();
+  }, []);
+
+  const fetchofferingData = () => {
+    let typeToFetch = "writing";
+    let categoryToFetch = "offerings";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText(responseData.data?.services[0]?.value);
+          setText1(responseData.data?.services[1]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchbenefitsData = () => {
+    let typeToFetch = "writing";
+    let categoryToFetch = "benefits";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText2(responseData.data?.services[0]?.value);
+          // setText5(responseData.data?.services[1]?.value);
+          // setText2(responseData.data?.services[2]?.value);
+          // setText3(responseData.data?.services[3]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchidealData = () => {
+    let typeToFetch = "writing";
+    let categoryToFetch = "ideal";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText3(responseData.data?.services[0]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const [id1,setId1] = useState(false);
+  const [id2,setId2] = useState(false);
+  const [id3,setId3] = useState(false);
+  const [id4,setId4] = useState(false);
+
+  
+  const handleSave = async() => {
     setEdit(false);
-  setEdit(false);
-  setText(text);
-  setText(text1);
-  setText(text2);
-  setText(text3);
+    if (id1) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 30,
+        value: text,
+      });
+      console.log(cardResponse.data);
+    } else if(id2) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 31,
+        value: text1,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id3) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 32,
+        value: text2,
+      });
+      console.log(cardResponse.data);
+    } else if(id4) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 33,
+        value: text3,
+      });
+      console.log(cardResponse.data);
+    }
   }
+
+  
   return (
     <div className="our-services-7">
       <img className="vector-icon2" alt="" src="/vector.svg" />
@@ -67,7 +182,7 @@ const OurServices7 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text}
-                         onChange={(e) => setText(e.target.value)}
+                         onChange={(e) => {setText(e.target.value),setId1(true)}}
                          />
             )}
             </li>
@@ -79,7 +194,7 @@ const OurServices7 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text1}
-                         onChange={(e) => setText1(e.target.value)}
+                         onChange={(e) => {setText1(e.target.value),setId2(true)}}
                          />
             )}
             </li>
@@ -92,7 +207,7 @@ const OurServices7 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text2}
-                         onChange={(e) => setText2(e.target.value)}
+                         onChange={(e) => {setText2(e.target.value),setId3(true)}}
                          />
             )}
             </li>
@@ -104,7 +219,7 @@ const OurServices7 = () => {
           {  edit &&(
             <input placeholder="Enter text"
                        value={text3}
-                       onChange={(e) => setText3(e.target.value)}
+                       onChange={(e) => {setText3(e.target.value),setId4(true)}}
                        />
           )}
           </ul>

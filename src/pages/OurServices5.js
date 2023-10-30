@@ -1,16 +1,17 @@
-import { useCallback,useState } from "react";
+import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices5.css";
 import "./OurServices3.css";
+import axios from "axios";
 
 const OurServices5 = () => {
   const navigate = useNavigate();
   const [edit, setEdit] = useState(false);
-  const [text, setText] = useState(" Strategic Branding: Cohesive and impactful branding solutions to strengthen your identity.");
-  const [text1, setText1] = useState("Content Marketing Mastery: Amplify your presence with tailored and strategic content solutions..");
-  const [text2, setText2] = useState(" Social Media Management: Effective and resonant connection with your audience..");
- const [text3, setText3] = useState(" Strengthen your brand identity and communicate your message effectively and strategically with our comprehensive solutions..");
- const [text4, setText4] = useState("Brands and organisations looking to enhance their identity, presence, and communication strategies..");
+  const [text, setText] = useState("");
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
+ const [text3, setText3] = useState("");
+ const [text4, setText4] = useState("");
   const onAutoLayoutVerticalClick = useCallback(() => {
     navigate("/our-services4");
   }, [navigate]);
@@ -43,15 +44,135 @@ const OurServices5 = () => {
     setEdit(true);
   };
 
-  const handleSave = () => {
+  useEffect(() => {
+    fetchofferingData();
+    fetchbenefitsData();
+    fetchidealData();
+  }, []);
+
+  const fetchofferingData = () => {
+    let typeToFetch = "brandingstrategic";
+    let categoryToFetch = "offerings";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("API response", responseData.data);
+          setText(responseData.data?.services[0]?.value);
+          setText1(responseData.data?.services[1]?.value);
+          setText2(responseData.data?.services[2]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchbenefitsData = () => {
+    let typeToFetch = "brandingstrategic";
+    let categoryToFetch = "benefits";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText3(responseData.data?.services[0]?.value);
+          // setText5(responseData.data?.services[1]?.value);
+          // setText2(responseData.data?.services[2]?.value);
+          // setText3(responseData.data?.services[3]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchidealData = () => {
+    let typeToFetch = "brandingstrategic";
+    let categoryToFetch = "ideal";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText4(responseData.data?.services[0]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const [id1,setId1] = useState(false);
+  const [id2,setId2] = useState(false);
+  const [id3,setId3] = useState(false);
+  const [id4,setId4] = useState(false);
+  const [id5,setId5] = useState(false);
+  
+  const handleSave = async() => {
     setEdit(false);
-  setEdit(false);
-  setText(text);
-  setText(text1);
-  setText(text2);
-  setText(text3);
-  setText(text4);
-}
+    if (id1) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 21,
+        value: text,
+      });
+      console.log(cardResponse.data);
+    } else if(id2) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 22,
+        value: text1,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id3) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 23,
+        value: text2,
+      });
+      console.log(cardResponse.data);
+    } else if(id4) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 24,
+        value: text3,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id5) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 25,
+        value: text4,
+      });
+      console.log(cardResponse.data);
+    }
+  }
+
   return (
     <div className="our-services-5">
     
@@ -69,7 +190,7 @@ const OurServices5 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text}
-                         onChange={(e) => setText(e.target.value)}
+                         onChange={(e) => {setText(e.target.value),setId1(true)}}
                          />
             )}
             </li>
@@ -81,7 +202,7 @@ const OurServices5 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text1}
-                         onChange={(e) => setText1(e.target.value)}
+                         onChange={(e) => {setText1(e.target.value),setId2(true)}}
                          />
             )}
             </li>
@@ -93,7 +214,7 @@ const OurServices5 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text2}
-                         onChange={(e) => setText2(e.target.value)}
+                         onChange={(e) => {setText2(e.target.value),setId3(true)}}
                          />
             )}
             </li>
@@ -106,7 +227,7 @@ const OurServices5 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text3}
-                         onChange={(e) => setText3(e.target.value)}
+                         onChange={(e) => {setText3(e.target.value),setId4(true)}}
                          />
             )}
             </li>
@@ -119,7 +240,7 @@ const OurServices5 = () => {
               {  edit &&(
                 <input placeholder="Enter text"
                            value={text4}
-                           onChange={(e) => setText4(e.target.value)}
+                           onChange={(e) => {setText4(e.target.value),setId5(true)}}
                            />
               )}
             </li>
