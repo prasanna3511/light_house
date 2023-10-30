@@ -140,8 +140,8 @@
 }
 .statesecondary1 {
   position: absolute;
-  top: 642px;
-  left: 1015px;
+  top: 92%;
+  left: 79%;
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;

@@ -51,7 +51,7 @@ const OurServices8 = () => {
       <img className="vector-icon1" alt="" src="/vector1.svg" />
       <img className="icon1" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child" />
+        <div className="frame-child12" />
         <div className="comprehensive-organisational-t">
           Comprehensive Organisational Transformation and HR Solutions
         </div>

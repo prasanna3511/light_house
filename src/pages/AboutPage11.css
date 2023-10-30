@@ -17,8 +17,8 @@
   top: 73.45%;
   right: 46.25%;
   bottom: 0;
-  left: 0; */
-/* } */
+  left: 0; 
+ } */
 .button12 {
   position: relative;
   text-transform: uppercase;
@@ -107,7 +107,7 @@
 .about-page-11-child {
   position: absolute;
   top: 61.5px;
-  left: 882px;
+  left: 66.7%;
   border-top: 1px solid var(--color-burlywood);
   box-sizing: border-box;
   width: 58.01px;

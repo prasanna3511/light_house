@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutPage11.css";
+import "./LandingPage.css";
 
 const AboutPage11 = () => {
   const navigate = useNavigate();
@@ -105,6 +106,7 @@ const AboutPage11 = () => {
   };
   return (
     <div className="about-page-11">
+    <img className="icon12" alt="" src="/2-1@2x.png" />
       <div
         className="statesecondary11"
         onClick={onStateSecondaryContainerClick}
@@ -121,16 +123,16 @@ const AboutPage11 = () => {
         <div className="button12">Discover our services</div>
       </div>
 
-      <div className="rent-a-skill9">Rent- a- Skill</div>
-      <div className="glossary9">Glossary</div>
-      <div className="about9">About</div>
-      <div className="home9" onClick={onHomeTextClick}>
+      <div className="rent-a-skill21">Rent- a- Skill</div>
+      <div className="glossary21">Glossary</div>
+      <div className="about16">About</div>
+      <div className="home16" onClick={onHomeTextClick}>
         Home
       </div>
-      <div className="services9" onClick={onServicesTextClick}>
+      <div className="services21" onClick={onServicesTextClick}>
         Services
       </div>
-      <div className="contact9" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="about-page-11-child" />

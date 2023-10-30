@@ -178,7 +178,7 @@
   overflow: hidden;
   flex-direction: column;
 }
-.auto-layout-horizontal {
+.auto-layout-horizontal9 {
   top: 140px;
   left: 1171px;
   background-color: var(--color-gray-200);
@@ -192,8 +192,8 @@
 }
 .statesecondary5 {
   position: absolute;
-  top: 706px;
-  left: 1055px;
+  top: 85%;
+  left: 72%;
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;

@@ -6,7 +6,7 @@ import"./OurServices3.css";
 const OurServices1 = () => {
   const navigate = useNavigate();
   const [edit, setEdit] = useState(false);
-  const [text, setText] = useState("Transformative Coaching: Public Speaking, Executive Guidance, and Mentoring to unlock your true potential.");
+  const [text, setText] = useState("  Transformative Coaching: Public Speaking, Executive Guidance, and Mentoring to unlock your true potential.");
   const [text1, setText1] = useState("  Meditative Practices: Traditional, Walking, and Customised Guided Meditations for holistic well-being..");
  const [text2, setText2] = useState("  Transformational Breathing Sessions: Breathe your way to a balanced and harmonious life.")
   const [text3, setText3] = useState(" Positive Habit Building: Tailored trainings to foster and sustain healthy life habits.")
@@ -55,7 +55,7 @@ const OurServices1 = () => {
 
       <img className="icon9" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child18" />
+        <div className="frame-child12" />
         <div className="personal-development-and">
           Personal Development and Holistic Growth
         </div>
@@ -63,7 +63,7 @@ const OurServices1 = () => {
           <p className="blank-line17">&nbsp;</p>
           <ul className="transformative-coaching-publi">
             <li className="positive-habit-building">
-              {text}
+              T{text}
               {  edit &&(
                 <input placeholder="Enter text"
                            value={text}

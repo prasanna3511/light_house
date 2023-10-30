@@ -121,7 +121,7 @@ const OurServices6 = () => {
         </div>
       </div>
       <div
-        className="auto-layout-vertical4"
+        className="auto-layout-vertical4 "
         onClick={onAutoLayoutVerticalClick}
       >
         <div className="auto-layout-horizontal9">

@@ -55,7 +55,7 @@ const OurServices4 = () => {
 
       <img className="icon6" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child9" />
+        <div className="frame-child12" />
         <div className="experiential-and-outdoor">
           Experiential and Outdoor Services
         </div>

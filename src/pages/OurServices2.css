@@ -26,7 +26,7 @@
   height: 40px;
   object-fit: cover;
 }
-/* .frame-child15 {
+.frame-child15 {
   position: absolute;
   top: 19px;
   left: 10px;
@@ -34,7 +34,7 @@
   background-color: var(--color-gray-800);
   width: 1180px;
   height: 683px;
-} */
+}
 .creative-and-expressive {
   position: absolute;
   top: 78px;
@@ -194,8 +194,8 @@
 }
 .statesecondary7 {
   position: absolute;
-  top: 92%;
-  left: 80%;
+  top: 85%;
+  left: 72%;
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;

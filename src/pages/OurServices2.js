@@ -54,7 +54,7 @@ const OurServices2 = () => {
 
       <img className="icon8" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child15" />
+        <div className="frame-child12" />
         <div className="creative-and-expressive">
           Creative and Expressive Services
         </div>

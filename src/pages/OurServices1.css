@@ -152,8 +152,8 @@
 }
 .statesecondary8 {
   position: absolute;
-  top: 92%;
-  left: 80%;
+  top: 85%;
+  left: 72%;
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;
@@ -225,7 +225,7 @@
 .auto-layout-horizontal13 {
   position: absolute;
   top: 140px;
-  left: 90%;
+  left: 80%;
   border-radius: var(--br-9xs);
   background-color: var(--color-gray-200);
   border: 1px solid var(--color-darkkhaki);

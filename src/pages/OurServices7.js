@@ -15,7 +15,7 @@ const OurServices7 = () => {
   }, [navigate]);
 
   const onAutoLayoutHorizontal1Click = useCallback(() => {
-    navigate("/");
+    navigate("/our-services8");
   }, [navigate]);
 
   const onStateSecondaryContainerClick = useCallback(() => {
@@ -56,7 +56,7 @@ const OurServices7 = () => {
       <img className="vector-icon3" alt="" src="/vector1.svg" />
       <img className="icon2" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="rectangle-div" />
+        <div className="frame-child12" />
         <div className="writing-and-editorial">
           Writing and Editorial Services
         </div>

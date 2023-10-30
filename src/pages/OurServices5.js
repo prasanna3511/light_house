@@ -58,7 +58,7 @@ const OurServices5 = () => {
       
       <img className="icon5" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child6" />
+        <div className="frame-child12" />
         <div className="branding-and-strategic">
           Branding and Strategic Communication
         </div>
