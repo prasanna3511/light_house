@@ -22,6 +22,7 @@ import ContactUsOffline from "./pages/ContactUsOffline";
 import ContactUs from "./pages/ContactUs";
 import AboutPage1 from "./pages/AboutPage1";
 import LandingPage from "./pages/LandingPage";
+import Login from "./pages/Login";
 
 function App() {
   const action = useNavigationType();
@@ -125,7 +126,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<OurServices8 />} />
+      {/* <Route path="/" element={<OurServices8 />} /> */}
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login/>} />
       <Route path="/our-services7" element={<OurServices7 />} />
       <Route path="/our-services6" element={<OurServices6 />} />
       <Route path="/our-services5" element={<OurServices5 />} />

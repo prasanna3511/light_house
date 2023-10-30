@@ -1,15 +1,18 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
+import axios from "axios";
+import { Box, TextField } from "@material-ui/core";
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const [edit,setEdit]=useState(false);
-  const [edit1,setEdit1]=useState(false);
-  const [edit3,setEdit3]=useState(false);
-  const [text1, setText1] = useState("The Lighthouse, - your beacon of transformation and holistic growth. \n In a world of constant change and uncertainty, we stand as a pillar of support.");
-  const [text3, setText3] = useState("We are your steadfast companion, offering innovative solutions and guidance to both individuals and organisations embarking on their transformative journeys.");
-  const [text, setText] = useState("Discover our mission, vision, and array of services designed to illuminate your path to sustainable success and holistic development.");
+  const isAuthenticated = localStorage.getItem("isAuthenticated");
+  const [edit, setEdit] = useState(false);
+  const [edit1, setEdit1] = useState(false);
+  const [edit3, setEdit3] = useState(false);
+  const [text1, setText1] = useState("");
+  const [text3, setText3] = useState("");
+  const [text, setText] = useState("");
   const onAboutTextClick = useCallback(() => {
     navigate("/about-page1");
   }, [navigate]);
@@ -26,28 +29,66 @@ const LandingPage = () => {
     navigate("/our-services-main-page");
   }, [navigate]);
 
-    const handleEdit = ()=>{
-      setEdit(true);
-    }
-  const handleSave = ()=>{
-      setEdit(false);
-      setText(text);
-  }
-  const handleEdit1 = ()=>{
+  const handleEdit = () => {
+    setEdit(true);
+  };
+
+  const handleSave = async () => {
+    const cardResponse = await axios.put("http://localhost:3000/home.php", {
+      id: 1,
+      description: text1,
+    });
+    const cardResponse1 = await axios.put("http://localhost:3000/home.php", {
+      id: 2,
+      description: text3,
+    });
+    const cardResponse2 = await axios.put("http://localhost:3000/home.php", {
+      id: 3,
+      description: text,
+    });
+
+    // console.log(cardResponse.data);
+    setEdit(false);
+    setText(text);
+  };
+
+  const handleEdit1 = () => {
     setEdit1(true);
-  }
-  const handleSave1 = ()=>{
+  };
+  const handleSave1 = () => {
     setEdit1(false);
     setText1(text1);
-}
-const handleEdit3 = ()=>{
-  setEdit3(true);
-}
-const handleSave3 = ()=>{
-  setEdit3(false);
-  setText3(text3);
-}
+  };
+  const handleEdit3 = () => {
+    setEdit3(true);
+  };
+  const handleSave3 = () => {
+    setEdit3(false);
+    setText3(text3);
+  };
 
+  useEffect(() => {
+    fetchAboutData();
+  }, []);
+
+  const fetchAboutData = () => {
+    axios
+      .get("http://localhost:3000/home.php")
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          console.log("homefetch", responseData.data.cards[1]?.description);
+          setText1(responseData?.data.cards[0]?.description);
+          setText3(responseData?.data.cards[1]?.description);
+          setText(responseData?.data.cards[2]?.description);
+        } else {
+          console.error("Error fetching employees data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching employees data:", error);
+      });
+  };
 
   return (
     <div className="landing-page">
@@ -84,60 +125,49 @@ const handleSave3 = ()=>{
           </div>
         </div>
         <div className="the-lighthouse-container">
-        <p className="the-lighthouse-">&nbsp;</p>
-        
-        {edit ? (
-          <>
-       
-        
-     
-      <button className="savebutton" onClick={handleSave} >Save</button> 
-           </>
-            ) :(
-              <></>
-               
-          )}
-          <button className="editbutton" onClick={handleEdit}>EDIT</button>
           <p className="the-lighthouse-">&nbsp;</p>
-          <p className="the-lighthouse-">
-             {text1.split('\n').map((item, key) => (
-                <span key={key}>
-                  {item}
-                  <br />
-                </span>
-              ))}
+
+          {edit ? (
+            <Box
+              style={{ width: "90%", display: "flex", flexDirection: "column" }}
+            >
+              <input
+                style={{ width: "100%", height: "auto", marginBottom: "20px" }}
+                placeholder="Enter text"
+                value={text1}
+                onChange={(e) => setText1(e.target.value)}
+              />
+              <input
+                style={{ width: "100%", height: "auto", marginBottom: "20px" }}
+                placeholder="Enter text"
+                value={text3}
+                onChange={(e) => setText3(e.target.value)}
+              />
+              <input
+                style={{ width: "100%", height: "auto", marginBottom: "20px" }}
+                placeholder="Enter text"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+              />
+              <button onClick={handleSave}>Save</button>
+            </Box>
+          ) : (
+            <>
+              <p className="the-lighthouse-">
+                {text1.split("\n").map((item, key) => (
+                  <span key={key}>
+                    {item}
+                    <br />
+                  </span>
+                ))}
               </p>
-          { edit && (
-            <input  placeholder="Enter text"
-            value={text1}
-            onChange={(e) => setText1(e.target.value)}/>
-            )}
-
-          <p className="the-lighthouse-">{text3}
-          { edit&&(
-
-         
-          <input  placeholder="Enter text"
-          value={text3}
-          onChange={(e) => setText3(e.target.value)}
-        />
+              <p className="the-lighthouse-">&nbsp;</p>
+              <p className="the-lighthouse-">{text3}</p>
+              <p className="the-lighthouse-">&nbsp;</p>
+              <p className="the-lighthouse-">{text}</p>
+              {isAuthenticated && <button onClick={handleEdit}>EDIT</button>}
+            </>
           )}
-        </p>
-         
-          
-          <p className="the-lighthouse-">&nbsp;</p>
-         
-          <p className="the-lighthouse-">
-           {text}
-         {  edit &&(
-           <input placeholder="Enter text"
-                      value={text}
-                      onChange={(e) => setText(e.target.value)}
-                      />
-         )}
-          </p>
-        
-         
         </div>
         <div className="stateprimary12" onClick={onStatePrimaryContainerClick}>
           <div className="button35">discover our services</div>
@@ -148,7 +178,7 @@ const handleSave3 = ()=>{
 };
 
 export default LandingPage;
-<img className="vector-icon55" alt="" src="/vector26.svg" />
+<img className="vector-icon55" alt="" src="/vector26.svg" />;
 // <img className="vector-icon56" alt="" src="/vector27.svg" />
 // import { useCallback, useState } from "react";
 // import { useNavigate } from "react-router-dom";
@@ -226,7 +256,7 @@ export default LandingPage;
 //           {edit ? (
 //             <>
 //             <input placeholder="rfitdf"/>
-//             <button onClick={handleSave}>Save</button> 
+//             <button onClick={handleSave}>Save</button>
 //             </>
 //             ) : (
 //               <p className="the-lighthouse-">
@@ -234,7 +264,7 @@ export default LandingPage;
 //               illuminate your path to sustainable success and holistic
 //               development.
 //               </p>
-              
+
 //             )}
 //              <button onClick={handleEdit}>EDIT</button>
 //         </div>
