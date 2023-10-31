@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServicesMainPage.css";
+import "./LandingPage.css";
 
 const OurServicesMainPage = () => {
   const navigate = useNavigate();
@@ -64,19 +65,19 @@ const OurServicesMainPage = () => {
         <div className="button9">Contact us</div>
       </div>
       <div className="explore-our-diverse">{`Explore our diverse range of services and discover how The Lighthouse can empower your journey to transformation and growth. Whether you are interested in a specific service or wish to learn more about our holistic approach, we are here to connect with you. `}</div>
-      <div className="glossary8">Glossary</div>
-      <div className="about8" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home8" onClick={onHomeTextClick}>
+      <div className="home16" onClick={onHomeTextClick}>
         Home
       </div>
-      <div className="rent-a-skill8">Rent- a- skill</div>
-      <div className="services8">Services
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21">Services
       </div>
       <div className="Services-Child" />
       
-      <div className="contact8" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-main-page-child" />

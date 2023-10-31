@@ -218,8 +218,8 @@
 }
 .statesecondary3 {
   position: absolute;
-  top: 706px;
-  left: 1055px;
+  top: 85%;
+  left: 72%;
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;
@@ -294,4 +294,10 @@
   font-size: var(--body-text-size);
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
+}
+.edit{
+  
+  margin-right: 1270px;
+ margin-top:100px;
+ 
 }

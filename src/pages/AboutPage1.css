@@ -61,14 +61,14 @@
 .statesecondary19 {
   left: 60%;
 }
-/* .icon24 {
+.icon24 {
   position: absolute;
   top: 17px;
   left: 20px;
   width: 217px;
   height: 40px;
   object-fit: cover;
-} */
+}
 .about15,
 .contact15,
 .glossary20,
@@ -116,7 +116,7 @@
 .about-page-1-child {
   position: absolute;
   top: 61.5px;
-  left: 881px;
+  left: 67%;
   border-top: 1px solid var(--color-burlywood);
   box-sizing: border-box;
   width: 58.01px;

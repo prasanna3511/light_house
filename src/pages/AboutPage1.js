@@ -1,6 +1,7 @@
 import { useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AboutPage1.css";
+import "./LandingPage.css";
 import { Box } from "@material-ui/core";
 import axios from "axios";
 
@@ -100,7 +101,7 @@ const AboutPage1 = () => {
   return (
     <div className="about-page-1">
       <img className="vector-icon52" alt="" src="/Aboutpage-1.png" />
-
+      <mg className="icon24" alt="" src="/2-1@2x.png" />
       <div
         className="statesecondary17"
         onClick={onStateSecondaryContainerClick}
@@ -117,16 +118,16 @@ const AboutPage1 = () => {
         <div className="button29">Discover our services</div>
       </div>
 
-      <div className="rent-a-skill20">Rent- a- Skill</div>
-      <div className="glossary20">Glossary</div>
-      <div className="about15">About</div>
-      <div className="home15" onClick={onHomeTextClick}>
+      <div className="rent-a-skill21">Rent- a- Skill</div>
+      <div className="glossary21">Glossary</div>
+      <div className="about16">About</div>
+      <div className="home16" onClick={onHomeTextClick}>
         Home
       </div>
-      <div className="services20" onClick={onServicesTextClick}>
+      <div className="services21" onClick={onServicesTextClick}>
         Services
       </div>
-      <div className="contact15" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="about-page-1-child" />

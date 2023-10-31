@@ -236,7 +236,7 @@ const OurServices6 = () => {
         </div>
       </div>
       <div
-        className="auto-layout-vertical4"
+        className="auto-layout-vertical4 "
         onClick={onAutoLayoutVerticalClick}
       >
         <div className="auto-layout-horizontal9">
@@ -272,7 +272,7 @@ const OurServices6 = () => {
       ) : (
         <></>
       )}
-      <button onClick={handleEdit}>EDIT</button>
+      <button className="edit" onClick={handleEdit}>EDIT</button>
       </div>
   );
 };

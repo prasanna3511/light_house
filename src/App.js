@@ -129,6 +129,7 @@ function App() {
       {/* <Route path="/" element={<OurServices8 />} /> */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/our-services8" element={<OurServices8 />} />
       <Route path="/our-services7" element={<OurServices7 />} />
       <Route path="/our-services6" element={<OurServices6 />} />
       <Route path="/our-services5" element={<OurServices5 />} />

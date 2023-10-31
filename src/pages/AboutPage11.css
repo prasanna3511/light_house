@@ -17,8 +17,8 @@
   top: 73.45%;
   right: 46.25%;
   bottom: 0;
-  left: 0; */
-/* } */
+  left: 0; 
+ } */
 .button12 {
   position: relative;
   text-transform: uppercase;
@@ -107,7 +107,7 @@
 .about-page-11-child {
   position: absolute;
   top: 61.5px;
-  left: 882px;
+  left: 66.7%;
   border-top: 1px solid var(--color-burlywood);
   box-sizing: border-box;
   width: 58.01px;
@@ -154,12 +154,11 @@
   height: 12px;
 }
 .the-only-constant-textfield1{
-  position: absolute;
+ 
   left:25% ;
   /* left: 243px; */
-  font-size: var(--subheading-size);
-  font-weight: 200;
-  display: flex;
+
+  
   width: 600px;
   height: 12px;
 }  
@@ -183,16 +182,12 @@
   width: 600px;
   height: 12px;
 }   
-.the-only-constant-textfield11{
-  /* position: absolute;
-  left:25% ; */
-  /* left: 243px; */
-  /* font-size: var(--subheading-size);
-  font-weight: 200;
-  display: flex;*/
+ 
+.the-only-constant-textfieldvision
+{
   width: 60px;
   height: 12px;
-}  
+}
 .read-less {
   position: absolute;
 padding-top: 120%;

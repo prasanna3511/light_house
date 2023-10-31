@@ -2,6 +2,7 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices3.css";
 import axios from "axios";
+import "./LandingPage.css";
 
 const OurServices3 = () => {
   const navigate = useNavigate();
@@ -254,14 +255,14 @@ const OurServices3 = () => {
       <div className="statesecondary6" onClick={onStateSecondaryContainerClick}>
         <div className="button6">Contact us</div>
       </div>
-      <div className="glossary5">Glossary</div>
-      <div className="about5" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home5">Home</div>
-      <div className="rent-a-skill5">Rent- a- skill</div>
-      <div className="services5">Services</div>
-      <div className="contact5" onClick={onContactTextClick}>
+      <div className="home16">Home</div>
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21">Services</div>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-3-child" onClick={onLineClick} />
@@ -272,7 +273,7 @@ const OurServices3 = () => {
       ) : (
         <></>
       )}
-      <button onClick={handleEdit}>EDIT</button>
+      <button className="edit" onClick={handleEdit}>EDIT</button>
       </div>
   );
 };

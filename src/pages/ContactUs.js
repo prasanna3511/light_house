@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ContactUs.css";
+import "./LandingPage.css";
 
 const ContactUs = () => {
   const navigate = useNavigate();
@@ -144,18 +145,18 @@ const ContactUs = () => {
         </div>
       </div>
       <div className="contact-us5">{`Contact us `}</div>
-      <div className="rent-a-skill19">Rent- a- Skill</div>
-      <div className="glossary19">Glossary</div>
-      <div className="about14" onClick={onAboutTextClick}>
+      <div className="rent-a-skill21">Rent- a- Skill</div>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home14" onClick={onHomeTextClick}>
+      <div className="home16" onClick={onHomeTextClick}>
         Home
       </div>
-      <div className="services19" onClick={onServicesText1Click}>
+      <div className="services21" onClick={onServicesText1Click}>
         Services
       </div>
-      <div className="contact14">Contact</div>
+      <div className="contact16">Contact</div>
       <div className="contact-us-child" />
       <img className="vector-icon49" alt="" src="/vector14.svg" />
       <img className="contact-us-item" alt="" src="/group-3.svg" />

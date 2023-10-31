@@ -37,13 +37,13 @@
 .rent-a-skill21 {
   position: absolute;
   top: 36px;
-  left: 1088px;
+  left: 78%;
   display: inline-block;
   width: 119px;
   height: 26px;
 }
 .glossary21 {
-  left: 1236px;
+  left: 86%;
   width: 74px;
 }
 .about16,
@@ -57,33 +57,33 @@
   height: 26px;
 }
 .about16 {
-  left: 885px;
+  left: 67%;
   width: 51px;
   cursor: pointer;
 }
 .contact16,
 .home16,
 .services21 {
-  left: 792px;
+  left: 62%;
   width: 53px;
 }
 .contact16,
 .services21 {
-  left: 976px;
+  left: 72%;
   width: 74px;
   cursor: pointer;
 }
 .contact16 {
-  left: 1350px;
+  left: 92%;
   width: 66px;
 }
 .landing-page-child {
   position: absolute;
   top: 61.5px;
-  left: 787.5px;
+  left:62%;
   border-top: 1px solid var(--color-burlywood);
   box-sizing: border-box;
-  width: 58.01px;
+  width: 56px;
   height: 1px;
 }
 .frame-child21 {
