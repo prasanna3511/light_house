@@ -200,9 +200,11 @@
 .your-name4 {
   position: relative;
   letter-spacing: 0.02em;
-  line-height: 20px;
+  line-height: 3px;
   border: none; 
-  outline: none; 
+  outline: none;
+  width: 600px;
+ 
 }
 .auto-layout-horizontal111,
 .auto-layout-horizontal112 {
@@ -271,14 +273,14 @@
 }
 .auto-layout-vertical125 {
   position: absolute;
-  top: 245px;
+  top: 190px;
   left: calc(50% - 640px);
   border-radius: var(--br-9xs);
   background: radial-gradient(50% 50%at 50% 50%, #be9e45, #d8c691);
   border: 1px solid var(--color-lightsteelblue);
   box-sizing: border-box;
   width: 1280px;
-  height: 305px;
+  height: 345px;
   justify-content: center;
   padding: var(--padding-61xl) var(--padding-13xl);
   text-align: left;
