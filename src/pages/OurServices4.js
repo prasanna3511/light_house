@@ -36,6 +36,9 @@ const OurServices4 = () => {
   const onContactTextClick = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
+  const onHomeTextClick = useCallback(() => {
+    navigate("/landing-page");
+  }, [navigate]);
   
   const handleEdit = () => {
     setEdit(true);
@@ -282,7 +285,7 @@ const OurServices4 = () => {
       <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home16">Home</div>
+      <div className="home16"onClick={ onHomeTextClick}>Home</div>
       <div className="rent-a-skill21">Rent- a- skill</div>
       <div className="services21" onClick={onServicesTextClick}>
         Services

@@ -63,6 +63,7 @@
   font-family: var(--font-inherit);
   display: inline-block;
   width: 482px;
+  z-index: 5;
 }
 .individuals-seeking-personal-container,
 .navigate-your-transformative-container {
@@ -263,5 +264,5 @@ left:50%;
 .edit{
 margin-right:78%;
  margin-top:7%;
- 
+ z-index:1;
 }

@@ -62,6 +62,7 @@
   font-family: var(--font-inherit);
   display: inline-block;
   width: 482px;
+  z-index: 5;
 }
 .brands-and-organisations-container,
 .strengthen-your-brand-container {
