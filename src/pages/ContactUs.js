@@ -167,50 +167,50 @@ const ContactUs = () => {
           </div>
           }
           {online &&
-             <div className="auto-layout-horizontal63">
-             <div className="auto-layout-vertical63">
-               <div className="auto-layout-vertical64">
-                 <div className="auto-layout-horizontal64">
-                   <div className="auto-layout-horizontal65">
+             <div className="auto-layout-horizontal110">
+             <div className="auto-layout-vertical128">
+               <div className="auto-layout-vertical129">
+                 <div className="auto-layout-horizontal111">
+                   <div className="auto-layout-horizontal112">
                      
-                   <input type="text" id = "myInput" placeholder ="Your Name" className="your-name2"/>
+                   <input type="text" id = "myInput" placeholder ="Your Name" className="your-name4"/>
                    </div>
                  </div>
                </div>
              </div>
-             <div className="stateprimary7">
-               <div className="button24">Submit</div>
+             <div className="stateprimary11">
+               <div className="services18">Submit</div>
              </div>
            </div>
           }
           {call &&
           <>
-          <div className="auto-layout-horizontal19">
-          <div className="auto-layout-vertical11">
-            <div className="auto-layout-vertical12">
-              <div className="auto-layout-horizontal20">
-                <div className="auto-layout-horizontal21">
-                  <div className="your-name">Your e-mail</div>
+          <div className="auto-layout-horizontal110">
+          <div className="auto-layout-vertical128">
+            <div className="auto-layout-vertical129">
+              <div className="auto-layout-horizontal111">
+                <div className="auto-layout-horizontal112">
+                  <div className="your-name4">Your e-mail</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="stateprimary1">
-            <div className="button18">Submit</div>
-          </div>
+          {/* <div className="stateprimary11">
+            <div className="services18">Submit</div>
+          </div> */}
         </div>
-        <div className="auto-layout-horizontal19">
-          <div className="auto-layout-vertical11">
-            <div className="auto-layout-vertical12">
-              <div className="auto-layout-horizontal20">
-                <div className="auto-layout-horizontal21">
-                  <div className="your-name">Your what’s app number</div>
+        <div className="auto-layout-horizontal110">
+          <div className="auto-layout-vertical128">
+            <div className="auto-layout-vertical129">
+              <div className="auto-layout-horizontal111">
+                <div className="auto-layout-horizontal112">
+                  <div className="your-name4">Your what’s app number</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="stateprimary1">
-            <div className="button18">Submit</div>
+          <div className="stateprimary11">
+            <div className="services18">Submit</div>
           </div>
         </div>
           </>
