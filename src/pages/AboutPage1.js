@@ -20,6 +20,7 @@ const AboutPage1 = () => {
     navigate("/contact-us");
   }, [navigate]);
 
+
   const onStateSecondaryContainer1Click = useCallback(() => {
     navigate("/about-page11");
   }, [navigate]);
@@ -46,7 +47,7 @@ const AboutPage1 = () => {
 
   const handleSave = async () => {
     if (id2) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 2,
         title: text,
         short_description: text3,
@@ -55,7 +56,7 @@ const AboutPage1 = () => {
       });
       console.log(cardResponse.data);
     } else {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 1,
         title: text,
         short_description: text1,
@@ -74,7 +75,7 @@ const AboutPage1 = () => {
   const fetchHeaderTopData = () => {
     let typeToFetch = "top";
     axios
-      .get("https://thelighthouseweb.co/about.php", {
+      .get("http://localhost:3000/about.php", {
         params: {
           position: typeToFetch,
         },
@@ -213,4 +214,4 @@ export default AboutPage1;
 // <img className="vector-icon52" alt="" src="/vector23.svg" />
 // <img className="vector-icon53" alt="" src="/vector24.svg" />
 //  <img className="vector-icon54" alt="" src="/vector25.svg" />
-// img className="icon24" alt="" src="/2-1@2x.png" />
+// <img className="icon24" alt="" src="/2-1@2x.png" />

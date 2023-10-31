@@ -2,6 +2,7 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices6.css";
 import "./OurServices3.css";
+import "./LandingPage.css";
 import axios from "axios";
 
 const OurServices6 = () => {
@@ -51,7 +52,7 @@ const OurServices6 = () => {
     let typeToFetch = "languageculture";
     let categoryToFetch = "offerings";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -77,7 +78,7 @@ const OurServices6 = () => {
     let typeToFetch = "languageculture";
     let categoryToFetch = "benefits";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -105,7 +106,7 @@ const OurServices6 = () => {
     let typeToFetch = "languageculture";
     let categoryToFetch = "ideal";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -135,26 +136,26 @@ const OurServices6 = () => {
   const handleSave = async() => {
     setEdit(false);
     if (id1) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 26,
         value: text,
       });
       console.log(cardResponse.data);
     } else if(id2) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 27,
         value: text1,
       });
       console.log(cardResponse.data);
     }
     else if(id3) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 28,
         value: text2,
       });
       console.log(cardResponse.data);
     } else if(id4) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 29,
         value: text3,
       });
@@ -165,11 +166,10 @@ const OurServices6 = () => {
 
   return (
     <div className="our-services-6">
-      <img className="vector-icon4" alt="" src="/vector.svg" />
-      <img className="vector-icon5" alt="" src="/vector2.svg" />
+      
       <img className="icon3" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child3" />
+        <div className="frame-child12" />
         <div className="language-and-cultural">
           Language and Cultural Services
         </div>
@@ -254,16 +254,16 @@ const OurServices6 = () => {
       <div className="statesecondary3" onClick={onStateSecondaryContainerClick}>
         <div className="button3">Contact us</div>
       </div>
-      <div className="glossary2">Glossary</div>
-      <div className="about2" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home2">Home</div>
-      <div className="rent-a-skill2">Rent- a- skill</div>
-      <div className="services2" onClick={onServicesTextClick}>
+      <div className="home16">Home</div>
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21" onClick={onServicesTextClick}>
         Services
       </div>
-      <div className="contact2" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-6-child" />
@@ -282,3 +282,5 @@ const OurServices6 = () => {
 };
 
 export default OurServices6;
+// <img className="vector-icon4" alt="" src="/vector.svg" />
+//       <img className="vector-icon5" alt="" src="/vector2.svg" />

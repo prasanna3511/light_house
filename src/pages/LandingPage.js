@@ -34,15 +34,15 @@ const LandingPage = () => {
   };
 
   const handleSave = async () => {
-    const cardResponse = await axios.put("https://thelighthouseweb.co/home.php", {
+    const cardResponse = await axios.put("http://localhost:3000/home.php", {
       id: 1,
       description: text1,
     });
-    const cardResponse1 = await axios.put("https://thelighthouseweb.co/home.php", {
+    const cardResponse1 = await axios.put("http://localhost:3000/home.php", {
       id: 2,
       description: text3,
     });
-    const cardResponse2 = await axios.put("https://thelighthouseweb.co/home.php", {
+    const cardResponse2 = await axios.put("http://localhost:3000/home.php", {
       id: 3,
       description: text,
     });
@@ -73,7 +73,7 @@ const LandingPage = () => {
 
   const fetchAboutData = () => {
     axios
-      .get("https://thelighthouseweb.co/home.php")
+      .get("http://localhost:3000/home.php")
       .then((response) => {
         const responseData = response.data;
         if (responseData.message === "Data fetched successfully") {
@@ -97,7 +97,7 @@ const LandingPage = () => {
         alt=""
         src="/the-lighthouse-logo-no-tagline-loose-text-1-1@2x.png"
       />
-
+      <img className="icon24" alt="" src="/2-1@2x.png" />  
       <div className="rent-a-skill21">Rent- a- Skill</div>
       <div className="glossary21">Glossary</div>
       <div className="about16" onClick={onAboutTextClick}>

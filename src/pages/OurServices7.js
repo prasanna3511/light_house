@@ -2,6 +2,7 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices7.css";
 import "./OurServices3.css";
+import "./LandingPage.css";
 import axios from "axios";
 
 const OurServices7 = () => {
@@ -55,7 +56,7 @@ const OurServices7 = () => {
     let typeToFetch = "writing";
     let categoryToFetch = "offerings";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -81,7 +82,7 @@ const OurServices7 = () => {
     let typeToFetch = "writing";
     let categoryToFetch = "benefits";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -109,7 +110,7 @@ const OurServices7 = () => {
     let typeToFetch = "writing";
     let categoryToFetch = "ideal";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -139,26 +140,26 @@ const OurServices7 = () => {
   const handleSave = async() => {
     setEdit(false);
     if (id1) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 30,
         value: text,
       });
       console.log(cardResponse.data);
     } else if(id2) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 31,
         value: text1,
       });
       console.log(cardResponse.data);
     }
     else if(id3) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 32,
         value: text2,
       });
       console.log(cardResponse.data);
     } else if(id4) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 33,
         value: text3,
       });
@@ -169,8 +170,7 @@ const OurServices7 = () => {
   
   return (
     <div className="our-services-7">
-      <img className="vector-icon2" alt="" src="/vector.svg" />
-      <img className="vector-icon3" alt="" src="/vector1.svg" />
+     
       <img className="icon2" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
         <div className="frame-child12" />
@@ -251,16 +251,16 @@ const OurServices7 = () => {
       <div className="statesecondary2" onClick={onStateSecondaryContainerClick}>
         <div className="button2">Contact us</div>
       </div>
-      <div className="glossary1">Glossary</div>
-      <div className="about1" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home1">Home</div>
-      <div className="rent-a-skill1">Rent- a- skill</div>
-      <div className="services1" onClick={onServicesTextClick}>
+      <div className="home16">Home</div>
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21" onClick={onServicesTextClick}>
         Services
       </div>
-      <div className="contact1" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-7-child" onClick={onLineClick} />
@@ -279,3 +279,5 @@ const OurServices7 = () => {
 };
 
 export default OurServices7;
+// <img className="vector-icon2" alt="" src="/vector.svg" />
+// <img className="vector-icon3" alt="" src="/vector1.svg" />

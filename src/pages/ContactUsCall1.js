@@ -68,7 +68,7 @@ const ContactUsCall1 = () => {
               <div className="auto-layout-vertical40">
                 <div className="auto-layout-horizontal45">
                   <div className="auto-layout-horizontal46">
-                  <input type="text" id = "myInput" placeholder ="Your  mobile No" className="your-name1"/>
+                  <input type="text" id = "myInput" placeholder ="Your  mobile No" className="your-name3"/>
                   </div>
                 </div>
               </div>

@@ -2,6 +2,7 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices5.css";
 import "./OurServices3.css";
+import "./LandingPage.css";
 import axios from "axios";
 
 const OurServices5 = () => {
@@ -56,7 +57,7 @@ const OurServices5 = () => {
     let typeToFetch = "brandingstrategic";
     let categoryToFetch = "offerings";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -83,7 +84,7 @@ const OurServices5 = () => {
     let typeToFetch = "brandingstrategic";
     let categoryToFetch = "benefits";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -111,7 +112,7 @@ const OurServices5 = () => {
     let typeToFetch = "brandingstrategic";
     let categoryToFetch = "ideal";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -141,33 +142,33 @@ const OurServices5 = () => {
   const handleSave = async() => {
     setEdit(false);
     if (id1) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 21,
         value: text,
       });
       console.log(cardResponse.data);
     } else if(id2) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 22,
         value: text1,
       });
       console.log(cardResponse.data);
     }
     else if(id3) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 23,
         value: text2,
       });
       console.log(cardResponse.data);
     } else if(id4) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 24,
         value: text3,
       });
       console.log(cardResponse.data);
     }
     else if(id5) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 25,
         value: text4,
       });
@@ -277,16 +278,16 @@ const OurServices5 = () => {
       <div className="statesecondary4" onClick={onStateSecondaryContainerClick}>
         <div className="button4">Contact us</div>
       </div>
-      <div className="glossary3">Glossary</div>
-      <div className="about3" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home3">Home</div>
-      <div className="rent-a-skill3">Rent- a- skill</div>
-      <div className="services3" onClick={onServicesTextClick}>
+      <div className="home16">Home</div>
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21" onClick={onServicesTextClick}>
         Services
       </div>
-      <div className="contact3" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-5-child" onClick={onLineClick} />

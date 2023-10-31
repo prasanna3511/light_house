@@ -12,7 +12,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://thelighthouseweb.co/login.php", {
+      const response = await axios.post("http://localhost:3000/login.php", {
         email,
         password,
       });
@@ -50,7 +50,7 @@ export default function Login() {
           style={{
             width: "30%",
             height: "auto",
-            backgroundColor: "white",
+            // backgroundColor: "white",
             borderRadius: "25px",
             // backgroundImage: `url(${backGround2})`, // Use the "url()" function
             display: "flex",
@@ -67,7 +67,7 @@ export default function Login() {
             }}
           > */}
           <img
-            style={{ width: "150px", height: "150px", margin: "auto" }}
+            style={{ width: "200px", height: "200px", margin: "auto" }}
             src={require("../images/logo.png")}
           />
           <TextField
@@ -78,8 +78,8 @@ export default function Login() {
             style={{
               backgroundColor: "white",
               width: "60%",
-              borderRadius: "15",
-              marginTop: "50px",
+              borderRadius: "45px",
+              marginTop: "40px",
               margin: "auto",
             }}
             value={email}
@@ -93,8 +93,8 @@ export default function Login() {
             style={{
               backgroundColor: "white",
               width: "60%",
-              borderRadius: "15",
-              marginTop: "50px",
+              borderRadius: "45px",
+              marginTop: "20px",
               margin: "auto",
             }}
             value={password}
@@ -105,9 +105,13 @@ export default function Login() {
               borderWidth: 1,
               borderColor: "white",
               height: "40px",
-              borderRadius: "15",
-              marginTop: "10%",
-              color: "#FFD700",
+              borderRadius: "35px",
+              backgroundColor: "#BE9E45",
+              marginTop: "30px",
+              color: "white",
+              fontWeight: "bold",
+              width:"160px",
+              margin:"auto"
             }}
             onClick={handleSubmit}
           >

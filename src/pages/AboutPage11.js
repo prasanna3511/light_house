@@ -83,7 +83,7 @@ const AboutPage11 = () => {
 
   const handleSave = async () => {
     if (id3) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 4,
         title: text,
         short_description: text3,
@@ -92,7 +92,7 @@ const AboutPage11 = () => {
       });
       console.log(cardResponse.data);
     } else if (id4) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 5,
         title: text,
         short_description: text5,
@@ -101,7 +101,7 @@ const AboutPage11 = () => {
       });
       console.log(cardResponse.data);
     } else {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 3,
         title: text,
         short_description: text1,
@@ -116,7 +116,7 @@ const AboutPage11 = () => {
 
   const handleSave1 = async () => {
     if (id5) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 6,
         title: text7,
         short_description: "-",
@@ -125,7 +125,7 @@ const AboutPage11 = () => {
       });
       console.log(cardResponse.data);
     } else {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 7,
         title: text9,
         short_description: "-",
@@ -139,7 +139,7 @@ const AboutPage11 = () => {
 
   const handleSave2 = async () => {
     if (bid1) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 8,
         title: text11,
         short_description: "-",
@@ -148,7 +148,7 @@ const AboutPage11 = () => {
       });
       console.log(cardResponse.data);
     } else if(bid2) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 9,
         title: text12,
         short_description: "-",
@@ -158,7 +158,7 @@ const AboutPage11 = () => {
       console.log(cardResponse.data);
     }
     else if(bid3) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 10,
         title: text13,
         short_description: "-",
@@ -168,7 +168,7 @@ const AboutPage11 = () => {
       console.log(cardResponse.data);
     }
     else if(bid4) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 11,
         title: text14,
         short_description: "-",
@@ -178,7 +178,7 @@ const AboutPage11 = () => {
       console.log(cardResponse.data);
     }
     else if(bid5) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
+      const cardResponse = await axios.put("http://localhost:3000/about.php", {
         id: 12,
         title: text15,
         short_description: "-",
@@ -199,7 +199,7 @@ const AboutPage11 = () => {
   const fetchHeaderTopData = () => {
     let typeToFetch = "middle";
     axios
-      .get("https://thelighthouseweb.co/about.php", {
+      .get("http://localhost:3000/about.php", {
         params: {
           position: typeToFetch,
         },
@@ -228,7 +228,7 @@ const AboutPage11 = () => {
   const fetchVisionData = () => {
     let typeToFetch = "middlecard";
     axios
-      .get("https://thelighthouseweb.co/about.php", {
+      .get("http://localhost:3000/about.php", {
         params: {
           position: typeToFetch,
         },
@@ -257,7 +257,7 @@ const AboutPage11 = () => {
   const fetchValueData = () => {
     let typeToFetch = "bottomcard";
     axios
-      .get("https://thelighthouseweb.co/about.php", {
+      .get("http://localhost:3000/about.php", {
         params: {
           position: typeToFetch,
         },
@@ -359,9 +359,8 @@ const AboutPage11 = () => {
             />
           )}
           <p className="and-the-bottom">
-            {`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}
-            {`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}
-          </p>
+     {text2}
+          </p>     
           {edit && (
             <input
               className="the-only-constant-textfield3"
@@ -396,8 +395,8 @@ const AboutPage11 = () => {
           )}
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
-            {text6}
-            <p className="and-the-bottom">{`We guide individuals and organisations to empower themselves to evolve and thrive in all dimensions, aligning their actions and decisions with their values, purpose, and the greater good. `}</p>
+      
+            <p className="and-the-bottom">{text6}</p>
             {edit && (
               <input
                 className="the-only-constant-textfield3"
@@ -673,7 +672,8 @@ const AboutPage11 = () => {
 };
 
 export default AboutPage11;
-
+// {`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}
+// {`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}
 // <img className="vector-icon19" alt="" src="/vector8.svg" />
 //       <img className="vector-icon20" alt="" src="/vector9.svg" />
 // <img className="vector-icon21" alt="" src="/vector10.svg" />

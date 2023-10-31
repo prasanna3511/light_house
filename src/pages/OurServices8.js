@@ -2,6 +2,7 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices8.css";
 import "./OurServices3.css";
+import "./LandingPage.css";
 import axios from "axios";
 
 const OurServices8 = () => {
@@ -50,7 +51,7 @@ const OurServices8 = () => {
     let typeToFetch = "comprehensive";
     let categoryToFetch = "offerings";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -77,7 +78,7 @@ const OurServices8 = () => {
     let typeToFetch = "comprehensive";
     let categoryToFetch = "benefits";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -105,7 +106,7 @@ const OurServices8 = () => {
     let typeToFetch = "comprehensive";
     let categoryToFetch = "ideal";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -135,33 +136,33 @@ const OurServices8 = () => {
   const handleSave = async() => {
     setEdit(false);
     if (id1) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 34,
         value: text,
       });
       console.log(cardResponse.data);
     } else if(id2) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 35,
         value: text1,
       });
       console.log(cardResponse.data);
     }
     else if(id3) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 36,
         value: text2,
       });
       console.log(cardResponse.data);
     } else if(id4) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 37,
         value: text3,
       });
       console.log(cardResponse.data);
     }
     else if(id5) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 38,
         value: text4,
       });
@@ -171,8 +172,7 @@ const OurServices8 = () => {
   
   return (
     <div className="our-services-8">
-      <img className="vector-icon" alt="" src="/vector.svg" />
-      <img className="vector-icon1" alt="" src="/vector1.svg" />
+
       <img className="icon1" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
         <div className="frame-child12" />
@@ -267,18 +267,18 @@ const OurServices8 = () => {
       >
         <img className="frame-icon" alt="" src="/frame.svg" />
       </div>
-      <div className="glossary">Glossary</div>
-      <div className="about" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home" onClick={onHomeTextClick}>
+      <div className="home16" onClick={onHomeTextClick}>
         Home
       </div>
-      <div className="rent-a-skill">Rent- a- skill</div>
-      <div className="services" onClick={onServicesTextClick}>
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21" onClick={onServicesTextClick}>
         Services
       </div>
-      <div className="contact" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-8-child" />
@@ -298,3 +298,5 @@ const OurServices8 = () => {
 };
 
 export default OurServices8;
+// <img className="vector-icon" alt="" src="/vector.svg" />
+// <img className="vector-icon1" alt="" src="/vector1.svg" />

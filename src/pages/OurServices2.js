@@ -53,7 +53,7 @@ const OurServices2 = () => {
     let typeToFetch = "creativeexpressive";
     let categoryToFetch = "offerings";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -79,7 +79,7 @@ const OurServices2 = () => {
     let typeToFetch = "creativeexpressive";
     let categoryToFetch = "benefits";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -107,7 +107,7 @@ const OurServices2 = () => {
     let typeToFetch = "creativeexpressive";
     let categoryToFetch = "ideal";
     axios
-      .get("https://thelighthouseweb.co/service_page.php", {
+      .get("http://localhost:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -137,26 +137,26 @@ const OurServices2 = () => {
   const handleSave = async() => {
     setEdit(false);
     if (id1) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 8,
         value: text,
       });
       console.log(cardResponse.data);
     } else if(id2) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 9,
         value: text1,
       });
       console.log(cardResponse.data);
     }
     else if(id3) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 10,
         value: text2,
       });
       console.log(cardResponse.data);
     } else if(id4) {
-      const cardResponse = await axios.put("https://thelighthouseweb.co/service_page.php", {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
         id: 11,
         value: text3,
       });
