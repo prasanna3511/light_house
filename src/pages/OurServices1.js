@@ -278,7 +278,7 @@ const OurServices1 = () => {
          
               {edit && (
                 <input
-                  placeholder="Enter text"
+                  placeholder="Enter text" className="input6"
                   value={text6}
                   onChange={(e) => {setText6(e.target.value),setId7(true)}}
                 />

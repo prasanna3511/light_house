@@ -71,6 +71,7 @@
   display: inline-block;
   width: 474px;
   height: 65px;
+  z-index: 5;
 }
 .authors-corporations-and-container {
   top: 525px;

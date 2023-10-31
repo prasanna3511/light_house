@@ -63,6 +63,7 @@
   font-family: var(--font-inherit);
   display: inline-block;
   width: 482px;
+  z-index: 5;
 }
 .embark-on-a-container,
 .organisations-aspiring-to-container {

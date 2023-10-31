@@ -62,6 +62,7 @@
   font-family: var(--font-inherit);
   display: inline-block;
   width: 482px;
+  z-index: 5;
 }
 .brands-corporations-and-container,
 .elevate-your-brand-container {
@@ -156,6 +157,7 @@
   justify-content: center;
   /* top: 12%; */
   left: 85%;
+  
 }
 .auto-layout-horizontal11 {
   top: 16%;

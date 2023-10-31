@@ -71,6 +71,7 @@
   display: inline-block;
   width: 474px;
   height: 65px;
+  z-index: 5;
 }
 .individuals-and-organisations-container {
   top: 525px;

@@ -69,6 +69,7 @@
   left: 659px;
   width: 474px;
   height: 65px;
+  z-index: 5;
 }
 .teams-organisations-and-container {
   top: 525px;
