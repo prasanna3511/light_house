@@ -154,12 +154,11 @@
   height: 12px;
 }
 .the-only-constant-textfield1{
-  position: absolute;
+ 
   left:25% ;
   /* left: 243px; */
-  font-size: var(--subheading-size);
-  font-weight: 200;
-  display: flex;
+
+  
   width: 600px;
   height: 12px;
 }  
@@ -183,16 +182,7 @@
   width: 600px;
   height: 12px;
 }   
-.the-only-constant-textfield11{
-  /* position: absolute;
-  left:25% ; */
-  /* left: 243px; */
-  /* font-size: var(--subheading-size);
-  font-weight: 200;
-  display: flex;*/
-  width: 60px;
-  height: 12px;
-}  
+ 
 .the-only-constant-textfieldvision
 {
   width: 60px;
