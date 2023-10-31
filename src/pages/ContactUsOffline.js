@@ -15,6 +15,9 @@ const ContactUsOffline = () => {
   const onCallTextClick = useCallback(() => {
     navigate("/contact-us-call");
   }, [navigate]);
+  const onLineClick = useCallback(() => {
+    navigate("/contact-us-online");
+  }, [navigate]);
 
   return (
     <div className="contact-us-offline">
@@ -37,7 +40,7 @@ const ContactUsOffline = () => {
                 <div className="offline3">Offline</div>
               </div>
               <div className="auto-layout-horizontal80">
-                <div className="offline3">Online</div>
+                <div className="offline3"onClick={onLineClick}>Online</div>
               </div>
               <div className="auto-layout-horizontal81">
                 <div className="offline3" onClick={onCallTextClick}>Call</div>

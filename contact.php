@@ -28,30 +28,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = json_decode(file_get_contents('php://input'));
 
     if (
-        !isset($data->type) || // Add 'type' to the validation
+        !isset($data->name) || 
+        !isset($data->email) || 
+        !isset($data->phone) || 
+        !isset($data->type) || 
+        empty(trim($data->name)) || 
+        empty(trim($data->email)) || 
+        empty(trim($data->phone)) || 
         empty(trim($data->type))
     ) {
         sendJson(
             422,
-            'Please fill the required field: type',
-            ['required_fields' => ['type']]
+            'Please fill all required fields: name, email, phone, type',
+            ['required_fields' => ['name', 'email', 'phone', 'type']]
         );
     }
 
+    $name = mysqli_real_escape_string($connection, trim($data->name));
+    $email = mysqli_real_escape_string($connection, trim($data->email));
+    $phone = mysqli_real_escape_string($connection, trim($data->phone));
     $type = mysqli_real_escape_string($connection, trim($data->type));
 
-    // Fetch data from the 'contact' table based on the 'type'
-    $sql = "SELECT * FROM `contact` WHERE `type`='$type'";
-    $result = mysqli_query($connection, $sql);
+    // Insert data into the 'contact' table
+    $sql = "INSERT INTO `contact` (name, email, phone, type) VALUES ('$name', '$email', '$phone', '$type')";
 
-    if ($result) {
-        $contacts = [];
-        while ($row = mysqli_fetch_assoc($result)) {
-            $contacts[] = $row;
-        }
-        sendJson(200, 'Data fetched successfully', ['contacts' => $contacts]);
+    if (mysqli_query($connection, $sql)) {
+        sendJson(201, 'Data inserted successfully');
     } else {
-        sendJson(500, 'Error fetching data');
+        sendJson(500, 'Error inserting data');
     }
 } else {
     sendJson(405, 'Invalid Request Method. HTTP method should be POST');

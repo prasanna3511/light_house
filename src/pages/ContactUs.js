@@ -1,22 +1,28 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ContactUs.css";
 import "./LandingPage.css";
+import "./ContactUsCall.css";
+import "./ContactUsOnline.css";
+import "./ContactUsOffline.css";
+
 
 const ContactUs = () => {
   const navigate = useNavigate();
+  const [offline,setOffline] = useState(false);
+  const [online,setOnline] = useState(false);
+  const [call,setCall] = useState(false);
+  // const onRectangleClick = useCallback(() => {
+  //   navigate("/contact-us-offline");
+  // }, [navigate]);
 
-  const onRectangleClick = useCallback(() => {
-    navigate("/contact-us-offline");
-  }, [navigate]);
+  // const onRectangle1Click = useCallback(() => {
+  //   navigate("/contact-us-online");
+  // }, [navigate]);
 
-  const onRectangle1Click = useCallback(() => {
-    navigate("/contact-us-online");
-  }, [navigate]);
-
-  const onRectangle2Click = useCallback(() => {
-    navigate("/contact-us-call");
-  }, [navigate]);
+  // const onRectangle2Click = useCallback(() => {
+  //   navigate("/contact-us-call");
+  // }, [navigate]);
 
   const onAboutTextClick = useCallback(() => {
     navigate("/about-page11");
@@ -29,6 +35,22 @@ const ContactUs = () => {
   const onServicesText1Click = useCallback(() => {
     navigate("/our-services-main-page");
   }, [navigate]);
+
+  const onRectangleClick =()=>{
+    setOffline(true);
+    setOnline(false);
+    setCall(false);
+  }
+  const onRectangle1Click = ()=>{
+    setOffline(false);
+    setOnline(true);
+    setCall(false);
+  }
+  const onRectangle2Click =()=>{
+    setOffline(false);
+    setOnline(false);
+    setCall(true);
+  }
 
   return (
     <div className="contact-us4">
@@ -115,19 +137,20 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="auto-layout-horizontal-parent2">
-            <div className="auto-layout-horizontal107">
+            <div  className="auto-layout-horizontal107">
               <div className="about-us4">Offline</div>
             </div>
-            <div className="auto-layout-horizontal108">
+            <div  className="auto-layout-horizontal108">
               <div className="about-us4">Online</div>
             </div>
-            <div className="auto-layout-horizontal109">
+            <div   className="auto-layout-horizontal109">
               <div className="about-us4">Call</div>
             </div>
             <div className="group-child16" onClick={onRectangleClick} />
             <div className="group-child17" onClick={onRectangle1Click} />
             <div className="group-child18" onClick={onRectangle2Click} />
           </div>
+          {offline &&
           <div className="auto-layout-horizontal110">
             <div className="auto-layout-vertical128">
               <div className="auto-layout-vertical129">
@@ -142,6 +165,56 @@ const ContactUs = () => {
               <div className="services18">Submit</div>
             </div>
           </div>
+          }
+          {online &&
+             <div className="auto-layout-horizontal63">
+             <div className="auto-layout-vertical63">
+               <div className="auto-layout-vertical64">
+                 <div className="auto-layout-horizontal64">
+                   <div className="auto-layout-horizontal65">
+                     
+                   <input type="text" id = "myInput" placeholder ="Your Name" className="your-name2"/>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div className="stateprimary7">
+               <div className="button24">Submit</div>
+             </div>
+           </div>
+          }
+          {call &&
+          <>
+          <div className="auto-layout-horizontal19">
+          <div className="auto-layout-vertical11">
+            <div className="auto-layout-vertical12">
+              <div className="auto-layout-horizontal20">
+                <div className="auto-layout-horizontal21">
+                  <div className="your-name">Your e-mail</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="stateprimary1">
+            <div className="button18">Submit</div>
+          </div>
+        </div>
+        <div className="auto-layout-horizontal19">
+          <div className="auto-layout-vertical11">
+            <div className="auto-layout-vertical12">
+              <div className="auto-layout-horizontal20">
+                <div className="auto-layout-horizontal21">
+                  <div className="your-name">Your what’s app number</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="stateprimary1">
+            <div className="button18">Submit</div>
+          </div>
+        </div>
+          </>
+          }
         </div>
       </div>
       <div className="contact-us5">{`Contact us `}</div>

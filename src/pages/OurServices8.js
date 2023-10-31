@@ -1,15 +1,16 @@
-import { useCallback,useState } from "react";
+import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices8.css";
 import "./OurServices3.css";
+import axios from "axios";
 const OurServices8 = () => {
   const navigate = useNavigate();
   const [edit, setEdit] = useState(false);
-  const [text, setText] = useState("Holistic Individual and Team Empowerment: Unlock the full potential of every member through a deep exploration of individual motivations, passions, and purposes, fostering synergistic teams and holistic growth.");
-  const [text1, setText1] = useState("Sustainable Role Alignment and Enhancement: Optimise individual contributions and team dynamics through strategic role alignment, tailored trainings, and profile creation, ensuring sustainable success and development.");
-  const [text2, setText2] = useState("Cultural Evolution for a Better Tomorrow: Shape a resilient and positive organisational culture through comprehensive gap, mapping, best practice sharing, and transformative habit creation, contributing to a better, more equitable world..");
- const [text3, setText3] = useState("Embark on a transformative journey with our comprehensive solutions, enhancing organisational culture, optimising performances, and fostering an environment conducive to continuous growth and holistic development.");
- const [text4, setText4] = useState("Organisations aspiring to transformative and sustainable growth, seeking to strengthen their culture, optimise HR practices, and enhance employee experience and development in alignment with a vision for a better world.s.");
+  const [text, setText] = useState("");
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
+ const [text3, setText3] = useState("");
+ const [text4, setText4] = useState("");
  const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
@@ -37,14 +38,135 @@ const OurServices8 = () => {
     setEdit(true);
   };
 
-  const handleSave = () => {
+  useEffect(() => {
+    fetchofferingData();
+    fetchbenefitsData();
+    fetchidealData();
+  }, []);
+
+  const fetchofferingData = () => {
+    let typeToFetch = "comprehensive";
+    let categoryToFetch = "offerings";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("API response", responseData.data);
+          setText(responseData.data?.services[0]?.value);
+          setText1(responseData.data?.services[1]?.value);
+          setText2(responseData.data?.services[2]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchbenefitsData = () => {
+    let typeToFetch = "comprehensive";
+    let categoryToFetch = "benefits";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText3(responseData.data?.services[0]?.value);
+          // setText5(responseData.data?.services[1]?.value);
+          // setText2(responseData.data?.services[2]?.value);
+          // setText3(responseData.data?.services[3]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const fetchidealData = () => {
+    let typeToFetch = "comprehensive";
+    let categoryToFetch = "ideal";
+    axios
+      .get("http://localhost:3000/service_page.php", {
+        params: {
+          title: typeToFetch,
+          category:categoryToFetch
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        if (responseData.message === "Data fetched successfully") {
+          // setCardData(responseData.data.cards);
+          console.log("home API response", responseData.data);
+          setText4(responseData.data?.services[0]?.value);
+        } else {
+          console.error("Error fetching card data:", responseData.message);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching card data:", error);
+      });
+  };
+
+  const [id1,setId1] = useState(false);
+  const [id2,setId2] = useState(false);
+  const [id3,setId3] = useState(false);
+  const [id4,setId4] = useState(false);
+  const [id5,setId5] = useState(false);
+  
+  const handleSave = async() => {
     setEdit(false);
-  setEdit(false);
-  setText(text);
-  setText(text1);
-  setText(text2);
-  setText(text3);
+    if (id1) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 34,
+        value: text,
+      });
+      console.log(cardResponse.data);
+    } else if(id2) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 35,
+        value: text1,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id3) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 36,
+        value: text2,
+      });
+      console.log(cardResponse.data);
+    } else if(id4) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 37,
+        value: text3,
+      });
+      console.log(cardResponse.data);
+    }
+    else if(id5) {
+      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+        id: 38,
+        value: text4,
+      });
+      console.log(cardResponse.data);
+    }
   }
+  
   return (
     <div className="our-services-8">
       <img className="vector-icon" alt="" src="/vector.svg" />
@@ -63,7 +185,7 @@ const OurServices8 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text}
-                         onChange={(e) => setText(e.target.value)}
+                         onChange={(e) => {setText(e.target.value),setId1(true)}}
                          />
             )}
           </ul>
@@ -75,7 +197,7 @@ const OurServices8 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text1}
-                         onChange={(e) => setText1(e.target.value)}
+                         onChange={(e) => {setText1(e.target.value),setId2(true)}}
                          />
             )}
           </ul>
@@ -87,7 +209,7 @@ const OurServices8 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text2}
-                         onChange={(e) => setText2(e.target.value)}
+                         onChange={(e) => {setText2(e.target.value),setId3(true)}}
                          />
             )}
           </ul>
@@ -100,7 +222,7 @@ const OurServices8 = () => {
             {  edit &&(
               <input placeholder="Enter text"
                          value={text3}
-                         onChange={(e) => setText3(e.target.value)}
+                         onChange={(e) => {setText3(e.target.value),setId4(true)}}
                          />
             )}
           </ul>
@@ -112,7 +234,7 @@ const OurServices8 = () => {
           {  edit &&(
             <input placeholder="Enter text"
                        value={text4}
-                       onChange={(e) => setText4(e.target.value)}
+                       onChange={(e) => {setText4(e.target.value),setId5(true)}}
                        />
           )}
         </div>
