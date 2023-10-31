@@ -52,7 +52,7 @@ const OurServices1 = () => {
     let typeToFetch = "personaldevlopment";
     let categoryToFetch = "offerings";
     axios
-      .get("http://localhost:3000/service_page.php", {
+      .get("http://192.168.29.255:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -80,7 +80,7 @@ const OurServices1 = () => {
     let typeToFetch = "personaldevlopment";
     let categoryToFetch = "benefits";
     axios
-      .get("http://localhost:3000/service_page.php", {
+      .get("http://192.168.29.255:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -108,7 +108,7 @@ const OurServices1 = () => {
     let typeToFetch = "personaldevlopment";
     let categoryToFetch = "ideal";
     axios
-      .get("http://localhost:3000/service_page.php", {
+      .get("http://192.168.29.255:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -140,45 +140,45 @@ const OurServices1 = () => {
   const handleSave = async() => {
     setEdit(false);
     if (id1) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 1,
         value: text,
       });
       console.log(cardResponse.data);
     } else if(id2) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 2,
         value: text1,
       });
       console.log(cardResponse.data);
     }
     else if(id3) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 3,
         value: text2,
       });
       console.log(cardResponse.data);
     } else if(id4) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 4,
         value: text3,
       });
       console.log(cardResponse.data);
     } else if(id5) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 5,
         value: text4,
       });
       console.log(cardResponse.data);
     } else if(id6) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 6,
         value: text5,
       });
       console.log(cardResponse.data);
     }
     else if(id7) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 7,
         value: text6,
       });

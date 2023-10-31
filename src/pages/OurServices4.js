@@ -2,6 +2,7 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices4.css";
 import "./OurServices3.css";
+import "./LandingPage.css";
 import axios from "axios";
 
 const OurServices4 = () => {
@@ -50,7 +51,7 @@ const OurServices4 = () => {
     let typeToFetch = "experientialoutdoor";
     let categoryToFetch = "offerings";
     axios
-      .get("http://localhost:3000/service_page.php", {
+      .get("http://192.168.29.255:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -77,7 +78,7 @@ const OurServices4 = () => {
     let typeToFetch = "experientialoutdoor";
     let categoryToFetch = "benefits";
     axios
-      .get("http://localhost:3000/service_page.php", {
+      .get("http://192.168.29.255:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -105,7 +106,7 @@ const OurServices4 = () => {
     let typeToFetch = "experientialoutdoor";
     let categoryToFetch = "ideal";
     axios
-      .get("http://localhost:3000/service_page.php", {
+      .get("http://192.168.29.255:3000/service_page.php", {
         params: {
           title: typeToFetch,
           category:categoryToFetch
@@ -135,33 +136,33 @@ const OurServices4 = () => {
   const handleSave = async() => {
     setEdit(false);
     if (id1) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 16,
         value: text,
       });
       console.log(cardResponse.data);
     } else if(id2) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 17,
         value: text1,
       });
       console.log(cardResponse.data);
     }
     else if(id3) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 18,
         value: text2,
       });
       console.log(cardResponse.data);
     } else if(id4) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 19,
         value: text3,
       });
       console.log(cardResponse.data);
     }
     else if(id5) {
-      const cardResponse = await axios.put("http://localhost:3000/service_page.php", {
+      const cardResponse = await axios.put("http://192.168.29.255:3000/service_page.php", {
         id: 20,
         value: text4,
       });
@@ -277,16 +278,16 @@ const OurServices4 = () => {
       <div className="statesecondary5" onClick={onStateSecondaryContainerClick}>
         <div className="button5">Contact us</div>
       </div>
-      <div className="glossary4">Glossary</div>
-      <div className="about4" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home4">Home</div>
-      <div className="rent-a-skill4">Rent- a- skill</div>
-      <div className="services4" onClick={onServicesTextClick}>
+      <div className="home16">Home</div>
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21" onClick={onServicesTextClick}>
         Services
       </div>
-      <div className="contact4" onClick={onContactTextClick}>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-4-child" />

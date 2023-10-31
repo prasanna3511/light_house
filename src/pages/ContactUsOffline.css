@@ -408,7 +408,7 @@
 }
 .contact-us-offline {
   position: relative;
-  background: linear-gradient(59.63deg, #282828, #353535);
+  /* background: linear-gradient(59.63deg, #282828, #353535); */
   width: 100%;
   height: 1095px;
   overflow: hidden;
