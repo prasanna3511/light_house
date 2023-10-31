@@ -20,7 +20,7 @@ const AboutPage1 = () => {
     navigate("/contact-us");
   }, [navigate]);
 
-  
+
   const onStateSecondaryContainer1Click = useCallback(() => {
     navigate("/about-page11");
   }, [navigate]);
@@ -214,4 +214,4 @@ export default AboutPage1;
 // <img className="vector-icon52" alt="" src="/vector23.svg" />
 // <img className="vector-icon53" alt="" src="/vector24.svg" />
 //  <img className="vector-icon54" alt="" src="/vector25.svg" />
-// img className="icon24" alt="" src="/2-1@2x.png" />
+// <img className="icon24" alt="" src="/2-1@2x.png" />

@@ -149,7 +149,8 @@ const ContactUs = () => {
             <div className="group-child18" onClick={onRectangle2Click} />
           </div>
           {offline &&
-          <div className="auto-layout-horizontal110">
+            <>
+            <div className="auto-layout-horizontal110">
             <div className="auto-layout-vertical128">
               <div className="auto-layout-vertical129">
                 <div className="auto-layout-horizontal111">
@@ -163,7 +164,22 @@ const ContactUs = () => {
               <div className="services18">Submit</div>
             </div>
           </div>
-          }
+          <div className="auto-layout-horizontal110">
+           <div className="auto-layout-vertical128">
+             <div className="auto-layout-vertical129">
+               <div className="auto-layout-horizontal111">
+               <div className="auto-layout-horizontal112">
+               <input type="text" id = "myInput" placeholder ="Your mail" className="your-name4"/>
+               </div>
+               </div>
+               </div>
+               </div>
+               <div className="stateprimary11">
+               <div className="button18">Submit</div>
+               </div>
+               </div>
+               </>
+              }
           {online &&<>
              <div className="auto-layout-horizontal110">
              <div className="auto-layout-vertical128">
@@ -185,7 +201,7 @@ const ContactUs = () => {
              <div className="auto-layout-vertical129">
                <div className="auto-layout-horizontal111">
                  <div className="auto-layout-horizontal112">
-                 <input type="text" id = "myInput" placeholder ="Your mobile no" className="your-name4"/>
+                 <input type="text" id = "myInput" placeholder ="Your Whatsapp no" className="your-name4"/>
                  </div>
                </div>
              </div>
@@ -202,7 +218,7 @@ const ContactUs = () => {
             <div className="auto-layout-vertical129">
               <div className="auto-layout-horizontal111">
                 <div className="auto-layout-horizontal112">
-                   <input type="text" id = "myInput" placeholder ="Your mail" className="your-name4"/>
+                   <input type="text" id = "myInput" placeholder ="Your name" className="your-name4"/>
                 </div>
               </div>
             </div>
@@ -216,7 +232,7 @@ const ContactUs = () => {
             <div className="auto-layout-vertical129">
               <div className="auto-layout-horizontal111">
                 <div className="auto-layout-horizontal112">
-                <input type="text" id = "myInput" placeholder ="Your Whatsapp no" className="your-name4"/>
+                <input type="text" id = "myInput" placeholder ="your contact no" className="your-name4"/>
                 </div>
               </div>
             </div>

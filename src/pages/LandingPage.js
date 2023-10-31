@@ -97,7 +97,7 @@ const LandingPage = () => {
         alt=""
         src="/the-lighthouse-logo-no-tagline-loose-text-1-1@2x.png"
       />
-
+      <img className="icon24" alt="" src="/2-1@2x.png" />  
       <div className="rent-a-skill21">Rent- a- Skill</div>
       <div className="glossary21">Glossary</div>
       <div className="about16" onClick={onAboutTextClick}>

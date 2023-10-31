@@ -19,7 +19,7 @@ const OurServicesMainPage = () => {
   }, [navigate]);
 
   const onService8ContainerClick = useCallback(() => {
-    navigate("/");
+    navigate("/our-services8");
   }, [navigate]);
 
   const onService7ContainerClick = useCallback(() => {

@@ -359,9 +359,8 @@ const AboutPage11 = () => {
             />
           )}
           <p className="and-the-bottom">
-            {`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}
-            {`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}
-          </p>
+     {text2}
+          </p>     
           {edit && (
             <input
               className="the-only-constant-textfield3"
@@ -396,8 +395,8 @@ const AboutPage11 = () => {
           )}
           <p className="and-the-bottom">&nbsp;</p>
           <p className="and-the-bottom">
-            {text6}
-            <p className="and-the-bottom">{`We guide individuals and organisations to empower themselves to evolve and thrive in all dimensions, aligning their actions and decisions with their values, purpose, and the greater good. `}</p>
+      
+            <p className="and-the-bottom">{text6}</p>
             {edit && (
               <input
                 className="the-only-constant-textfield3"
@@ -673,7 +672,8 @@ const AboutPage11 = () => {
 };
 
 export default AboutPage11;
-
+// {`Rent-A-Skill is a unique service allowing you to access a wealth of expertise on a project basis. `}
+// {`Whether you require specialised skills in AI, (industrial) IT, R & D, technology, creativity, or organisational empowerment, `}
 // <img className="vector-icon19" alt="" src="/vector8.svg" />
 //       <img className="vector-icon20" alt="" src="/vector9.svg" />
 // <img className="vector-icon21" alt="" src="/vector10.svg" />
