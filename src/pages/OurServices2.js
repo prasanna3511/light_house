@@ -2,6 +2,7 @@ import { useCallback,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices2.css";
 import "./OurServices3.css";
+import "./LandingPage.css";
 const OurServices2 = () => {
   const navigate = useNavigate();
   const [edit, setEdit] = useState(false);
@@ -143,14 +144,14 @@ const OurServices2 = () => {
       <div className="statesecondary7" onClick={onStateSecondaryContainerClick}>
         <div className="button7">Contact us</div>
       </div>
-      <div className="glossary6">Glossary</div>
-      <div className="about6" onClick={onAboutTextClick}>
+      <div className="glossary21">Glossary</div>
+      <div className="about16" onClick={onAboutTextClick}>
         About
       </div>
-      <div className="home6">Home</div>
-      <div className="rent-a-skill6">Rent- a- skill</div>
-      <div className="services6">Services</div>
-      <div className="contact6" onClick={onContactTextClick}>
+      <div className="home16">Home</div>
+      <div className="rent-a-skill21">Rent- a- skill</div>
+      <div className="services21">Services</div>
+      <div className="contact16" onClick={onContactTextClick}>
         Contact
       </div>
       <div className="our-services-2-child" onClick={onLineClick} />
@@ -161,7 +162,7 @@ const OurServices2 = () => {
       ) : (
         <></>
       )}
-      <button onClick={handleEdit}>EDIT</button>
+      <button className="edit" onClick={handleEdit}>EDIT</button>
       </div>
   
   );

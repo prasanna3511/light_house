@@ -151,7 +151,7 @@ const AboutPage11 = () => {
           <p className="and-the-bottom">{` And the bottom line is The Triple Bottom Line: People, Planet, and Profit. `}</p>
           {edit && (
             <input
-              className="the-only-constant-textfield1"
+              className="the-only-constant-textfield3"
               placeholder="Enter text"
               value={text1}
               onChange={(e) => setText1(e.target.value)}
@@ -275,7 +275,7 @@ const AboutPage11 = () => {
         Vision
         {edit && (
           <input
-            className="the-only-constant-textfield7"
+            className="the-only-constant-textfieldvision"
             placeholder="Enter text"
             value={text7}
             onChange={(e) => setText7(e.target.value)}
@@ -308,7 +308,7 @@ const AboutPage11 = () => {
         and sustainable success.
         {edit && (
           <input
-            className="the-only-constant-textfield7"
+            className="the-only-constant-textfield"
             placeholder="Enter text"
             value={text10}
             onChange={(e) => setText10(e.target.value)}

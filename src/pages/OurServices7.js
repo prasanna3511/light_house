@@ -154,7 +154,7 @@ const OurServices7 = () => {
       ) : (
         <></>
       )}
-      <button onClick={handleEdit}>EDIT</button>
+      <button className="edit"  onClick={handleEdit}>EDIT</button>
       </div>
   );
 };
