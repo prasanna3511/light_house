@@ -6,6 +6,8 @@ import axios from "axios";
 
 const OurServices6 = () => {
   const navigate = useNavigate();
+  const isAuthenticated = localStorage.getItem("isAuthenticated");
+
   const [edit, setEdit] = useState(false);
   const [text, setText] = useState("");
   const [text1, setText1] = useState("");
@@ -272,7 +274,9 @@ const OurServices6 = () => {
       ) : (
         <></>
       )}
+      {isAuthenticated &&
       <button className="edit" onClick={handleEdit}>EDIT</button>
+      }
       </div>
   );
 };

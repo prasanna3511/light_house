@@ -5,6 +5,7 @@ import "./LandingPage.css";
 import "./ContactUsCall.css";
 import "./ContactUsOnline.css";
 import "./ContactUsOffline.css";
+import { Box } from "@material-ui/core";
 
 
 const ContactUs = () => {
@@ -55,6 +56,7 @@ const ContactUs = () => {
   return (
     <div className="contact-us4">
       <img className="icon23" alt="" src="/2-1@2x.png" />
+      <Box style={{width:"100%",display:"flex",justifyContent:"center"}}>
       <div className="auto-layout-horizontal97">
         <div className="auto-layout-vertical108">
           <div className="company4">Company</div>
@@ -121,6 +123,7 @@ const ContactUs = () => {
           <div className="about-us4">Facebook</div>
         </div>
       </div>
+      </Box>
       <div className="faqs4">FAQs?</div>
       <div className="developed-by-coherent4">
         Developed by Coherent Business Solutions
