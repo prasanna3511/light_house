@@ -34,15 +34,15 @@ const LandingPage = () => {
   };
 
   const handleSave = async () => {
-    const cardResponse = await axios.put("http://localhost:3000/home.php", {
+    const cardResponse = await axios.put("https://thelighthouseweb.co/home.php", {
       id: 1,
       description: text1,
     });
-    const cardResponse1 = await axios.put("http://localhost:3000/home.php", {
+    const cardResponse1 = await axios.put("https://thelighthouseweb.co/home.php", {
       id: 2,
       description: text3,
     });
-    const cardResponse2 = await axios.put("http://localhost:3000/home.php", {
+    const cardResponse2 = await axios.put("https://thelighthouseweb.co/home.php", {
       id: 3,
       description: text,
     });
@@ -73,7 +73,7 @@ const LandingPage = () => {
 
   const fetchAboutData = () => {
     axios
-      .get("http://localhost:3000/home.php")
+      .get("https://thelighthouseweb.co/home.php")
       .then((response) => {
         const responseData = response.data;
         if (responseData.message === "Data fetched successfully") {

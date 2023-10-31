@@ -12,7 +12,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/login.php", {
+      const response = await axios.post("https://thelighthouseweb.co/login.php", {
         email,
         password,
       });
