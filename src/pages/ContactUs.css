@@ -66,8 +66,8 @@
 }
 .auto-layout-horizontal97 {
   position: absolute;
-  bottom: 45px;
-  /* left: 103px; */
+  top: 745px;
+  left: 103px;
   width: 1074px;
   height: 208px;
   display: flex;
@@ -85,8 +85,8 @@
   text-align: left;
 }
 .developed-by-coherent4 {
-  bottom: 34px;
-  left: 80%;
+  top: 944px;
+  left: 1250px;
   font-size: var(--font-size-3xs);
   transform: rotate(-90deg);
   transform-origin: 0 0;
