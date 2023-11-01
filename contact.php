@@ -10,10 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-define('DB_HOST', 'localhost');
-define('DB_USERNAME', 'admin');
-define('DB_PASSWORD', 'admin');
-define('DB_NAME', 'lighthouse');
+define('DB_HOST', '127.0.0.1:3306');
+define('DB_USERNAME', 'u376511407_lighthouse');
+define('DB_PASSWORD', 'Lighthouse@2024');
+define('DB_NAME', 'u376511407_lighthouse');
 define('DB_PORT', 3306);
 
 // Create a new database connection

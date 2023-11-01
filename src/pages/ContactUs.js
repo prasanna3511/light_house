@@ -6,23 +6,31 @@ import "./ContactUsCall.css";
 import "./ContactUsOnline.css";
 import "./ContactUsOffline.css";
 import { Box } from "@material-ui/core";
+import axios from "axios";
 
 const ContactUs = () => {
   const navigate = useNavigate();
-  const [offline, setOffline] = useState(false);
-  const [online, setOnline] = useState(false);
-  const [call, setCall] = useState(false);
-  // const onRectangleClick = useCallback(() => {
-  //   navigate("/contact-us-offline");
-  // }, [navigate]);
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
+  const [text3, setText3] = useState("");
 
-  // const onRectangle1Click = useCallback(() => {
-  //   navigate("/contact-us-online");
-  // }, [navigate]);
-
-  // const onRectangle2Click = useCallback(() => {
-  //   navigate("/contact-us-call");
-  // }, [navigate]);
+  const handleSave = async () => {
+    if (!text1 || !text2 || !text3) {
+      alert("Please fill in all the required fields.");
+      return; // Do not proceed with the request
+    }
+      const cardResponse = await axios.post("https://thelighthouseweb.co/contact.php", {
+        name: text1,
+        email: text2,
+        phone: text3,
+        type: "contactus",
+      });
+      alert("Your message has been sent successfully. We will get back to you soon!");
+      console.log(cardResponse.data);
+      setText1("");
+      setText2("");
+      setText3("");
+  };
 
   const onAboutTextClick = useCallback(() => {
     navigate("/about-page11");
@@ -36,21 +44,6 @@ const ContactUs = () => {
     navigate("/our-services-main-page");
   }, [navigate]);
 
-  const onRectangleClick = () => {
-    setOffline(true);
-    setOnline(false);
-    setCall(false);
-  };
-  const onRectangle1Click = () => {
-    setOffline(false);
-    setOnline(true);
-    setCall(false);
-  };
-  const onRectangle2Click = () => {
-    setOffline(false);
-    setOnline(false);
-    setCall(true);
-  };
 
   return (
     <div className="contact-us4">
@@ -132,11 +125,11 @@ const ContactUs = () => {
         <div className="auto-layout-vertical126">
           <div className="auto-layout-vertical127">
             <div className="lets-light-up5">Let’s light up our lives!</div>
-            <div className="auto-layout-horizontal106">
+            {/* <div className="auto-layout-horizontal106">
               <div className="select-preferred-mode4">{`Select preferred mode of communication `}</div>
-            </div>
+            </div> */}
           </div>
-          <div className="auto-layout-horizontal-parent2">
+          {/* <div className="auto-layout-horizontal-parent2">
             <div className="auto-layout-horizontal107">
               <div className="about-us4">Offline</div>
             </div>
@@ -149,9 +142,9 @@ const ContactUs = () => {
             <div className="group-child16" onClick={onRectangleClick} />
             <div className="group-child17" onClick={onRectangle1Click} />
             <div className="group-child18" onClick={onRectangle2Click} />
-          </div>
-          {offline && (
-            <>
+          </div> */}
+          {/* {offline && ( */}
+            <Box style={{width:"350px",display:"flex",flexDirection:"column",justifyContent:"center"}}>
               <div className="auto-layout-horizontal110">
                 <div className="auto-layout-vertical128">
                   <div className="auto-layout-vertical129">
@@ -160,17 +153,18 @@ const ContactUs = () => {
                         <input
                           type="text"
                           id="myInput"
+                          required
                           placeholder="Your  Name"
                           className="your-name4"
-                        />
+                          value={text1}
+                          onChange={(e) => setText1(e.target.value)}
+                        />  
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="stateprimary11">
-                  <div className="services18">Submit</div>
-                </div>
               </div>
+
               <div className="auto-layout-horizontal110">
                 <div className="auto-layout-vertical128">
                   <div className="auto-layout-vertical129">
@@ -179,103 +173,47 @@ const ContactUs = () => {
                         <input
                           type="text"
                           id="myInput"
+                          required
                           placeholder="Your mail"
                           className="your-name4"
+                          value={text2}
+                          onChange={(e) => setText2(e.target.value)}
                         />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="stateprimary11">
-                  <div className="button18">Submit</div>
-                </div>
+
+                
               </div>
-            </>
-          )}
-          {online && (
-            <>
               <div className="auto-layout-horizontal110">
-                <div className="auto-layout-vertical128">
+                  <div className="auto-layout-vertical128">
                   <div className="auto-layout-vertical129">
+
                     <div className="auto-layout-horizontal111">
                       <div className="auto-layout-horizontal112">
                         <input
                           type="text"
                           id="myInput"
-                          placeholder="Your Name"
-                          className="your-name4"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="stateprimary11">
-                  <div className="button18">Submit</div>
-                </div>
-              </div>
-              <div className="auto-layout-horizontal110">
-                <div className="auto-layout-vertical128">
-                  <div className="auto-layout-vertical129">
-                    <div className="auto-layout-horizontal111">
-                      <div className="auto-layout-horizontal112">
-                        <input
-                          type="text"
-                          id="myInput"
+                          required
                           placeholder="Your Whatsapp no"
                           className="your-name4"
+                          value={text3}
+                          onChange={(e) => setText3(e.target.value)}
                         />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="stateprimary11">
-                  <div className="button18">Submit</div>
-                </div>
-              </div>
-            </>
-          )}
-          {call && (
-            <>
-              <div className="auto-layout-horizontal110">
-                <div className="auto-layout-vertical128">
-                  <div className="auto-layout-vertical129">
-                    <div className="auto-layout-horizontal111">
-                      <div className="auto-layout-horizontal112">
-                        <input
-                          type="text"
-                          id="myInput"
-                          placeholder="Your name"
-                          className="your-name4"
-                        />
-                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="stateprimary11">
+                  <div onClick={handleSave} className="stateprimary11">
                   <div className="button18">Submit</div>
                 </div>
-              </div>
-              <div className="auto-layout-horizontal110">
-                <div className="auto-layout-vertical128">
-                  <div className="auto-layout-vertical129">
-                    <div className="auto-layout-horizontal111">
-                      <div className="auto-layout-horizontal112">
-                        <input
-                          type="text"
-                          id="myInput"
-                          placeholder="your contact no"
-                          className="your-name4"
-                        />
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div className="stateprimary11">
-                  <div className="button18">Submit</div>
-                </div>
-              </div>
-            </>
-          )}
+
+                
+            </Box>
+          {/* )} */}
+         
         </div>
       </div>
       <div className="contact-us5">{`Contact us `}</div>
