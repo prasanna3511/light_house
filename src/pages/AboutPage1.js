@@ -47,7 +47,7 @@ const AboutPage1 = () => {
 
   const handleSave = async () => {
     if (id2) {
-      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
         id: 2,
         title: text,
         short_description: text3,
@@ -56,7 +56,7 @@ const AboutPage1 = () => {
       });
       console.log(cardResponse.data);
     } else {
-      const cardResponse = await axios.put("http://localhost:3000/about.php", {
+      const cardResponse = await axios.put("https://thelighthouseweb.co/about.php", {
         id: 1,
         title: text,
         short_description: text1,
@@ -75,7 +75,7 @@ const AboutPage1 = () => {
   const fetchHeaderTopData = () => {
     let typeToFetch = "top";
     axios
-      .get("http://localhost:3000/about.php", {
+      .get("https://thelighthouseweb.co/about.php", {
         params: {
           position: typeToFetch,
         },

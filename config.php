@@ -1,8 +1,8 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'admin');
-define('DB_PASSWORD', 'admin');
-define('DB_DATABASE', 'lighthouse');
+define('DB_SERVER', '127.0.0.1:3306');
+define('DB_USERNAME', 'u376511407_lighthouse');
+define('DB_PASSWORD', 'Lighthouse@2024');
+define('DB_DATABASE', 'u376511407_lighthouse');
 
 // Attempt to connect to the database
 $db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);

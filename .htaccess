@@ -1,0 +1,24 @@
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^api/.*$ /server.php [L]
+
+RewriteEngine On
+
+# Allow requests from any origin (adjust as needed for your local setup)
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type"
+Header always set Access-Control-Max-Age "1000"
+
+# Handle CORS preflight requests (OPTIONS)
+RewriteCond %{REQUEST_METHOD} =OPTIONS
+RewriteRule ^(.*)$ - [R=200,L]
+
+# Route requests to server.php for your API
+RewriteRule ^config.php(.*)$ config.php [L]
+
+# Route requests to React app if the file does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]

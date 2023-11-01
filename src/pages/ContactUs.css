@@ -81,7 +81,7 @@
 .faqs4 {
   position: absolute;
   top: 651px;
-  left: 48%;
+  left: 614px;
   text-align: left;
 }
 .developed-by-coherent4 {
@@ -200,11 +200,9 @@
 .your-name4 {
   position: relative;
   letter-spacing: 0.02em;
-  line-height: 3px;
+  line-height: 20px;
   border: none; 
-  outline: none;
-  width: 600px;
- 
+  outline: none; 
 }
 .auto-layout-horizontal111,
 .auto-layout-horizontal112 {
@@ -253,12 +251,14 @@
   padding: var(--padding-xs) var(--padding-5xl);
   color: var(--color-white);
   font-family: var(--body-text);
+  cursor: pointer;
 }
 .auto-layout-horizontal110 {
   justify-content: flex-start;
   gap: var(--gap-base);
   font-size: var(--button-text-size);
   font-family: var(--font-archivo);
+  margin-top: 1%;
 }
 .auto-layout-vertical125,
 .auto-layout-vertical126 {
@@ -273,14 +273,14 @@
 }
 .auto-layout-vertical125 {
   position: absolute;
-  top: 190px;
+  top: 245px;
   left: calc(50% - 640px);
   border-radius: var(--br-9xs);
   background: radial-gradient(50% 50%at 50% 50%, #be9e45, #d8c691);
   border: 1px solid var(--color-lightsteelblue);
   box-sizing: border-box;
   width: 1280px;
-  height: 345px;
+  height: 305px;
   justify-content: center;
   padding: var(--padding-61xl) var(--padding-13xl);
   text-align: left;
@@ -289,8 +289,8 @@
 }
 .contact-us5 {
   position: absolute;
-  top: 562px;
-  left: 47%;
+  top: 566px;
+  left: 595px;
   text-align: left;
 }
 .about14,
@@ -338,7 +338,7 @@
 .contact-us-child {
   position: absolute;
   top: 61.5px;
-  left: 92.3%;
+  left: 1167.5px;
   border-top: 1px solid var(--color-burlywood);
   box-sizing: border-box;
   width: 58.01px;
@@ -380,13 +380,10 @@
 }
 .contact-us4 {
   position: relative;
-  background-image: url(../images/Contactus.png);
-  /* background: linear-gradient(59.63deg, #282828, #353535); */
-  background-size: 100% auto;
+  background: linear-gradient(59.63deg, #282828, #353535);
   width: 100%;
-  height: 150vh;
-  /* overflow: hidden; */
-  object-fit: contain !important;
+  height: 1095px;
+  overflow: hidden;
   text-align: center;
   font-size: var(--body-text-size);
   color: var(--color-whitesmoke);
