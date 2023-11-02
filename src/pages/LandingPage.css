@@ -1,24 +1,123 @@
-/* .vector-icon55,
-.vector-icon56 {
-  position: absolute;
-  height: 75.84%;
-  width: 35.94%;
-  top: 0;
-  right: 0;
-  bottom: 24.16%;
-  left: 64.06%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-} */
-/* .vector-icon56 {
-  height: 61.8%;
-  width: 60.71%;
-  top: 38.2%;
-  right: 39.29%;
-  bottom: 0;
-  left: 0;
-} */
+
+.navbarnewmobile {
+  display: none;
+
+}
+
+@media (max-width: 768px) {
+  .navbarnew {
+    display: none;
+  }
+  .icon25,
+  .the-lighthouse-logo-no-tagline,
+  .rent-a-skill21mbl,
+  .glossary21mbl,
+  .about16mbl,
+  .contact16mbl,
+  .home16mbl,
+  .services21mbl,
+  .rent-a-skill21,
+  .glossary21,
+  .about16,
+  .contact16,
+  .home16,
+  .services21 {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+  }
+  .frame-child21 {
+    width: 100%;
+    /* background-color: red;
+    border: 1px solid red; */
+  }
+  .landing-page-child,
+  
+  
+  .frame1,
+  
+  .button35,
+  .stateprimary12,
+  .rectangle-parent10 {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .savebutton,
+  .editbutton {
+    top: auto;
+    float: none;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .the-lighthouse-container{
+    width: 40%;
+  }
+  .the-lighthouse- {
+    width: 60%;
+    margin: auto;
+  }
+  .the-lighthouse-container {
+    /* position: absolute; */
+    /* top: 60%; */
+    /* left: 280px; */
+    /* font-size: var(--body-text-size); */
+    /* text-align: center; */
+    /* display: inline-block; */
+    max-width: 100%;
+    /* height: 173px; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+  }
+  .frame{
+    /* position: absolute; */
+    
+    top: 300px;
+    /* left: 470px; */
+    width: 658px;
+    height: 59px;
+    align-items: center;
+    
+  }
+  .welcome-to-the-container{
+    font-size: 18px;
+  }
+  .bringing-the-path1{
+    font-size: 18px;
+  }
+  .landing-page {
+    /* position: relative; */
+    /* background-image: url("../images/LandingPage.png"); */
+    /* width: 100vw !important; */
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    /* text-align: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--body-text-size);
+    color: var(--color-whitesmoke);
+    font-family: var(--body-text);
+    background-size: cover;
+    /* background-position: center;
+    background-repeat: no-repeat; */
+    height: 100vh; 
+    /* object-fit: contain !important; */
+  }
+}
+
 .icon25,
 .the-lighthouse-logo-no-tagline {
   position: absolute;
@@ -33,6 +132,50 @@
   top: 17px;
   left: 20px;   width: 217px;
   height: 40px;
+}
+.rent-a-skill21mbl {
+  position: absolute;
+  top: 36px;
+  left: 78%;
+  display: inline-block;
+  width: 119px;
+  height: 26px;
+}
+.glossary21mbl {
+  left: 86%;
+  width: 74px;
+}
+.about16mbl,
+.contact16mbl,
+.glossary21mbl,
+.home16mbl,
+.services21mbl {
+  position: absolute;
+  top: 36px;
+  display: inline-block;
+  height: 26px;
+}
+.about16mbl {
+  left: 67%;
+  width: 51px;
+  cursor: pointer;
+}
+.contact16mbl,
+.home16mbl,
+.services21 {
+  left: 62%;
+  width: 53px;
+  cursor: pointer;
+}
+.contact16mbl,
+.services21 {
+  left: 72%;
+  width: 74px;
+  cursor: pointer;
+}
+.contact16mbl {
+  left: 92%;
+  width: 66px;
 }
 .rent-a-skill21 {
   position: absolute;
@@ -89,8 +232,8 @@
 }
 .frame-child21 {
   width: "100%";
-  background-color: "red";
-  border: "1px solid red";
+  /* background-color: "red"; */
+  /* border: "1px solid red"; */
 } 
 .lighthouse {
   background: linear-gradient(
