@@ -330,7 +330,7 @@ padding-top: 120%;
   width: 48%;
 }
 .group-item {
-  position: relative;
+  /* position: relative; */
   top: 0;
   left: 0;
   border-radius: var(--br-xl);
@@ -339,45 +339,79 @@ padding-top: 120%;
   box-sizing: border-box;
   width: 326px;
   height: 222px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .innovative-empowerment {
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 900;
+font-weight: bold;
 }
 .we-foster-an {
   margin: 0;
   font-size: var(--body-text-size);
 }
 .innovative-empowerment-we-container {
-  position: absolute;
+  /* position: absolute;
   top: 39px;
-  left: 40px;
+  /* left: 40px; */
   display: inline-block;
-  width: 247px;
+  /* width: 247px;  */
+  left: 240px
+  
 }
 .rectangle-parent5 {
-  position: absolute;
+  /* position: absolute;
   top: 68%;
-  left: 16%;
+  left: 16%; */
+
+ 
+  margin: 40px;
+
   width: 326px;
   height: 222px;
   font-size: var(--button-text-size);
+  
+ 
+} @media (max-width: 768px) {
+  .rectangle-parent5  {
+   /* display: none; */
+   /* background-color: red; */
+   margin: 20px; 
+  
+
+  }
 }
 .inclusive-understanding-we-container {
-  position: absolute;
-  top: 39px;
+  /* position: absolute; */
+  /* top: 39px;
   left: 21px;
   display: inline-block;
-  width: 285px;
+  width: 285px; */
 }
-.rectangle-parent6 {
+.rectangletest{
   position: absolute;
   top: 68%;
-  left: 43%;
+  display: flex;
+  justify-content: space-around; 
+   /* align-items: space-between; */
+   width: 100%;
+   height: 500px;
+  flex-wrap: wrap;
+  /* background-color: aliceblue; */
+}
+.rectangle-parent6 {
+  /* position: absolute; */
+  /* top: 68%; */
+  /* left: 43%; */
   width: 326px;
   height: 222px;
   font-size: var(--button-text-size);
+  margin: 40px;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 .transparent-integrity {
   margin: 0;
@@ -393,12 +427,14 @@ padding-top: 120%;
   width: 280px;
 }
 .rectangle-parent7 {
-  position: absolute;
+  /* position: absolute;
   top: 68%;
-  left: 70%;
+  left: 70%; */
   width: 326px;
   height: 222px;
-  display:flex
+  display:flex;
+  margin: 40px;
+
 }
 .reflective-responsibility-we-container {
   position: absolute;
@@ -408,25 +444,29 @@ padding-top: 120%;
   width: 307px;
 }
 .rectangle-parent8 {
-  position: absolute;
+  /* position: absolute;
   top: 79%;
-  left: 55%;
+  left: 55%; */
   width: 326px;
   height: 222px;
+  margin: 40px;
+
 }
 .active-listening-we-container {
-  position: absolute;
+  /* position: absolute;
   top: 17px;
   left: 12px;
   display: inline-block;
-  width: 303px;
+  width: 303px; */
 }
 .rectangle-parent9 {
-  position: absolute;
+  /* position: absolute;
   top:79%;
-  left: 30%;
+  left: 30%; */
   width: 326px;
   height: 222px;
+  margin: 40px;
+
 }
 .about-page-11 {
   position: relative;

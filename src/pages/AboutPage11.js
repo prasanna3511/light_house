@@ -506,23 +506,26 @@ const AboutPage11 = () => {
         living in alignment with our vision and mission. They define who we are
         and guide our actions.
       </div>
+      <div className="rectangletest" >
       <div className="rectangle-parent5">
-        <div className="group-item" />
-        <div className="innovative-empowerment-we-container">
-          <p className="innovative-empowerment">
+        {/* <p>hello shriiiiiiii</p> */}
+            <div className="group-item" >
+
+        {/* <div className="innovative-empowerment-we-container"> */}
+          <p className="transparent-integrity">
             {text11}
             {edit2 && (
               <input
-                className="the-only-constant-textfield11"
-                placeholder="Enter text"
-                value={text11}
-                onChange={(e) => setText11(e.target.value)}
+              className="the-only-constant-textfield11"
+              placeholder="Enter text"
+              value={text11}
+              onChange={(e) => setText11(e.target.value)}
               />
-            )}
+              )}
           </p>
-          <p className="innovative-empowerment">&nbsp;</p>
+          <p className="transparent-integrity">&nbsp;</p>
           <p className="we-foster-an">
-            {text16}
+           {text16}
             {edit2 && (
               <input
                 className="the-only-constant-textfield11"
@@ -535,9 +538,9 @@ const AboutPage11 = () => {
         </div>
       </div>
       <div className="rectangle-parent6">
-        <div className="group-item" />
-        <div className="inclusive-understanding-we-container">
-          <p className="innovative-empowerment">
+        <div className="group-item" >
+        {/* <div className="inclusive-understanding-we-container"> */}
+          <p className="transparent-integrity">
             {text12}
             {edit2 && (
               <input
@@ -548,7 +551,7 @@ const AboutPage11 = () => {
               />
             )}
           </p>
-          <p className="innovative-empowerment">&nbsp;</p>
+          <p className="transparent-integrity">&nbsp;</p>
           <p className="we-foster-an">
            {text17}
             {edit2 && (
@@ -560,11 +563,13 @@ const AboutPage11 = () => {
               />
             )}
           </p>
-        </div>
+        {/* </div> */}
       </div>
+      </div>
+
       <div className="rectangle-parent7">
-        <div className="group-item" />
-        <div className="transparent-integrity-we-container">
+        <div className="group-item" >
+        {/* <div className="transparent-integrity-we-container"> */}
           <p className="transparent-integrity">
             {text13}
             {edit2 && (
@@ -588,39 +593,12 @@ const AboutPage11 = () => {
               />
             )}
           </p>
-        </div>
+        {/* </div> */}
       </div>
-      <div className="rectangle-parent8">
-        <div className="group-item" />
-        <div className="reflective-responsibility-we-container">
-          <p className="transparent-integrity">
-            {text14}
-            {edit2 && (
-              <input
-                className="the-only-constant-textfield11"
-                placeholder="Enter text"
-                value={text14}
-                onChange={(e) => setText14(e.target.value)}
-              />
-            )}
-          </p>
-          <p className="and-the-bottom">&nbsp;</p>
-          <p className="and-the-bottom">
-           {text19}
-            {edit2 && (
-              <input
-                className="the-only-constant-textfield11"
-                placeholder="Enter text"
-                value={text19}
-                onChange={(e) => setText19(e.target.value)}
-              />
-            )}
-          </p>
-        </div>
       </div>
       <div className="rectangle-parent9">
-        <div className="group-item" />
-        <div className="active-listening-we-container">
+      <div className="group-item" >
+        {/* <div className="active-listening-we-container"> */}
           <p className="transparent-integrity">
             {text15}
             {edit2 && (
@@ -644,8 +622,41 @@ const AboutPage11 = () => {
               />
             )}{" "}
           </p>
-        </div>
+        {/* </div> */}
       </div>
+      </div>
+      <div className="rectangle-parent8">
+        <div className="group-item" >
+        {/* <div className="reflective-responsibility-we-container"> */}
+          <p className="transparent-integrity">
+            {text14}
+            {edit2 && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text14}
+                onChange={(e) => setText14(e.target.value)}
+              />
+            )}
+          </p>
+          <p className="and-the-bottom">&nbsp;</p>
+          <p className="and-the-bottom">
+           {text19}
+            {edit2 && (
+              <input
+                className="the-only-constant-textfield11"
+                placeholder="Enter text"
+                value={text19}
+                onChange={(e) => setText19(e.target.value)}
+              />
+            )}
+          </p>
+        {/* </div> */}
+      </div>
+      </div>
+
+      </div>
+      
       {edit ? (
         <>
           <button onClick={handleSave}>Save</button>
@@ -941,3 +952,4 @@ export default AboutPage11;
 // };
 
 // export default AboutPage11;
+
