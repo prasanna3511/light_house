@@ -230,10 +230,13 @@ const ContactUs = () => {
       </div>
       <div className="contact16">Contact</div>
       <div className="contact-us-child" />
+      <div className="contact-icons">
+
       <img className="vector-icon49" alt="" src="/vector14.svg" />
       <img className="contact-us-item" alt="" src="/group-3.svg" />
       <img className="vector-icon50" alt="" src="/vector15.svg" />
       <img className="vector-icon51" alt="" src="/vector16.svg" />
+      </div>
     </div>
   );
 };
