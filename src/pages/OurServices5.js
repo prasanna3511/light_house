@@ -2,7 +2,8 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices5.css";
 import "./OurServices3.css";
-import "./LandingPage.css";
+
+import "./NavBar";
 import axios from "axios";
 
 const OurServices5 = () => {
@@ -178,7 +179,7 @@ const OurServices5 = () => {
 
   return (
     <div className="our-services-5">
-    
+    <navBar/>
       
       <img className="icon5" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">

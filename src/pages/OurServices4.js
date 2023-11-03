@@ -2,7 +2,8 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices4.css";
 import "./OurServices3.css";
-import "./LandingPage.css";
+import"./NavBar.css";
+import NavBar from "./NavBar";
 import axios from "axios";
 
 const OurServices4 = () => {
@@ -177,7 +178,7 @@ const OurServices4 = () => {
 
   return (
     <div className="our-services-4">
-     
+     <NavBar/>
 
 
       <img className="icon6" alt="" src="/2-1@2x.png" />
@@ -257,8 +258,8 @@ const OurServices4 = () => {
         <div className="ideal-for4">Ideal for</div>
         <div className="offerings4">Offerings:</div>
         <img className="benefit-icon4" alt="" src="/benefit-icon.svg" />
-        <div className="frame-child13" />
-        <div className="frame-child14" />
+        <div className="frame-child10" />
+        <div className="frame-child11" />
         <img className="ideal-icon4" alt="" src="/ideal-icon.svg" />
         <img
           className="outdoor-services-icon1"

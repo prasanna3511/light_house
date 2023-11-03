@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./OurServices2.css";
 import "./OurServices3.css";
 import axios from "axios";
-import "./LandingPage.css";
+import"./NavBar.css";
+import NavBar from "./NavBar";
 const OurServices2 = () => {
   const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem("isAuthenticated");
@@ -167,7 +168,7 @@ const OurServices2 = () => {
  
   return (
     <div className="our-services-2">
-    
+    <NavBar/>
 
 
       <img className="icon8" alt="" src="/2-1@2x.png" />

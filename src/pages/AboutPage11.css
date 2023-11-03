@@ -446,3 +446,150 @@ padding-top: 120%;
   font-family: var(--body-text);
   object-fit: contain !important;
 }
+@media (max-width: 768px){
+
+  .who-we-are {
+    position: relative;
+    top: 1px;
+    /* left: 442px; */
+    font-size: 22px;
+    display: inline-block;
+    width: 200px;
+    height: 62px;
+  }
+
+  .the-only-constant {
+    position: absolute;
+    top: 25px;
+    /* left: 243px; */
+    font-size: 18px;
+   
+    display: inline-lock;
+    width: 320px;
+  }
+  .and-the-bottom-container {
+    position: absolute;
+    top: 85px;
+    /* left: 24px; */
+    text-align: center;
+    display: inline-block;
+    width: 320px;
+   font-size: 14px;
+  }
+
+  .statesecondary11,
+  .statesecondary12,
+  .statesecondary13 {
+    position: absolute;
+    top: 870px;
+    border-radius: var(--br-981xl);
+    border: 1px solid var(--color-darkkhaki);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-xs) var(--padding-5xl);
+    text-align: left;
+    font-size: 6px;
+    color: var(--color-darkkhaki);
+    
+  }
+  .statesecondary11 {
+ 
+    left: 30px;
+    cursor: pointer;
+  
+  }
+  .statesecondary12,
+  .statesecondary13 {
+    left: 140px;
+    width: 70px;
+    
+  }
+  .statesecondary13 {
+    left: 270px;
+    cursor: pointer;
+
+  }
+
+
+  .our-vision-mission{
+    top: 940px;
+    left: 70px;  
+   justify-content: center;
+   display: flex;
+ 
+   /* text-align: left;
+   width: 711px; */
+   text-align: center;
+   font-size: 18px;
+ }
+ .about-page-11-inner,
+ .about-page-11-item {
+   position: absolute;
+   top: 980px;
+   left: 10px;
+   border-radius: var(--br-xl);
+   background-color: var(--color-gray-700);
+   border: 1px solid var(--color-burlywood);
+   box-sizing: border-box;
+   width: 340px;
+   height: 200px;
+ }
+ 
+ .about-page-11-inner {
+   top:1200px;
+   height: 360px;
+ }
+ .mission,
+.vision {
+  position: absolute;
+  top:1050px;
+  left:30px;
+  font-size: 18px;
+
+}
+.mission {
+  position: absolute;
+  top: 1350px;
+  left: 75%;
+}
+.to-be-a {
+  position: absolute;
+  display: inline-block;
+  
+}
+.to-be-a {
+  position: absolute;
+  display: inline-block;
+   top: 1000px;
+   left: 80px;
+  text-align: right;
+  width: 260px;
+  font-size: 14px;
+ 
+}
+.to-champion-transformative {
+  position: absolute;
+  top: 1210px;
+  left: 18px;
+  text-align: left;
+  display: inline-block;
+  width: 250px;
+  font-size: 14px;
+}
+.values {
+  position: absolute;
+  top: 1570px;
+  left: 110px;
+  font-size: 22px;
+
+}
+.our-values-are {
+  position: absolute;
+  top: 1600px;
+  left: 4px;
+  display: inline-block;
+  width: 350px;
+} 
+  }

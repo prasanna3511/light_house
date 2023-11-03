@@ -175,7 +175,7 @@ const OurServices8 = () => {
 
       <img className="icon1" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child12" />
+        <div className="frame-child12" /> 
         <div className="comprehensive-organisational-t">
           Comprehensive Organisational Transformation and HR Solutions
         </div>
@@ -231,7 +231,9 @@ const OurServices8 = () => {
         </div>
         <div className="organisations-aspiring-to-container">
           <ul className="holistic-individual-and-team-e">
+          <li className="holistic-individual-and">
             {text4}
+            </li>
           </ul>
           {  edit &&(
             <input placeholder="Enter text"

@@ -24,6 +24,7 @@ import AboutPage1 from "./pages/AboutPage1";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 
+
 function App() {
   const action = useNavigationType();
   const location = useLocation();
@@ -112,6 +113,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+        case "/NavBar":
+        title = "";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -131,6 +136,7 @@ function App() {
   return (
     <Routes>
       {/* <Route path="/" element={<OurServices8 />} /> */}
+      
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login/>} />
       <Route path="/our-services8" element={<OurServices8 />} />

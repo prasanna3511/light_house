@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./OurServices1.css";
 import"./OurServices3.css";
 import axios from "axios";
-import"./LandingPage.css";
+
+import NavBar from "./NavBar";
 
 const OurServices1 = () => {
   const navigate = useNavigate();
@@ -190,13 +191,11 @@ const OurServices1 = () => {
   }
   return (
     <div className="our-services-1">
-
-
-
+    
       <img className="icon9" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child12" />
-        <div className="personal-development-and">
+      <div className="frame-child12" />
+      <div className="personal-development-and">
           Personal Development and Holistic Growth
         </div>
         <div className="transformative-coaching-publi-container">
@@ -210,35 +209,35 @@ const OurServices1 = () => {
                            onChange={(e) => {setText(e.target.value),setId1(true)}}
                            />
               )}</li>
-          </ul>
-          <p className="blank-line17">&nbsp;</p>
-          <ul className="transformative-coaching-publi">
-            <li className="positive-habit-building">
+              </ul>
+              <p className="blank-line17">&nbsp;</p>
+              <ul className="transformative-coaching-publi">
+              <li className="positive-habit-building">
               {text1}
               {  edit &&(
                 <input placeholder="Enter text"
-                           value={text1}
-                           onChange={(e) => {setText1(e.target.value),setId2(true)}}
-                           />
-              )}</li>
-          </ul>
-          <p className="blank-line17">&nbsp;</p>
-          <ul className="transformative-coaching-publi">
-            <li className="positive-habit-building">
-    {text2}
-              {  edit &&(
-                <input placeholder="Enter text"
-                           value={text2}
-                           onChange={(e) => {setText2(e.target.value),setId3(true)}}
-                           />
-              )} </li>
-          </ul>
-          <p className="blank-line17">&nbsp;</p>
-          <ul className="transformative-coaching-publi">
-            <li className="positive-habit-building">
-              {text3}
-              {  edit &&(
-                <input placeholder="Enter text"
+                value={text1}
+                onChange={(e) => {setText1(e.target.value),setId2(true)}}
+                />
+                )}</li>
+                </ul>
+                <p className="blank-line17">&nbsp;</p>
+                <ul className="transformative-coaching-publi">
+                <li className="positive-habit-building">
+                {text2}
+                {  edit &&(
+                  <input placeholder="Enter text"
+                  value={text2}
+                  onChange={(e) => {setText2(e.target.value),setId3(true)}}
+                  />
+                  )} </li>
+                  </ul>
+                  <p className="blank-line17">&nbsp;</p>
+                  <ul className="transformative-coaching-publi">
+                  <li className="positive-habit-building">
+                  {text3}
+                  {  edit &&(
+                    <input placeholder="Enter text"
                            value={text3}
                            onChange={(e) =>{ setText3(e.target.value),setId4(true)}}
                            />
@@ -249,12 +248,12 @@ const OurServices1 = () => {
         <div className="navigate-your-transformative-container">
           <ul className="transformative-coaching-publi">
             <li className="positive-habit-building">
-              {text4}
-           
-           
-              {edit && (
-                <input
-                  placeholder="Enter text"
+            {text4}
+            
+            
+            {edit && (
+              <input
+              placeholder="Enter text"
                   value={text4}
                   onChange={(e) => {setText4(e.target.value),setId5(true)}}
                 />
@@ -276,45 +275,35 @@ const OurServices1 = () => {
             <li className="positive-habit-building">
             {text6}
          
-              {edit && (
-                <input
+            {edit && (
+              <input
                   placeholder="Enter text" className="input6"
                   value={text6}
                   onChange={(e) => {setText6(e.target.value),setId7(true)}}
-                />
+                  />
               )}     </li>
-          </ul>
-        </div>
-        <div className="benefits14">
-          <p className="blank-line17">Benefits</p>
-        </div>
-        <div className="ideal-for7">Ideal for</div>
-        <div className="offerings7">Offerings:</div>
-        <img
-          className="personality-dev-icon1"
-          alt=""
-          src="/personality-dev-icon1.svg"
-        />
-        <img className="benefit-icon7" alt="" src="/benefit-icon.svg" />
-        <div className="frame-child19" />
-        <div className="frame-child20" />
-        <img className="ideal-icon7" alt="" src="/ideal-icon.svg" />
-      </div>
-      <div className="statesecondary8" onClick={onStateSecondaryContainerClick}>
-        <div className="button8">Contact us</div>
-      </div>
-      <div className="glossary21">Glossary</div>
-      <div className="about16" onClick={onAboutTextClick}>
-        About
-      </div>
-      <div className="home16">Home</div>
-      <div className="rent-a-skill21">Rent- a- skill</div>
-      <div className="services21" onClick={onServicesTextClick}>
-        Services
-      </div>
-      <div className="contact16" onClick={onContactTextClick}>
-        Contact
-      </div>
+              </ul>
+              </div>
+              <div className="benefits14">
+              <p className="blank-line17">Benefits</p>
+              </div>
+              <div className="ideal-for7">Ideal for</div>
+              <div className="offerings7">Offerings:</div>
+              <img
+              className="personality-dev-icon1"
+              alt=""
+              src="/personality-dev-icon1.svg"
+              />
+              <img className="benefit-icon7" alt="" src="/benefit-icon.svg" />
+              <div className="frame-child19" />
+              <div className="frame-child20" />
+              <img className="ideal-icon7" alt="" src="/ideal-icon.svg" />
+              </div>
+              <div className="statesecondary8" onClick={onStateSecondaryContainerClick}>
+              <div className="button8">Contact us</div>
+              </div>
+              <NavBar/>
+              
       <div className="our-services-1-child" />
       <div
         className="auto-layout-horizontal13"

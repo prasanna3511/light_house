@@ -123,6 +123,7 @@
 text-align: center;
   justify-content: center;
 }
+ 
 .service-8-child {
   position: absolute;
   height: 100%;
@@ -484,6 +485,7 @@ text-align: center;
 .empowering-your-journey {
   align-self: stretch;
   position: relative;
+ 
 }
 .at-the-lighthouse {
   flex: 1;
