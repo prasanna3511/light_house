@@ -31,7 +31,8 @@
 }
 .icon25 {
   top: 17px;
-  left: 20px;   width: 217px;
+  left: 20px;
+  width: 217px;
   height: 40px;
 }
 .rent-a-skill21 {
@@ -81,7 +82,7 @@
 .landing-page-child {
   position: absolute;
   top: 61.5px;
-  left:62%;
+  left: 62%;
   border-top: 1px solid var(--color-burlywood);
   box-sizing: border-box;
   width: 56px;
@@ -91,7 +92,7 @@
   width: "100%";
   background-color: "red";
   border: "1px solid red";
-} 
+}
 .lighthouse {
   background: linear-gradient(
     217.81deg,
@@ -122,8 +123,6 @@
   width: 658px;
   height: 59px;
   align-items: center;
-  
-  
 }
 .bringing-the-path1,
 .frame1 {
@@ -136,7 +135,7 @@
   font-weight: 300;
   display: inline-block;
   width: 474px; */
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -171,7 +170,7 @@ display: flex;
 .stateprimary12 {
   position: absolute;
   top: 90%;
-  
+
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;
@@ -186,12 +185,12 @@ display: flex;
   /* position: absolute;
   top: 64px;
   left: 40px; */
-  width: '100%';
-  height: '100%';
+  width: "100%";
+  height: "100%";
   display: flex;
   justify-content: center;
   align-items: center;
-  border:#382a04;
+  border: #382a04;
   height: 704px;
   text-align: center;
   font-size: var(--heading-1-size);
@@ -215,15 +214,58 @@ display: flex;
   height: 100vh;
   object-fit: contain !important;
 }
- .savebutton{
-top:1000px;
-cursor: pointer;
-height: 30px;
-float: right; 
- } 
- .editbutton{
-top:1000px; 
+.savebutton {
+  top: 1000px;
   cursor: pointer;
   height: 30px;
-  float: right; 
-   } 
+  float: right;
+}
+.editbutton {
+  top: 1000px;
+  cursor: pointer;
+  height: 30px;
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .rectangle-parent10 {
+    font-size: 22px;
+  }
+  .bringing-the-path1 {
+    font-size: 16px;
+  }
+  .the-lighthouse-container {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+  }
+  .bringing-the-path1,
+  .frame1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 62px;
+  }
+  .stateprimary12 {
+    /* bottom: 5% !important; */
+    top: 95% !important;
+  }
+  .landing-page{
+    background-image: url(../images/mob-home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, makes the background image fixed */
+    background-position: center center;
+    height: 1000px!important;
+    overflow: hidden;
+  }
+  .frame1{
+    width: 100% !important;
+  }
+  .frame{
+    width: 100% !important;
+  }
+}
