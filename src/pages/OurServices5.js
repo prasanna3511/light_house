@@ -294,13 +294,13 @@ const OurServices5 = () => {
       <div className="our-services-5-child" onClick={onLineClick} />
       {edit ? (
         <>
-          <button onClick={handleSave}>Save</button>
+          <button className="Save5"  onClick={handleSave}>Save</button>
         </>
       ) : (
         <></>
       )}
       {isAuthenticated &&
-      <button className="edit" onClick={handleEdit}>EDIT</button>
+      <button className="edit5" onClick={handleEdit}>EDIT</button>
       }
       </div>
   );

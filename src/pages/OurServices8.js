@@ -2,7 +2,7 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices8.css";
 import "./OurServices3.css";
-import "./LandingPage.css";
+
 import axios from "axios";
 
 const OurServices8 = () => {
@@ -175,7 +175,7 @@ const OurServices8 = () => {
 
       <img className="icon1" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
-        <div className="frame-child12" /> 
+        <div className="frame-child" /> 
         <div className="comprehensive-organisational-t">
           Comprehensive Organisational Transformation and HR Solutions
         </div>
@@ -264,7 +264,7 @@ const OurServices8 = () => {
         </div>
       </div>
       <div
-        className="auto-layout-horizontal10"
+        className="auto-layout-horizontal"
         onClick={onAutoLayoutHorizontalClick}
       >
         <img className="frame-icon" alt="" src="/frame.svg" />
@@ -286,13 +286,13 @@ const OurServices8 = () => {
       <div className="our-services-8-child" />
       {edit ? (
         <>
-          <button onClick={handleSave}>Save</button>
+          <button className="Save8" onClick={handleSave}>Save</button>
         </>
       ) : (
         <></>
       )}
       {isAuthenticated &&
-      <button className="edit"  onClick={handleEdit}>EDIT</button>
+      <button className="edit8"  onClick={handleEdit}>EDIT</button>
     }
   
       </div>

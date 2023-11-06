@@ -254,28 +254,17 @@ const OurServices6 = () => {
       <div className="statesecondary3" onClick={onStateSecondaryContainerClick}>
         <div className="button3">Contact us</div>
       </div>
-      <div className="glossary21">Glossary</div>
-      <div className="about16" onClick={onAboutTextClick}>
-        About
-      </div>
-      <div className="home16">Home</div>
-      <div className="rent-a-skill21">Rent- a- skill</div>
-      <div className="services21" onClick={onServicesTextClick}>
-        Services
-      </div>
-      <div className="contact16" onClick={onContactTextClick}>
-        Contact
-      </div>
+      
       <div className="our-services-6-child" />
       {edit ? (
         <>
-          <button onClick={handleSave}>Save</button>
+          <button className="Save6" onClick={handleSave}>Save</button>
         </>
       ) : (
         <></>
       )}
       {isAuthenticated &&
-      <button className="edit" onClick={handleEdit}>EDIT</button>
+      <button className="edit6" onClick={handleEdit}>EDIT</button>
       }
       </div>
   );
