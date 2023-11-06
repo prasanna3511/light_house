@@ -239,6 +239,7 @@
   justify-content: center;
   padding: var(--padding-xl);
   cursor: pointer;
+  z-index: 7;
 }
 .tthe-only-constant-textfield{
   /* width: 60px;
@@ -280,6 +281,17 @@ height: 110vh;
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
 }
+.edit{
+  margin-right:78%;
+   z-index:1;
+  margin-top: 30px; 
+}
+.Save{
+  margin-right:40%;
+  margin-top: 50px;
+   z-index:1;
+}
+
 .rectangle-parent2 {
   position: absolute;
   top: 64px;
@@ -416,43 +428,22 @@ height: 110vh;
   cursor: pointer;
   text-align: left;
   font-size: var(--button-text-size);
-}
-.auto-layout-horizontal10,
-.auto-layout-horizontal9,
-.auto-layout-vertical4 {
+}.auto-layout-horizontal13 {
+  position: absolute;
+  top: 10.5%;
+  left:72%;
   border-radius: var(--br-9xs);
+  background-color: var(--color-gray-200);
   border: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-.auto-layout-horizontal9 {
-  background-color: var(--color-gray-200);
-  flex-direction: row;
-  padding: var(--padding-xl);
-}
-.auto-layout-horizontal10,
-.auto-layout-vertical4 {
-  position: absolute;
-  box-sizing: border-box;
-  width: 43px;
-  height: 43px;
+  padding: 10px;
   cursor: pointer;
-}
-.auto-layout-vertical4 {
-  top: 16.80%;
-  left:75%;
- 
-   
-  overflow: hidden;
-  flex-direction: column;
-}
-.auto-layout-horizontal10 {
-  top: 95px;
-  left:76%;
-  background-color: var(--color-gray-200);
-  flex-direction: row;
-  padding: var(--padding-xl);
+
 }
 }

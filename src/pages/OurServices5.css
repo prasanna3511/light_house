@@ -269,7 +269,7 @@
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
 }
-.edit{
+.edit5{
   margin-right:78%;
   margin-top:7%;
  
@@ -286,6 +286,16 @@
   font-size: var(--body-text-size);
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
+}
+.edit5{
+  margin-right:78%;
+   z-index:1;
+  margin-top: 50px; 
+}
+.Save5{
+  margin-right:40%;
+  margin-top: 50px;
+   z-index:1;
 }
 .rectangle-parent2 {
   position: absolute;
@@ -454,6 +464,7 @@
   background-color: var(--color-gray-200);
   flex-direction: row;
   padding: var(--padding-xl);
+  
 }
 
 

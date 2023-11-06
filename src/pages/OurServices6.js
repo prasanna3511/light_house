@@ -296,17 +296,20 @@ const OurServices6 = () => {
       >
         <img className="frame-icon3" alt="" src="/frame2.svg" />
       </div>
-     
+      <div className="statesecondary3" onClick={onStateSecondaryContainerClick}>
+        <div className="button3">Contact us</div>
+      </div>
+      
       <div className="our-services-6-child" />
       {edit ? (
         <>
-          <button onClick={handleSave}>Save</button>
+          <button className="Save6" onClick={handleSave}>Save</button>
         </>
       ) : (
         <></>
       )}
       {isAuthenticated &&
-      <button className="edit" onClick={handleEdit}>EDIT</button>
+      <button className="edit6" onClick={handleEdit}>EDIT</button>
       }
       </div>
   );

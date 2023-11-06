@@ -58,6 +58,7 @@
   font-family: var(--font-inherit);
   display: inline-block;
   width: 482px;
+  z-index: 5;
 }
 .enhance-organizational-and {
   margin-bottom: 0;
@@ -159,6 +160,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 7;
 }
 .auto-layout-horizontal9 {
   background-color: var(--color-gray-200);
@@ -287,11 +289,21 @@
   /* background: linear-gradient(59.63deg, #282828, #353535); */
   background-size: cover;
   overflow: hidden;
-height: 101vh;
+height: 100vh;
   text-align: center;
   font-size: var(--body-text-size);
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
+}
+.edit{
+  margin-right:78%;
+   z-index:1;
+  margin-top: 30px; 
+}
+.Save{
+  margin-right:40%;
+  margin-top: 50px;
+   z-index:1;
 }
 .rectangle-parent2 {
   position: absolute;
@@ -311,7 +323,7 @@ height: 101vh;
   border-radius: var(--br-xl);
   background-color: var(--color-gray-800);
   width: 300px;
-  height: 660px;
+  height:300px;
 
 } 
 .training-icon1 {
@@ -358,18 +370,8 @@ height: 101vh;
 .frame-child14{
   top: 470px;
 }
-.enhance-organizational-and-container,
-.organizations-and-individuals-container {
-  position: absolute;
-  top: 350px;
-  left: 2px;
-  font-size: 14px;
-  font-family: var(--font-inherit);
-  display: inline-block;
-  width: 247px;
-  height: 65px;
-  z-index: 5;
-}
+
+
 .benefits10,
 .ideal-for5,
 .offerings5 {
@@ -390,10 +392,33 @@ height: 101vh;
   height: 24px;
   font-size: 12px;
 }
-.organizations-and-individuals-container {
-  top: 510px;
-  height: 68px;
+
+.enhance-organizational-and {
+  margin-bottom: 0;
 }
+.enhance-organizational-and-container {
+  position: relative;
+  top: 292px;
+  left: 10px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width: 474px;
+  height: 65px;
+  z-index: 5;
+}
+.organizations-and-individuals-container {
+  position: relative;
+  top: 50px;
+  left: 10px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width: 474px;
+  height: 65px;
+  z-index: 5;
+}
+
 .statesecondary6 {
   position: absolute;
   top: 690px;
@@ -446,5 +471,7 @@ height: 101vh;
   background-color: var(--color-gray-200);
   flex-direction: row;
   padding: var(--padding-xl);
+  width: 25px;
+  height: 25px;
 }
 }

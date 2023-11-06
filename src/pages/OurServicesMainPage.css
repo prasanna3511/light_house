@@ -545,3 +545,403 @@ text-align: center;
   font-family: var(--body-text);
   
 }
+
+@media (max-width: 768px){
+  
+.our-services-main-page {
+  position: relative;
+  background-image: url(../images/OurservicesmainPage.png);
+  background-size: cover;
+  /* background-position: center;
+  object-fit: contain !important; */
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* background: linear-gradient(59.63deg, #282828, #353535); */
+  width: 32 0%;
+  height: 2350px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--body-text-size);
+  color: var(--color-whitesmoke);
+  font-family: var(--body-text);
+  
+}
+
+.auto-layout-vertical7 {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 10px;
+}
+.auto-layout-vertical6 {
+  position: absolute;
+  top: 100px;
+  left:1px;
+  width: 350px;
+  align-items: center;
+  font-size: 16px;
+}
+.auto-layout-horizontal14 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size:12px;
+}
+.personality-dev-icon2 {
+  position: absolute;
+  height: 30.98%;
+  width: 30.21%;
+  top:15%;
+  right: 0.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.language-and-cultural1 {
+  /* position: absolute;
+  width: 93.98%; */
+  top: 70px;
+  left: 3.01%;
+  display: inline-block;
+  font-size: medium;
+}
+.service-1 {
+  position: absolute;
+  top: 250px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.service-2 {
+  Position: absolute;
+  top: 250px;
+  left: 190px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.creative-services-icon2 {
+  position: absolute;
+  height: 30.98%;
+  width: 30.21%;
+  top:15%;
+  right: 0.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-3 {
+  Position: absolute;
+  top: 430px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.training-icon2{
+position: absolute;
+  height: 30.98%;
+  width: 30.21%;
+  top:15%;
+  right: 0.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.service-4 {
+  Position: absolute;
+  top: 430px;
+  left: 190px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.outdoor-services-icon2{
+position: absolute;
+  height: 30.98%;
+  width: 30.21%;
+  top:15%;
+  right: 0.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.service-5 {
+  Position: absolute;
+  top: 620px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.branding-icon2{
+position: absolute;
+  height: 30.98%;
+  width: 30.21%;
+  top:15%;
+  right: 0.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.service-6 {
+  Position: absolute;
+  top: 620px;
+  left: 190px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+
+  
+  .div2 {
+      width: 36.76%;
+      top: 3.26%;
+      left: 10.87%;
+  }
+  .a2, .div2 {
+      position: absolute;
+      height: 42.65%;
+      width: 25%;
+      top: 42.39%;
+      left: 56.52%;
+      display: inline-block;
+}
+
+.service-7 {
+  Position: absolute;
+  top: 800px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.editor-icon2{
+  position: absolute;
+  height: 30.98%;
+  width: 30.21%;
+  top:15%;
+  right: 0.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;;
+}
+
+.service-8 {
+  Position: absolute;
+  top: 800px;
+  left: 190px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+.org-transform-icon2{
+position: absolute;
+  height: 30.98%;
+  width: 30.21%;
+  top:1%;
+  right: 0.21%;
+  bottom: 40.85%;
+  left: 31.58%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.writing-and-editorial1 {
+  position: absolute;
+  width: 93.98%;
+  top: 55.53%;
+  left: 3.01%;
+  display: inline-block;
+}
+.comprehensive-organisational-t1 {
+  position: absolute;
+  width: 70.98%;
+  top: 29.91%;
+  left: 3.01%;
+  display: inline-block;
+
+}
+.explore-our-diverse, .glossary8 {
+  position: absolute;
+  top: 976px;
+  left: 1px;
+  display: inline-block;
+  width: 353px;
+  font-size: 14px;
+}
+.statesecondary9 {
+  position: absolute;
+  top: 1100px;
+  left: calc(50% - 77px);
+  border-radius: var(--br-981xl);
+  background-color: var(--color-darkkhaki);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--button-text-size);
+}
+.event-and-entertainment {
+  position: relative;
+  top: 1180px;
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.event-hosting-icon1 {
+  position: absolute;
+  top: 1236px;
+  left: 150px;
+  width: 50px;
+  height: 40px;
+}
+.event-hosting-and {
+  position: absolute;
+  top: 1284px;
+  left: 1px;
+  display: inline-block;
+  width:357px;
+}
+.mcing-icon1 {
+  position: absolute;
+  top: 1390px;
+  left: 150px;
+  width: 50px;
+  height: 40px;
+}
+ .mcing-services-our {
+  position: absolute;
+  top: 1450px;
+  left: 1px;
+  display: inline-block;
+  width: 1px;
+  width:357px;
+}
+.music-and-band-icon1 {
+  position: absolute;
+  top: 1580px;
+  left: 150px;
+  width: 50px;
+  height: 40px;
+}
+.music-and-bands {
+  top: 1640px;
+  left: 1px;
+  width: 356px;
+}
+
+
+
+
+.group-child {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+  width:300px;
+  height: 182px;
+}
+
+.customised-solutions-icon1 {
+  position: absolute;
+  top: 1800px;
+  left: 150px;
+  width: 50px;
+  height: 40px;;
+}
+.customised-entertainment-solut {
+  top: 1850px;
+  left: 1px;
+  width:357px;
+}
+.group-div {
+  position: absolute;
+  top: 1970px;
+  left:1px;
+  width: 536px;
+  height: 182px;
+  text-align: left;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--color-darkkhaki);
+}
+.create-unforgettable-moments {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 16px;
+  color: var(--color-whitesmoke);
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+  height: 83px;
+}
+
+.discover-the-rhythm {
+  position: absolute;
+  top: 2180px;
+  left: 1px;
+  display: inline-block;
+  width: 350px;
+font-size: medium;
+}
+
+.benefit-icon8 {
+  position: absolute;
+  top: 22.5px;
+  left: 120.5px;
+  width: 33px;
+  height: 33px;
+}
+.benefits16 {
+  position: absolute;
+  top: 27px;
+  left: 160px;
+  display: inline-block;
+  width: 110px;
+  height: 24px;
+}
+
+.statesecondary10 {
+  position: absolute;
+  top: 2290px;
+  left: calc(50% - 77px);
+  border-radius: var(--br-981xl);
+  background-color: var(--color-darkkhaki);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--button-text-size);
+}
+}

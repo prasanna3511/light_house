@@ -454,7 +454,7 @@ const AboutPage11 = () => {
         </div>
         {isAuthenticated &&
         <>
-        {!edit && <button onClick={handleEdit}>EDIT</button>}
+        {!edit && <button className="mainedit" onClick={handleEdit}>EDIT</button>}
         </>
         }
         <div className="read-less" onClick={onReadLessTextClick}>
@@ -467,7 +467,7 @@ const AboutPage11 = () => {
       <div className="about-page-11-inner" />
       {isAuthenticated &&
       <>
-      {!edit1 && <button onClick={handleEdit1}>EDIT middle card</button>}
+      {!edit1 && <button className="editbuttonmiddle" onClick={handleEdit1}>EDIT middle card</button>}
       </>
       }
       <div className="our-vision-mission">Our Vision, Mission, and Values</div>
@@ -539,7 +539,7 @@ const AboutPage11 = () => {
       </div>
       {isAuthenticated &&
       <>
-      {!edit2 && <button onClick={handleEdit2}>EDIT Values card</button>}
+      {!edit2 && <button className="editbuttonvalue" onClick={handleEdit2}>EDIT Values card</button>}
       </>
       }
       <div className="values">Values</div>
@@ -701,21 +701,21 @@ const AboutPage11 = () => {
       
       {edit ? (
         <>
-          <button onClick={handleSave}>Save</button>
+          <button className="mainsave" onClick={handleSave}>Save</button>
         </>
       ) : (
         <></>
       )}
       {edit1 ? (
         <>
-          <button onClick={handleSave1}>Save middle</button>
+          <button className="editbuttonmiddle" onClick={handleSave1}>Save middle</button>
         </>
       ) : (
         <></>
       )}
       {edit2 ? (
         <>
-          <button onClick={handleSave2}>Save value card</button>
+          <button className="editbuttonvalue" onClick={handleSave2}>Save value card</button>
         </>
       ) : (
         <></>

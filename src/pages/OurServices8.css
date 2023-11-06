@@ -26,7 +26,7 @@
   height: 40px;
   object-fit: cover;
 }
-.frame-child12{
+.frame-child{
    position: absolute;
   top: 64px;
   left: 15%;
@@ -185,6 +185,7 @@
   justify-content: center;
   padding: var(--padding-xl);
   cursor: pointer;
+  z-index: 7;
 }
 .glossary {
   position: absolute;
@@ -253,7 +254,7 @@
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
 }
-.edit{
+.edit8{
   margin-right:78%;
  margin-top:7%;
  
@@ -264,11 +265,21 @@
     /* background: linear-gradient(59.63deg, #282828, #353535); */
     background-size: cover;
     overflow: hidden;
-  
+    height: 1000px;
     text-align: center;
     
     color: var(--color-whitesmoke);
     font-family: var(--body-text);
+  }
+  .edit8{
+    margin-right:78%;
+     z-index:1;
+    margin-top: 50px; 
+  }
+  .Save8{
+    margin-right:40%;
+    margin-top: 50px;
+  
   }
   .rectangle-parent2 {
     position: absolute;
@@ -278,9 +289,10 @@
     height: 900px;
     text-align: left;
     font-size: var(--heading-2-size);
+    height: 1000px;
     z-index: 1;
   }
-  .frame-child12{
+  .frame-child{
     position: absolute;
     top: 19px;
     left:-15px;
@@ -288,7 +300,7 @@
     border-radius: var(--br-xl);
     background-color: var(--color-gray-800);
     width: 300px;
-    height: 1100px;
+    height: 900px;
   
   } 
   .org-transform-icon1  {
@@ -439,12 +451,14 @@
     overflow: hidden;
     flex-direction: column;
   }
-  .auto-layout-horizontal10 {
-    top: 95px;
-    left:76%;
+  .auto-layout-horizontal {
+    top: 92px;
+    left:72%;
     background-color: var(--color-gray-200);
     flex-direction: row;
-    padding: var(--padding-xl);
+    padding:10px;
+    width: 25px;
+    height: 25px;
   }
   
 .embark-on-a-container,
