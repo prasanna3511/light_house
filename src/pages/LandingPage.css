@@ -1,193 +1,12 @@
-
-.navbarnewmobile {
-  display: none;
-
-}
-
-@media (max-width: 768px) {
-  .navbarnew {
-    display: none;
-  }
-  .icon25,
-  .the-lighthouse-logo-no-tagline,
-  .rent-a-skill21mbl,
-  .glossary21mbl,
-  .about16mbl,
-  .contact16mbl,
-  .home16mbl,
-  .services21mbl,
-  .rent-a-skill21,
-  .glossary21,
-  .about16,
-  .contact16,
-  .home16,
-  .services21 {
-    position: static;
-    top: auto;
-    left: auto;
-    width: auto;
-    height: auto;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    float: none;
-  }
-  .frame-child21 {
-    width: 100%;
-    /* background-color: red;
-    border: 1px solid red; */
-  }
-  .landing-page-child,
-  
-  
-  .frame1,
-  
-  .button35,
-  .stateprimary12,
-  .rectangle-parent10 {
-    position: static;
-    top: auto;
-    left: auto;
-    width: 100%;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-  }
-  .savebutton,
-  .editbutton {
-    top: auto;
-    float: none;
-    height: auto;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .the-lighthouse-container{
-    width: 40%;
-  }
-  .the-lighthouse- {
-    width: 60%;
-    margin: auto;
-  }
-  .the-lighthouse-container {
-    /* position: absolute; */
-    /* top: 60%; */
-    /* left: 280px; */
-    /* font-size: var(--body-text-size); */
-    /* text-align: center; */
-    /* display: inline-block; */
-    max-width: 100%;
-    /* height: 173px; */
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
-  }
-  .frame{
-    /* position: absolute; */
-    
-    top: 300px;
-    /* left: 470px; */
-    width: 658px;
-    height: 59px;
-    align-items: center;
-    
-  }
-  .welcome-to-the-container{
-    font-size: 18px;
-  }
-  .bringing-the-path1{
-    font-size: 18px;
-  }
-  .landing-page {
-    /* position: relative; */
-    /* background-image: url("../images/LandingPage.png"); */
-    /* width: 100vw !important; */
-    /* height: 100vh; */
-    /* overflow: hidden; */
-    /* text-align: center; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--body-text-size);
-    color: var(--color-whitesmoke);
-    font-family: var(--body-text);
-    background-size: cover;
-    /* background-position: center;
-    background-repeat: no-repeat; */
-    height: 100vh; 
-    /* object-fit: contain !important; */
-  }
-}
-
+/* Common styles for both desktop and mobile */
 .icon25,
 .the-lighthouse-logo-no-tagline {
   position: absolute;
   top: 95px;
-  /* left: 543px; */
   width: 195px;
   height: 194px;
   object-fit: cover;
   justify-content: center;
-}
-.icon25 {
-  top: 17px;
-  left: 20px;   width: 217px;
-  height: 40px;
-}
-.rent-a-skill21mbl {
-  position: absolute;
-  top: 36px;
-  left: 78%;
-  display: inline-block;
-  width: 119px;
-  height: 26px;
-}
-.glossary21mbl {
-  left: 86%;
-  width: 74px;
-}
-.about16mbl,
-.contact16mbl,
-.glossary21mbl,
-.home16mbl,
-.services21mbl {
-  position: absolute;
-  top: 36px;
-  display: inline-block;
-  height: 26px;
-}
-.about16mbl {
-  left: 67%;
-  width: 51px;
-  cursor: pointer;
-}
-.contact16mbl,
-.home16mbl,
-.services21 {
-  left: 62%;
-  width: 53px;
-  cursor: pointer;
-}
-.contact16mbl,
-.services21 {
-  left: 72%;
-  width: 74px;
-  cursor: pointer;
-}
-.contact16mbl {
-  left: 92%;
-  width: 66px;
-}
-.rent-a-skill21 {
-  position: absolute;
-  top: 36px;
-  left: 78%;
-  display: inline-block;
-  width: 119px;
-  height: 26px;
-}
-.glossary21 {
-  left: 86%;
-  width: 74px;
 }
 .about16,
 .contact16,
@@ -221,10 +40,160 @@
   left: 92%;
   width: 66px;
 }
+/* Desktop Navbar Styles */
+.navbar {
+  position: absolute;
+  top: 36px;
+  display: inline-block;
+  height: 26px;
+  color: #999999;
+  cursor: pointer;
+}
+
+/* Mobile Navbar Styles (initially hidden) */
+.navbar-mobile {
+  position: static;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+
+/* Button to open mobile navbar */
+.mobile-nav-button {
+  display: none; /* Initially hidden */
+}
+.button-menu{
+  display: none;
+}
+
+/* Media query for mobile responsiveness (below 768px) */
+@media (max-width: 768px) {
+  /* Hide desktop navbar */
+  .button-menu{
+    display: block;
+  }
+.navbarnew,
+  .about16,
+.contact16,
+.glossary21,
+.home16,
+.services21 {
+  display: none;
+
+}
+.about16 {
+  display: none;
+
+}
+.contact16,
+.home16,
+.services21 {
+  display: none;
+
+}
+.contact16,
+.services21 {
+  display: none;
+
+}
+.contact16 {
+  display: none;
+}
+
+  .rent-a-skill21{
+    display: none;
+  }
+  .glossary21{
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+
+  /* Show the button to open mobile navbar */
+  .mobile-nav-button {
+    display: block;
+  }
+
+  /* Show mobile navbar when it's open */
+  .navbar-mobile {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.navbar-mobile {
+  position: absolute;
+  top: 53px;
+  right: 0;
+  border:1px solid #bf9f45;
+  /* background-color: #fff; Set your desired background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for a card-like appearance */
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  padding: 10px; /* Adjust padding as needed */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  text-align: left; /* Align text to the right */
+  line-height: 40px;
+}
+
+/* Style the mobile nav items */
+.navbar-mobile > div {
+  margin: 10px 0;
+  /* Add additional styling for the individual items if needed */
+}
+
+/* Style the links within the mobile nav items */
+.navbar-mobile a {
+  text-decoration: none;
+  color: #333; /* Set the link color */
+}
+
+
+/* Additional styles for other elements */
+/* .frame-child21,
+.landing-page-child,
+.frame1,
+.button35,
+.stateprimary12,
+.rectangle-parent10,
+.savebutton,
+.editbutton,
+.the-lighthouse-container {
+  position: static;
+  top: auto;
+  left: auto;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.frame {
+  top: 300px;
+  align-items: center;
+} */
+
+/* .welcome-to-the-container,
+.bringing-the-path1,
+.landing-page {
+  font-size: 18px;
+} */
+
+/* .the-lighthouse- {
+  width: 100%;
+  margin: auto;
+} */
+
 .landing-page-child {
   position: absolute;
   top: 61.5px;
-  left:62%;
+  left: 62%;
   border-top: 1px solid var(--color-burlywood);
   box-sizing: border-box;
   width: 56px;
@@ -232,13 +201,13 @@
 }
 .frame-child21 {
   width: "100%";
-  /* background-color: "red"; */
-  /* border: "1px solid red"; */
-} 
+  background-color: "red";
+  border: "1px solid red";
+}
 .lighthouse {
   background: linear-gradient(
     217.81deg,
-    #be9e45,
+    #bf9f45,
     #be9e45 0.01%,
     #fff 49%,
     #d8c691
@@ -265,8 +234,6 @@
   width: 658px;
   height: 59px;
   align-items: center;
-  
-  
 }
 .bringing-the-path1,
 .frame1 {
@@ -279,7 +246,7 @@
   font-weight: 300;
   display: inline-block;
   width: 474px; */
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -314,7 +281,7 @@ display: flex;
 .stateprimary12 {
   position: absolute;
   top: 90%;
-  
+
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
   display: flex;
@@ -329,12 +296,12 @@ display: flex;
   /* position: absolute;
   top: 64px;
   left: 40px; */
-  width: '100%';
-  height: '100%';
+  width: "100%";
+  height: "100%";
   display: flex;
   justify-content: center;
   align-items: center;
-  border:#382a04;
+  border: #382a04;
   height: 704px;
   text-align: center;
   font-size: var(--heading-1-size);
@@ -358,15 +325,58 @@ display: flex;
   height: 100vh;
   object-fit: contain !important;
 }
- .savebutton{
-top:1000px;
-cursor: pointer;
-height: 30px;
-float: right; 
- } 
- .editbutton{
-top:1000px; 
+.savebutton {
+  top: 1000px;
   cursor: pointer;
   height: 30px;
-  float: right; 
-   } 
+  float: right;
+}
+.editbutton {
+  top: 1000px;
+  cursor: pointer;
+  height: 30px;
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .rectangle-parent10 {
+    font-size: 22px;
+  }
+  .bringing-the-path1 {
+    font-size: 16px;
+  }
+  .the-lighthouse-container {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+  }
+  .bringing-the-path1,
+  .frame1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 62px;
+  }
+  .stateprimary12 {
+    /* bottom: 5% !important; */
+    top: 95% !important;
+  }
+  .landing-page{
+    background-image: url(../images/mob-home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, makes the background image fixed */
+    background-position: center center;
+    height: 1000px!important;
+    overflow: hidden;
+  }
+  .frame1{
+    width: 100% !important;
+  }
+  .frame{
+    width: 100% !important;
+  }
+}

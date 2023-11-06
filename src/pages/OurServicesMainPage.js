@@ -1,11 +1,15 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServicesMainPage.css";
 import "./LandingPage.css";
 
 const OurServicesMainPage = () => {
   const navigate = useNavigate();
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
   const onAboutTextClick = useCallback(() => {
     navigate("/about-page1");
   }, [navigate]);
@@ -61,25 +65,47 @@ const OurServicesMainPage = () => {
 
 
       <img className="icon10" alt="" src="/2-1@2x.png" />
-      <div className="statesecondary9">
-        <div className="button9">Contact us</div>
+     
+      <button className="button-menu" style={{width:'70px',height:"40px",color:"#bf9f45",backgroundColor:"transparent",backdropFilter:"blur(20px)", position:"absolute",top:"10px",right:"20px"}} onClick={toggleMobileNav}>
+        ☰ 
+      </button>
+      {!isMobileNavOpen &&
+      <div className="navbarnew">
+     
+        <div className="rent-a-skill21">Rent- a- Skill</div>
+        <div className="glossary21">Glossary</div>
+        <div className="about16" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16" onClick={onHomeTextClick}>Home</div>
+        <div className="services21" >
+          Services
+        </div>
+        <div className="contact16" onClick={onContactTextClick}>
+          Contact
+        </div>
       </div>
-      <div className="explore-our-diverse">{`Explore our diverse range of services and discover how The Lighthouse can empower your journey to transformation and growth. Whether you are interested in a specific service or wish to learn more about our holistic approach, we are here to connect with you. `}</div>
-      <div className="glossary21">Glossary</div>
-      <div className="about16" onClick={onAboutTextClick}>
-        About
+      }
+      {isMobileNavOpen && (
+        <div className="navbar-mobile">
+          {/* ... (mobile nav items) */}
+      <div className="navbarnewmobile">
+        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+        <div className="glossary21mbl">Glossary</div>
+        <div className="about16mbl" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16mbl">Home</div>
+        <div className="services21mbl" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16mbl" onClick={onContactTextClick}>
+          Contact
+        </div>
       </div>
-      <div className="home16" onClick={onHomeTextClick}>
-        Home
-      </div>
-      <div className="rent-a-skill21">Rent- a- skill</div>
-      <div className="services21">Services
-      </div>
-      <div className="Services-Child" />
-      
-      <div className="contact16" onClick={onContactTextClick}>
-        Contact
-      </div>
+        </div>
+      )}
+
       <div className="our-services-main-page-child" />
       <div className="event-and-entertainment">
         Event and entertainment services

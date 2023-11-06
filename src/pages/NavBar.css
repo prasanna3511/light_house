@@ -1,0 +1,122 @@
+
+.rent-a-skill21 {
+    position: absolute;
+    top: 36px;
+    left: 78%;
+    display: inline-block;
+    width: 119px;
+    height: 26px;
+  }
+  .glossary21 {
+    left: 86%;
+    width: 74px;
+  }
+  .about16,
+  .contact16,
+  .glossary21,
+  .home16,
+  .services21 {
+    position: absolute;
+    top: 36px;
+    display: inline-block;
+    height: 26px;
+  }
+  .about16 {
+    left: 67%;
+    width: 51px;
+    cursor: pointer;
+  }
+  .contact16,
+  .home16,
+  .services21 {
+    left: 62%;
+    width: 53px;
+    cursor: pointer;
+  }
+  .contact16,
+  .services21 {
+    left: 72%;
+    width: 74px;
+    cursor: pointer;
+  }
+  .contact16 {
+    left: 92%;
+    width: 66px;
+  }
+
+
+/* .navbar {
+    background-color: #333;
+    position: fixed;
+     top: 0;
+    right: 0; 
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    transform: translateX(150px);
+  }  */
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .menu-toggle {
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .bar.open {
+    transform: rotate(45deg);
+  }
+  
+  .bar.open:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+  
+  /* Media query to show/hide the menu and toggle button for mobile screens */
+  @media (max-width: 768px) {
+    .navbar {
+      width: 100%;
+    }
+  
+    .navbar.open {
+      transform: translateX(0);
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #333;
+      padding: 10px;
+      width: 150px;
+    }
+  
+    .menu.open {
+      display: block;
+    }
+  } 

@@ -109,7 +109,7 @@
 .frame-child11 {
   position: absolute;
   top: 201px;
-  left: 40%;
+  left: 50%;
   border-radius: var(--br-3xs);
   border: 1px solid var(--color-darkkhaki);
   box-sizing: border-box;
@@ -277,3 +277,229 @@
   margin-right:78%;
  margin-top:7%;
 }      
+
+@media (max-width: 768px){
+  .our-services-4 {
+  position: relative;
+  background-image: url(../images/ourservices-1.png);
+  /* background: linear-gradient(59.63deg, #282828, #353535); */
+  background-size: cover;
+  overflow: hidden;
+
+  text-align: center;
+  font-size: var(--body-text-size);
+  color: var(--color-whitesmoke);
+  font-family: var(--body-text);
+}
+.rectangle-parent2 {
+  position: absolute;
+  top: 64px;
+  left: 33px;
+  width: 1200px;
+  height: 704px;
+  text-align: left;
+  font-size: var(--heading-2-size);
+  z-index: 1;
+}
+.frame-child12 {
+  position: absolute;
+  top: 19px;
+  left:-15px;
+ 
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-800);
+  width: 300px;
+  height: 660px;
+
+} 
+.outdoor-services-icon1 {
+  top: 51px;
+  left: 1px;
+  width: 66px;
+  height: 40px;
+}
+.experiential-and-outdoor {
+  position: absolute;
+  top: 60px;
+  left:70px;
+  display: inline-block;
+  width: 556px;
+  font-size: 14px;
+}
+.offerings4 {
+  top: 120px;
+  left: 0px;
+  width: 130px;
+}
+  
+.team-building-excellence-cust {
+  margin: 0;
+  padding-left: var(--padding-5xl);
+}
+.inspiring-retreats-tailored {
+  margin-bottom: 0;
+}
+
+.team-building-excellence-cust-container  
+ {
+  position: absolute;
+  top: 150px;
+  left: 1px;
+  font-size: 12px;
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width: 280px;
+}
+.frame-child10,
+.frame-child11 {
+  position: absolute;
+  top: 310px;
+  left: 1px;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+  width: 250px;
+  height: 140px;
+}
+.frame-child11{
+  top: 470px;
+}
+.enhance-organizational-and-container,
+.organizations-and-individuals-container {
+  position: absolute;
+  top: 350px;
+  left: 2px;
+  font-size: 14px;
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width: 247px;
+  height: 65px;
+  z-index: 5;
+}
+.benefits8,
+.ideal-for4,
+.offerings4 {
+  position: absolute;
+  display: inline-block;
+} 
+.benefits8 {
+  top: 335px;
+  left: 40px;
+  width: 10px;
+  height: 24px;
+  font-size: 12px;
+}
+.benefit-icon4 {
+  position: absolute;
+  top: 330px;
+  left: 2px;
+  width: 20x;
+  height: 25px;
+}
+.ideal-for4 {
+  top: 480px;
+  left: 40px;
+  width: 10px;
+  height: 24px;
+  font-size: 12px;
+}
+.ideal-icon4 {
+  position: absolute;
+  top: 475px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+}
+.organizations-and-individuals-container {
+  top: 510px;
+  height: 68px;
+}
+.statesecondary5 {
+  position: absolute;
+  top: 690px;
+  left: 95px;
+  border-radius: var(--br-981xl);
+  background-color: var(--color-darkkhaki);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xs) var(--padding-5xl);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--button-text-size);
+}
+.auto-layout-horizontal10,
+.auto-layout-horizontal9,
+.auto-layout-vertical4 {
+  border-radius: var(--br-9xs);
+  border: 1px solid var(--color-darkkhaki);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auto-layout-horizontal9 {
+  background-color: var(--color-gray-200);
+  flex-direction: row;
+  padding: var(--padding-xl);
+}
+.auto-layout-horizontal10,
+.auto-layout-vertical4 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 43px;
+  height: 43px;
+  cursor: pointer;
+}
+.auto-layout-vertical4 {
+  top: 16.80%;
+  left:75%;
+ 
+   
+  overflow: hidden;
+  flex-direction: column;
+}
+.auto-layout-horizontal10 {
+  top: 95px;
+  left:76%;
+  background-color: var(--color-gray-200);
+  flex-direction: row;
+  padding: var(--padding-xl);
+}
+.frame-child10,
+.frame-child11 {
+  position: absolute;
+  top: 320px;
+  left: 1px;
+  border-radius: var(--br-3xs);
+  border: 1px solid var(--color-darkkhaki);
+  box-sizing: border-box;
+  width: 250px;
+  height: 140px;
+}
+.frame-child11 {
+  top: 470px;
+}
+.create-memorable-and-container {
+  position: absolute;
+  top: 370px;
+  left: 1px;
+  font-size:12px;
+  font-family: var(--font-inherit);
+  display: inline-block;
+  width:247px;
+}
+.teams-organisations-and-container {
+  top: 300px;
+  left: 1px;
+  width: 250px;
+  height: 65px;
+  z-index: 5;
+  font-size:12px;
+}
+.teams-organisations-and-container {
+  top: 525px;
+  height: 68px;
+}
+}

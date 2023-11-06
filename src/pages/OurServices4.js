@@ -2,13 +2,18 @@ import { useCallback,useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./OurServices4.css";
 import "./OurServices3.css";
-import "./LandingPage.css";
+import"./NavBar.css";
+import NavBar from "./NavBar";
 import axios from "axios";
 
 const OurServices4 = () => {
   const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem("isAuthenticated");
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
   const [edit, setEdit] = useState(false);
   const [text, setText] = useState("");
   const [text1, setText1] = useState("");
@@ -178,6 +183,45 @@ const OurServices4 = () => {
   return (
     <div className="our-services-4">
      
+     <button className="button-menu" style={{width:'70px',height:"40px",color:"#bf9f45",backgroundColor:"transparent",backdropFilter:"blur(20px)", position:"absolute",top:"10px",right:"20px"}} onClick={toggleMobileNav}>
+        ☰ 
+      </button>
+      {!isMobileNavOpen &&
+      <div className="navbarnew">
+     
+        <div className="rent-a-skill21">Rent- a- Skill</div>
+        <div className="glossary21">Glossary</div>
+        <div className="about16" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16" onClick={onHomeTextClick}>Home</div>
+        <div className="services21" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16" onClick={onContactTextClick}>
+          Contact
+        </div>
+      </div>
+      }
+      {isMobileNavOpen && (
+        <div className="navbar-mobile">
+          {/* ... (mobile nav items) */}
+      <div className="navbarnewmobile">
+        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+        <div className="glossary21mbl">Glossary</div>
+        <div className="about16mbl" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16mbl">Home</div>
+        <div className="services21mbl" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16mbl" onClick={onContactTextClick}>
+          Contact
+        </div>
+      </div>
+        </div>
+      )}
 
 
       <img className="icon6" alt="" src="/2-1@2x.png" />
@@ -257,8 +301,8 @@ const OurServices4 = () => {
         <div className="ideal-for4">Ideal for</div>
         <div className="offerings4">Offerings:</div>
         <img className="benefit-icon4" alt="" src="/benefit-icon.svg" />
-        <div className="frame-child13" />
-        <div className="frame-child14" />
+        <div className="frame-child10" />
+        <div className="frame-child11" />
         <img className="ideal-icon4" alt="" src="/ideal-icon.svg" />
         <img
           className="outdoor-services-icon1"
@@ -280,21 +324,7 @@ const OurServices4 = () => {
       >
         <img className="frame-icon7" alt="" src="/frame2.svg" />
       </div>
-      <div className="statesecondary5" onClick={onStateSecondaryContainerClick}>
-        <div className="button5">Contact us</div>
-      </div>
-      <div className="glossary21">Glossary</div>
-      <div className="about16" onClick={onAboutTextClick}>
-        About
-      </div>
-      <div className="home16"onClick={ onHomeTextClick}>Home</div>
-      <div className="rent-a-skill21">Rent- a- skill</div>
-      <div className="services21" onClick={onServicesTextClick}>
-        Services
-      </div>
-      <div className="contact16" onClick={onContactTextClick}>
-        Contact
-      </div>
+     
       <div className="our-services-4-child" />
       {edit ? (
         <>
