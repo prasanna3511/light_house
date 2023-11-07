@@ -262,7 +262,7 @@ Additional styles for other elements
 }
 .the-lighthouse-container {
   position: absolute;
-  top: 72%;
+  top: 55%;
   /* left: 280px; */
   font-size: var(--body-text-size);
   text-align: center;
@@ -310,9 +310,9 @@ Additional styles for other elements
   /* position: relative; */
   background-image: url("../images/LandingPage.png");
   width: 100vw;
-  /* height: 100vh; */
-  /* overflow: hidden; */
-  /* text-align: center; */
+   height: 100vh; 
+   overflow: hidden; 
+  text-align: center; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,9 +320,9 @@ Additional styles for other elements
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
   background-size: cover;
-  /* background-position: center;
-  background-repeat: no-repeat; */
-  /* height: 100vh; */
+  background-position: center;
+  background-repeat: no-repeat;
+  
   object-fit: contain !important;
 }
 .savebutton {
