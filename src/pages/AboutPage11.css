@@ -488,15 +488,15 @@ font-weight: bold;
 }
 .editbuttonmiddle{
   position:absolute;
-  top: 1120px;
+  top: 38%;
   cursor: pointer;
   height: 30px;
-  float: right;
+left: 48%;
 }
 .editbuttonvalue{
   position:absolute;
-  top: 1870px;
-  left: 710px;
+  top: 80%;
+  left: 46%;
   cursor: pointer;
   height: 30px;
   float: right;

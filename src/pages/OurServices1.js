@@ -313,13 +313,13 @@ const OurServices1 = () => {
       </div>
       {edit ? (
         <>
-          <button className="Save" onClick={handleSave}>Save</button>
+          <button className="Save1" onClick={handleSave}>Save</button>
         </>
       ) : (
         <></>
       )}
       {isAuthenticated &&
-      <button  className="edit" onClick={handleEdit}>EDIT</button>
+      <button  className="edit1" onClick={handleEdit}>EDIT</button>
       }
     </div>
   );
