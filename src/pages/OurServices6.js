@@ -296,9 +296,7 @@ const OurServices6 = () => {
       >
         <img className="frame-icon3" alt="" src="/frame2.svg" />
       </div>
-      <div className="statesecondary3" onClick={onStateSecondaryContainerClick}>
-        <div className="button3">Contact us</div>
-      </div>
+      
       
       <div className="our-services-6-child" />
       {edit ? (
@@ -318,3 +316,6 @@ const OurServices6 = () => {
 export default OurServices6;
 // <img className="vector-icon4" alt="" src="/vector.svg" />
 //       <img className="vector-icon5" alt="" src="/vector2.svg" />
+// <div className="statesecondary3" onClick={onStateSecondaryContainerClick}>
+//          <div className="button3">Contact us</div>
+//        </div>

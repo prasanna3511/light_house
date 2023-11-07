@@ -42,7 +42,7 @@
 }
 .statesecondary9 {
   position: absolute;
-  top: 935px;
+  top: 45%;
   left: calc(50% - 77px);
   border-radius: var(--br-981xl);
   background-color: var(--color-darkkhaki);
@@ -390,11 +390,11 @@ text-align: center;
 }
 .our-services-main-page-item {
   position: absolute;
-  top: 1025.5px;
-  left: 251.5px;
+  top: 50%;
+  left: 18%;
   border-top: 1px solid var(--color-darkkhaki);
   box-sizing: border-box;
-  width: 778px;
+  width: 65%;
   height: 1px;
 }
 .group-child {

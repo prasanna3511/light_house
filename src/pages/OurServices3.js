@@ -210,9 +210,9 @@ const OurServices3 = () => {
             </li>
           </ul>
         </div>
-        <div className="enhance-organizational-and-container">
+        <div className="enhance-organizational-and-container3">
           <ul className="customisable-trainings-leader">
-            <li className="enhance-organizational-and">
+            <li className="enhance-organizational-and3">
             {text2}
             {  edit &&(
               <input placeholder="Enter text"
@@ -223,9 +223,9 @@ const OurServices3 = () => {
             </li>
           </ul>
         </div>
-        <div className="organizations-and-individuals-container">
+        <div className="organizations-and-individuals-container3">
           <ul className="customisable-trainings-leader">
-            <li className="enhance-organizational-and">
+            <li className="enhance-organizational-and3">
             {text3}
             {  edit &&(
               <input placeholder="Enter text"

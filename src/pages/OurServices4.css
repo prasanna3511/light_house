@@ -273,7 +273,7 @@
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
 }
-.edit1{
+.edit4{
   margin-right:78%;
  margin-top:7%;
 }      
@@ -292,7 +292,7 @@ height: 800px;
   font-family: var(--body-text);
 }
 .edit{
-  margin-right:78%;
+  margin-right:60%;
    z-index:1;
   margin-top: 50px; 
 }

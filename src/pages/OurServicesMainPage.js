@@ -105,6 +105,11 @@ const OurServicesMainPage = () => {
       </div>
         </div>
       )}
+      <div className="statesecondary9">
+      <div className="button9">Contact us</div>
+    </div>
+    <div className="explore-our-diverse">{`Explore our diverse range of services and discover how The Lighthouse can empower your journey to transformation and growth. Whether you are interested in a specific service or wish to learn more about our holistic approach, we are here to connect with you. `}</div>
+    
 
       <div className="our-services-main-page-child" />
       <div className="event-and-entertainment">

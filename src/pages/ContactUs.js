@@ -52,9 +52,7 @@ const ContactUs = () => {
     navigate("/landing-page");
   }, [navigate]);
 
-  const onServicesText1Click = useCallback(() => {
-    navigate("/our-services-main-page");
-  }, [navigate]);
+
 
 
   return (
@@ -241,7 +239,7 @@ const ContactUs = () => {
           About
         </div>
         <div className="home16" onClick={onHomeTextClick}>Home</div>
-        <div className="services21" >
+        <div className="services21" onClick={onServicesTextClick}>
           Services
         </div>
         <div className="contact16" onClick={onContactTextClick}>
