@@ -8,7 +8,11 @@ import NavBar from "./NavBar";
 const OurServices3 = () => {
   const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem("isAuthenticated");
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
   const [edit, setEdit] = useState(false);
   const [text, setText] = useState("");
   const [text1, setText1] = useState("");
@@ -30,6 +34,9 @@ const OurServices3 = () => {
   const onAboutTextClick = useCallback(() => {
     navigate("/about-page1");
   }, [navigate]);
+  const onServicesTextClick = useCallback(() => {
+    navigate("/our-services-main-page");
+  }, [navigate]);
 
   const onContactTextClick = useCallback(() => {
     navigate("/contact-us");
@@ -39,6 +46,9 @@ const OurServices3 = () => {
     navigate("/our-services-main-page");
   }, [navigate]);
 
+  const onHomeTextClick = useCallback(() => {
+    navigate("/landing-page");
+  }, [navigate]);
   
   const handleEdit = () => {
     setEdit(true);
@@ -168,9 +178,6 @@ const OurServices3 = () => {
 
   return (
     <div className="our-services-3">
-     
-<NavBar/>
-
       <img className="icon7" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
       <div className="frame-child12" />
@@ -255,19 +262,46 @@ const OurServices3 = () => {
       >
         <img className="frame-icon9" alt="" src="/frame2.svg" />
       </div>
-      <div className="statesecondary6" onClick={onStateSecondaryContainerClick}>
-        <div className="button6">Contact us</div>
+      <button className="button-menu" style={{width:'70px',height:"40px",color:"#bf9f45",backgroundColor:"transparent",backdropFilter:"blur(20px)", position:"absolute",top:"10px",right:"20px"}} onClick={toggleMobileNav}>
+        ☰ 
+      </button>
+      {!isMobileNavOpen &&
+      <div className="navbarnew">
+     
+        <div className="rent-a-skill21">Rent- a- Skill</div>
+        <div className="glossary21">Glossary</div>
+        <div className="about16" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16" onClick={onHomeTextClick}>Home</div>
+        <div className="services21" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16" onClick={onContactTextClick}>
+          Contact
+        </div>
       </div>
-      <div className="glossary21">Glossary</div>
-      <div className="about16" onClick={onAboutTextClick}>
-        About
+      }
+      {isMobileNavOpen && (
+        <div className="navbar-mobile">
+          {/* ... (mobile nav items) */}
+      <div className="navbarnewmobile">
+        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+        <div className="glossary21mbl">Glossary</div>
+        <div className="about16mbl" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16mbl">Home</div>
+        <div className="services21mbl" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16mbl" onClick={onContactTextClick}>
+          Contact
+        </div>
       </div>
-      <div className="home16">Home</div>
-      <div className="rent-a-skill21">Rent- a- skill</div>
-      <div className="services21">Services</div>
-      <div className="contact16" onClick={onContactTextClick}>
-        Contact
-      </div>
+        </div>
+      )}
+
       <div className="our-services-3-child" onClick={onLineClick} />
       {edit ? (
         <>

@@ -67,7 +67,7 @@
 .auto-layout-horizontal97 {
   position: absolute;
   top: 745px;
-  left: 103px;
+  left: 20%;
   width: 1074px;
   height: 208px;
   display: flex;
@@ -81,12 +81,12 @@
 .faqs4 {
   position: absolute;
   top: 651px;
-  left: 614px;
+  left: 49%;
   text-align: left;
 }
 .developed-by-coherent4 {
   top: 944px;
-  left: 1250px;
+  left: 80%;
   font-size: var(--font-size-3xs);
   transform: rotate(-90deg);
   transform-origin: 0 0;
@@ -290,7 +290,7 @@
 .contact-us5 {
   position: absolute;
   top: 566px;
-  left: 595px;
+  left: 48%;
   text-align: left;
 }
 .about14,

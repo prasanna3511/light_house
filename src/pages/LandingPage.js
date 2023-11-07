@@ -13,6 +13,13 @@ const LandingPage = () => {
   const [text1, setText1] = useState("");
   const [text3, setText3] = useState("");
   const [text, setText] = useState("");
+
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
+
   const onAboutTextClick = useCallback(() => {
     navigate("/about-page1");
   }, [navigate]);
@@ -34,18 +41,27 @@ const LandingPage = () => {
   };
 
   const handleSave = async () => {
-    const cardResponse = await axios.put("https://thelighthouseweb.co/home.php", {
-      id: 1,
-      description: text1,
-    });
-    const cardResponse1 = await axios.put("https://thelighthouseweb.co/home.php", {
-      id: 2,
-      description: text3,
-    });
-    const cardResponse2 = await axios.put("https://thelighthouseweb.co/home.php", {
-      id: 3,
-      description: text,
-    });
+    const cardResponse = await axios.put(
+      "https://thelighthouseweb.co/home.php",
+      {
+        id: 1,
+        description: text1,
+      }
+    );
+    const cardResponse1 = await axios.put(
+      "https://thelighthouseweb.co/home.php",
+      {
+        id: 2,
+        description: text3,
+      }
+    );
+    const cardResponse2 = await axios.put(
+      "https://thelighthouseweb.co/home.php",
+      {
+        id: 3,
+        description: text,
+      }
+    );
 
     // console.log(cardResponse.data);
     setEdit(false);
@@ -97,19 +113,47 @@ const LandingPage = () => {
         alt=""
         src="/the-lighthouse-logo-no-tagline-loose-text-1-1@2x.png"
       />
-      <img className="icon24" alt="" src="/2-1@2x.png" />  
-      <div className="rent-a-skill21">Rent- a- Skill</div>
-      <div className="glossary21">Glossary</div>
-      <div className="about16" onClick={onAboutTextClick}>
-        About
+      <img className="icon24" alt="" src="/2-1@2x.png" />
+      <button className="button-menu" style={{width:'70px',height:"40px",color:"#bf9f45",backgroundColor:"transparent",backdropFilter:"blur(20px)", position:"absolute",top:"10px",right:"20px"}} onClick={toggleMobileNav}>
+        ☰ 
+      </button>
+      {!isMobileNavOpen &&
+      <div className="navbarnew">
+     
+        <div className="rent-a-skill21">Rent- a- Skill</div>
+        <div className="glossary21">Glossary</div>
+        <div className="about16" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16">Home</div>
+        <div className="services21" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16" onClick={onContactTextClick}>
+          Contact
+        </div>
       </div>
-      <div className="home16">Home</div>
-      <div className="services21" onClick={onServicesTextClick}>
-        Services
+      }
+      {isMobileNavOpen && (
+        <div className="navbar-mobile">
+          {/* ... (mobile nav items) */}
+      <div className="navbarnewmobile">
+        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+        <div className="glossary21mbl">Glossary</div>
+        <div className="about16mbl" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16mbl">Home</div>
+        <div className="services21mbl" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16mbl" onClick={onContactTextClick}>
+          Contact
+        </div>
       </div>
-      <div className="contact16" onClick={onContactTextClick}>
-        Contact
-      </div>
+        </div>
+      )}
+
       <div className="landing-page-child" />
       <div className="rectangle-parent10">
         <div className="frame-child21" />

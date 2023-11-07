@@ -8,7 +8,11 @@ import axios from "axios";
 const OurServices6 = () => {
   const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem("isAuthenticated");
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
   const [edit, setEdit] = useState(false);
   const [text, setText] = useState("");
   const [text1, setText1] = useState("");
@@ -25,7 +29,10 @@ const OurServices6 = () => {
   const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
-
+  const onHomeTextClick = useCallback(() => {
+    navigate("/landing-page");
+  }, [navigate]);
+  
   const onAboutTextClick = useCallback(() => {
     navigate("/about-page1");
   }, [navigate]);
@@ -166,7 +173,45 @@ const OurServices6 = () => {
 
   return (
     <div className="our-services-6">
-      
+       <button className="button-menu" style={{width:'70px',height:"40px",color:"#bf9f45",backgroundColor:"transparent",backdropFilter:"blur(20px)", position:"absolute",top:"10px",right:"20px"}} onClick={toggleMobileNav}>
+        ☰ 
+      </button>
+      {!isMobileNavOpen &&
+      <div className="navbarnew">
+     
+        <div className="rent-a-skill21">Rent- a- Skill</div>
+        <div className="glossary21">Glossary</div>
+        <div className="about16" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16" onClick={onHomeTextClick}>Home</div>
+        <div className="services21" >
+          Services
+        </div>
+        <div className="contact16" onClick={onContactTextClick}>
+          Contact
+        </div>
+      </div>
+      }
+      {isMobileNavOpen && (
+        <div className="navbar-mobile">
+          {/* ... (mobile nav items) */}
+      <div className="navbarnewmobile">
+        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+        <div className="glossary21mbl">Glossary</div>
+        <div className="about16mbl" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16mbl">Home</div>
+        <div className="services21mbl" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16mbl" onClick={onContactTextClick}>
+          Contact
+        </div>
+      </div>
+        </div>
+      )}
       <img className="icon3" alt="" src="/2-1@2x.png" />
       <div className="rectangle-parent2">
         <div className="frame-child12" />

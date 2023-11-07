@@ -16,6 +16,13 @@ const AboutPage1 = () => {
   const [text4, setText4] = useState("");
   const [id2, setId2] = useState(false);
 
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
+
+
   const onStateSecondaryContainerClick = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
@@ -44,6 +51,16 @@ const AboutPage1 = () => {
   const handleEdit = () => {
     setEdit(true);
   };
+
+  const onAboutTextClick = useCallback(() => {
+    navigate("/about-page1");
+  }, [navigate]);
+
+ 
+
+  const onStatePrimaryContainerClick = useCallback(() => {
+    navigate("/our-services-main-page");
+  }, [navigate]);
 
   const handleSave = async () => {
     if (id2) {
@@ -118,19 +135,47 @@ const AboutPage1 = () => {
       <div className="statesecondary19">
         <div className="button29">Discover our services</div>
       </div>
+      <button className="button-menu" style={{width:'70px',height:"40px",color:"#bf9f45",backgroundColor:"transparent",backdropFilter:"blur(20px)", position:"absolute",top:"10px",right:"20px"}} onClick={toggleMobileNav}>
+        ☰ 
+      </button>
+      {!isMobileNavOpen &&
+      <div className="navbarnew">
+     
+        <div className="rent-a-skill21">Rent- a- Skill</div>
+        <div className="glossary21">Glossary</div>
+        <div className="about16" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16" onClick={onHomeTextClick}>Home</div>
+        <div className="services21" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16" onClick={onContactTextClick}>
+          Contact
+        </div>
+      </div>
+      }
+      {isMobileNavOpen && (
+        <div className="navbar-mobile">
+          {/* ... (mobile nav items) */}
+      <div className="navbarnewmobile">
+        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+        <div className="glossary21mbl">Glossary</div>
+        <div className="about16mbl" onClick={onAboutTextClick}>
+          About
+        </div>
+        <div className="home16mbl">Home</div>
+        <div className="services21mbl" onClick={onServicesTextClick}>
+          Services
+        </div>
+        <div className="contact16mbl" onClick={onContactTextClick}>
+          Contact
+        </div>
+      </div>
+        </div>
+      )}
 
-      <div className="rent-a-skill21">Rent- a- Skill</div>
-      <div className="glossary21">Glossary</div>
-      <div className="about16">About</div>
-      <div className="home16" onClick={onHomeTextClick}>
-        Home
-      </div>
-      <div className="services21" onClick={onServicesTextClick}>
-        Services
-      </div>
-      <div className="contact16" onClick={onContactTextClick}>
-        Contact
-      </div>
+
       <div className="about-page-1-child" />
       <div className="who-we-are-group">
         <div className="who-we-are1">Who We Are.</div>
