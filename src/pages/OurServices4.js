@@ -299,13 +299,13 @@ const OurServices4 = () => {
       <div className="our-services-4-child" />
       {edit ? (
         <>
-          <button onClick={handleSave}>Save</button>
+          <button className="Save4" onClick={handleSave}>Save</button>
         </>
       ) : (
         <></>
       )}
       {isAuthenticated &&
-      <button className="edit1" onClick={handleEdit}>EDIT</button>
+      <button className="edit4" onClick={handleEdit}>EDIT</button>
       }
  
       </div>
