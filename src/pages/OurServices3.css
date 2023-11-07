@@ -33,7 +33,7 @@
   border-radius: var(--br-xl);
   background-color: var(--color-gray-800);
   width: 100%;
-  height: 683px;
+  height: 700px;
 
 }
 .training-and-learning {
@@ -144,7 +144,7 @@
   width: 1200px;
   height: 704px;
   text-align: left;
-  font-size: var(--heading-2-size);
+  /* font-size: var(--heading-2-size); */
   z-index: 1;
 }
 .frame-icon9 {
@@ -289,7 +289,7 @@
   /* background: linear-gradient(59.63deg, #282828, #353535); */
   background-size: cover;
   overflow: hidden;
-height: 100vh;
+height: 750PX;
   text-align: center;
   font-size: var(--body-text-size);
   color: var(--color-whitesmoke);
@@ -298,11 +298,11 @@ height: 100vh;
 .edit3{
   margin-right:78%;
    z-index:1;
-  margin-top: 8%; 
+  margin-top: 15%; 
 }
 .Save3{
   margin-right:40%;
-  margin-top:8%;
+  margin-top:15%;
    z-index:1;
 }
 .rectangle-parent2 {
@@ -480,5 +480,8 @@ height: 100vh;
   padding: var(--padding-xl);
   width: 25px;
   height: 25px;
+}
+.our-services-3-child {
+  display: none;
 }
 }

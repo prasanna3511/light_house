@@ -284,7 +284,7 @@ height: 110vh;
 .edit1{
   margin-right:78%;
    z-index:1;
-  margin-top: 10%; 
+  margin-top: 15%; 
 }
 .Save1{
   margin-right:40%;
@@ -295,7 +295,7 @@ height: 110vh;
 .rectangle-parent2 {
   position: absolute;
   top: 64px;
-  left: 33px;
+  left: 13%;
   width: 1200px;
   height: 704px;
   text-align: left;
@@ -310,7 +310,7 @@ height: 110vh;
   border-radius: var(--br-xl);
   background-color: var(--color-gray-800);
   width: 300px;
-  height: 720px;
+  height: 650px;
 
 } 
 .personality-dev-icon1  {
@@ -445,5 +445,8 @@ height: 110vh;
   padding: 10px;
   cursor: pointer;
 
+}
+.our-services-1-child {
+  display: none;
 }
 }

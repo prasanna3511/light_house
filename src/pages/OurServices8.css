@@ -284,7 +284,7 @@
   .rectangle-parent2 {
     position: absolute;
     top: 64px;
-    left: 33px;
+    left: 60%;
     width: 1200px;
     height: 900px;
     text-align: left;
@@ -473,5 +473,7 @@
   top: 730px;
   height: 81px;
 }
-  
+.our-services-8-child {
+  display: none;
+}
   }

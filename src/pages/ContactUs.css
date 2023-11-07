@@ -513,4 +513,7 @@
     transform: rotate(0deg);
     transform-origin: 0 0;
 }
+.contact-us-child {
+  display: none;
+}
 }

@@ -617,18 +617,18 @@ left: 48%;
  .about-page-11-item {
    position: absolute;
    top: 980px;
-   left: 10px;
+   left: 5%;
    border-radius: var(--br-xl);
    background-color: var(--color-gray-700);
    border: 1px solid var(--color-burlywood);
    box-sizing: border-box;
-   width: 340px;
+   width: 90%;
    height: 200px;
  }
  
  .about-page-11-inner {
    top:1200px;
-   height: 360px;
+   height: 11%;
  }
  .mission,
 .vision {
@@ -640,8 +640,9 @@ left: 48%;
 }
 .mission {
   position: absolute;
-  top: 1350px;
-  left: 75%;
+  top: 44%;
+  left: 74%;
+  font-size: 18PX;
 }
 .to-be-a {
   position: absolute;
@@ -661,25 +662,25 @@ left: 48%;
 .to-champion-transformative {
   position: absolute;
   top: 1210px;
-  left: 18px;
+  left: 7%;
   text-align: left;
   display: inline-block;
-  width: 250px;
+  width:70%;
   font-size: 14px;
 }
 .values {
   position: absolute;
-  top: 1570px;
-  left: 128px;
+  top: 52%;
+  left: 38%;
   font-size: 22px;
 
 }
 .our-values-are {
   position: absolute;
-  top: 1600px;
-  left: 4px;
+  top:53%;
+  left: 7%;
   display: inline-block;
-  width: 350px;
+  width: 80%;
 } 
 .group-item {
   position: relative;
@@ -699,14 +700,14 @@ left: 48%;
 
 .rectangle-parent5 {
   position: absolute;
-  top: -350px;
-  left: -23px;
+  top: -60%;
+  left: 7%;
 
  
-  margin: 40px;
+  margin: auto;
 
-  width: 120px;
-  height: 100px;
+  width: 70%;
+  height: 20;
   font-size:12px;
   
  
@@ -714,7 +715,7 @@ left: 48%;
 .rectangle-parent6 {
   position: absolute; 
   top: -130px;
-  left: -23px;
+  left: -4%;
   width: 326px;
   height: 222px;
   
@@ -727,7 +728,7 @@ left: 48%;
 .rectangle-parent7 {
    position: absolute;
   top:90px;
-  left: -23px; 
+  left: -4%; 
   width: 326px;
   height: 222px;
   display:flex;
@@ -737,7 +738,7 @@ left: 48%;
 .rectangle-parent8 {
   position: absolute;
   top: 310px;
-  left: -23px;
+  left: -4%;
   width: 326px;
   height: 222px;
   margin: 40px;
@@ -746,7 +747,7 @@ left: 48%;
 .rectangle-parent9 {
   position: absolute;
   top:530px;
-  left: -23px;
+  left: -4%;
   width: 326px;
   height: 222px;
   margin: 40px;
@@ -788,5 +789,39 @@ padding-top: 2700px;
   /* align-items: left; */
   cursor: pointer;
 }
+.editbuttonmiddle{
+  position:absolute;
+  top: 32%;
+  cursor: pointer;
+  height: 20px;
+left: 38%;
+}
 
+.editbuttonvalue{
+  position:absolute;
+  top: 57%;
+  left: 32%;
+  cursor: pointer;
+  height: 20px;
+  float: right;
+}
+.mainedit{
+  position:absolute;
+  top: 10%;
+  cursor: pointer;
+  height: 30px;
+  float: right;
+  left: 10%;
+}
+.mainsave{
+  position:absolute;
+  top: 10%;
+  cursor: pointer;
+  height: 30px;
+  float: right;
+  left: 10%;
+}
+.about-page-11-child{
+  display: none;
+}
   }

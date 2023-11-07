@@ -57,6 +57,9 @@ const OurServicesMainPage = () => {
   const onStateSecondaryContainer1Click = useCallback(() => {
     navigate("/contact-us");
   }, [navigate]);
+  const onServicesTextClick = useCallback(() => {
+    navigate("/our-services-main-page");
+  }, [navigate]);
 
   return (
     <div className="our-services-main-page">
@@ -89,21 +92,23 @@ const OurServicesMainPage = () => {
       {isMobileNavOpen && (
         <div className="navbar-mobile">
           {/* ... (mobile nav items) */}
-      <div className="navbarnewmobile">
-        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
-        <div className="glossary21mbl">Glossary</div>
-        <div className="about16mbl" onClick={onAboutTextClick}>
-          About
-        </div>
-        <div className="home16mbl">Home</div>
-        <div className="services21mbl" onClick={onServicesTextClick}>
-          Services
-        </div>
-        <div className="contact16mbl" onClick={onContactTextClick}>
-          Contact
-        </div>
-      </div>
-        </div>
+          <div className="navbarnewmobile">
+          <div className="home16mbl" onClick={onHomeTextClick}>Home</div>
+          <div className="about16mbl" onClick={onAboutTextClick}>
+              About
+            </div>
+            
+            <div className="services21mbl" onClick={onServicesTextClick}>
+              Services
+            </div>
+            <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+            <div className="glossary21mbl">Glossary</div>
+            
+            <div className="contact16mbl" onClick={onContactTextClick}>
+              Contact
+            </div>
+          </div>
+            </div>
       )}
       <div className="statesecondary9">
       <div className="button9">Contact us</div>

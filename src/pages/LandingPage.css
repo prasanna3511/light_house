@@ -155,8 +155,8 @@
 }
 
 
-/* Additional styles for other elements */
-/* .frame-child21,
+Additional styles for other elements
+/* /* .frame-child21,
 .landing-page-child,
 .frame1,
 .button35,
@@ -172,7 +172,7 @@
   display: block;
   text-align: center;
   margin: 0 auto;
-}
+} */
 
 .frame {
   top: 300px;
@@ -262,7 +262,7 @@
 }
 .the-lighthouse-container {
   position: absolute;
-  top: 60%;
+  top: 72%;
   /* left: 280px; */
   font-size: var(--body-text-size);
   text-align: center;
@@ -322,7 +322,7 @@
   background-size: cover;
   /* background-position: center;
   background-repeat: no-repeat; */
-  height: 100vh;
+  /* height: 100vh; */
   object-fit: contain !important;
 }
 .savebutton {
@@ -345,32 +345,42 @@
   .bringing-the-path1 {
     font-size: 16px;
   }
+   .the-lighthouse-logo-no-tagline {
+    position: absolute;
+    top: 95px;
+    width: 195px;
+    height: 194px;
+    object-fit: cover;
+    justify-content: center;
+}
   .the-lighthouse-container {
     font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
+    top: 59%;
   }
   .bringing-the-path1,
   .frame1 {
+    top: 47%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 62px;
+    width: 100%;
   }
   .stateprimary12 {
     /* bottom: 5% !important; */
-    top: 95% !important;
+    top: 93% !important;
   }
   .landing-page{
     background-image: url(../images/mob-home.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional, makes the background image fixed */
-    background-position: center center;
-    height: 1000px!important;
+
+    background-position:  center;
+    height: 100vh!important;
     overflow: hidden;
   }
   .frame1{
@@ -379,4 +389,7 @@
   .frame{
     width: 100% !important;
   }
+  .contact-us-child {
+  display: none;
+}
 }

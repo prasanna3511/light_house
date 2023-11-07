@@ -119,7 +119,7 @@ const AboutPage1 = () => {
   return (
     <div className="about-page-1">
       <img className="vector-icon52" alt="" src="/Aboutpage-1.png" />
-      <mg className="icon24" alt="" src="/2-1@2x.png" />
+      <img className="icon24" alt="" src="/2-1@2x.png" />
       <div
         className="statesecondary17"
         onClick={onStateSecondaryContainerClick}
@@ -158,21 +158,23 @@ const AboutPage1 = () => {
       {isMobileNavOpen && (
         <div className="navbar-mobile">
           {/* ... (mobile nav items) */}
-      <div className="navbarnewmobile">
-        <div className="rent-a-skill21mbl">Rent- a- Skill</div>
-        <div className="glossary21mbl">Glossary</div>
-        <div className="about16mbl" onClick={onAboutTextClick}>
-          About
-        </div>
-        <div className="home16mbl">Home</div>
-        <div className="services21mbl" onClick={onServicesTextClick}>
-          Services
-        </div>
-        <div className="contact16mbl" onClick={onContactTextClick}>
-          Contact
-        </div>
-      </div>
-        </div>
+          <div className="navbarnewmobile">
+          <div className="home16mbl" onClick={onHomeTextClick}>Home</div>
+          <div className="about16mbl" onClick={onAboutTextClick}>
+              About
+            </div>
+            
+            <div className="services21mbl" onClick={onServicesTextClick}>
+              Services
+            </div>
+            <div className="rent-a-skill21mbl">Rent- a- Skill</div>
+            <div className="glossary21mbl">Glossary</div>
+            
+            <div className="contact16mbl" onClick={onContactTextClick}>
+              Contact
+            </div>
+          </div>
+            </div>
       )}
 
 

@@ -528,4 +528,7 @@
   font-size: 16px;
   color: var(--color-darkkhaki);
 }
+.our-services-6-child {
+  display: none;
+}
   }

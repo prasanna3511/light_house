@@ -291,14 +291,14 @@ height: 800px;
   color: var(--color-whitesmoke);
   font-family: var(--body-text);
 }
-.edit{
-  margin-right:60%;
+.edit4{
+  margin-right:78%;
    z-index:1;
-  margin-top: 50px; 
+  margin-top: 15%; 
 }
-.Save{
+.Save4{
   margin-right:40%;
-  margin-top: 50px;
+  margin-top:15%;
    z-index:1;
 }
 .rectangle-parent2 {
@@ -513,5 +513,8 @@ height: 800px;
 .teams-organisations-and-container {
   top: 525px;
   height: 68px;
+}
+.our-services-4-child {
+  display: none;
 }
 }

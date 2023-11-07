@@ -332,4 +332,13 @@ p {
 .lets-light-up6, .the-only-constant1{
   top: -45px;
 }
+.read-more {
+  top: 115%;
+  left: 20%;
+  color: var(--color-darkkhaki);
+  cursor: pointer;
+}
+.about-page-1-child{
+  display: none;
+}
 }
